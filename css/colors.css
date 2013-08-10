@@ -1,0 +1,149 @@
+a {
+	color:#000
+}
+
+a:hover {
+	color:#633f33
+}
+
+.transparent {
+	background-color:transparent!important
+}
+
+.black {
+	background-color:#3c3535!important
+}
+
+.dark-blue {
+	background-color:#1060ce!important
+}
+
+.bblack {
+	background-color:#000!important
+}
+
+.gray {
+	background-color:#848283!important
+}
+
+.green {
+	background-color:#899449!important
+}
+
+.red {
+	background-color:#c71f2d!important
+}
+
+.brown {
+	background-color:#633f33!important
+}
+
+.white {
+	background-color:#fff!important
+}
+
+.lightgray {
+	background-color:#e2ddda!important
+}
+
+.lightblue {
+	background-color:#ebf5f5!important
+}
+
+.blue {
+	background-color:#73c1e7!important
+}
+
+.orange {
+	background-color:#d39c43!important
+}
+
+.beige {
+	background-color:#b39f8d!important
+}
+
+.yellow {
+	background-color:#fdce28!important
+}
+
+.black,.dark-blue,.bblack,.gray,.red,.green,.brown {
+	color:#fff
+}
+
+.black a,.dark-blue a,.bblack a,.gray a,.red a,.green a,.brown a {
+	color:#aaa
+}
+
+.text-white a:hover,.text-lightgray a:hover,.text-lightblue a:hover,.text-blue a:hover,.text-orange a:hover,.text-beige a:hover,.text-yellow a:hover,.black a:hover,.dark-blue a:hover,.bblack a:hover,.gray a:hover,.red a:hover,.green a:hover,.brown a:hover {
+	color:#444!important;
+	text-shadow:0 0 .5em #999,0 0 .4em #aaa,0 0 .6em #ddd,0 0 .8em #eee,0 0 1em #fff,0 0 1.5em #fff!important
+}
+
+.white,.lightgray,.lightblue,.blue,.orange,.beige,.yellow {
+	color:#3c3535
+}
+
+.white a,.lightgray a,.lightblue a,.blue a,.orange a,.beige a,.yellow a {
+	color:#777
+}
+
+.text-black a:hover,.text-dark-blue a:hover,.text-bblack a:hover,.text-gray a:hover,.text-red a:hover,.text-green a:hover,.text-brown a:hover,.white a:hover,.lightgray a:hover,.lightblue a:hover,.blue a:hover,.orange a:hover,.beige a:hover,.yellow a:hover {
+	color:#eee;
+	text-shadow:-1px -1px 2px #000,1px -1px 2px #000,-1px 1px 2px #000,1px 1px 2px #000!important
+}
+
+.text-white {
+	color:#fff!important
+}
+
+.text-black {
+	color:#3c3535!important
+}
+
+.text-bblack {
+	color:#000!important
+}
+
+.text-gray {
+	color:#848283!important
+}
+
+.text-lightgray {
+	color:#b5bab6!important
+}
+
+.text-red {
+	color:#c71f2d!important
+}
+
+.text-green {
+	color:#899449!important
+}
+
+.text-blue {
+	color:#73c1e7!important
+}
+
+.text-brown {
+	color:#633f33!important
+}
+
+.text-orange {
+	color:#d39c43!important
+}
+
+.text-beige {
+	color:#b39f8d!important
+}
+
+.text-yellow {
+	color:#fdce28!important
+}
+
+.text-dark-blue {
+	color:#1060ce!important
+}
+
+.text-lightblue {
+	color:#ebf5f5!important
+}
