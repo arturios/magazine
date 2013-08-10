@@ -1,0 +1,4 @@
+magazine
+========
+
+Magazine web framework
