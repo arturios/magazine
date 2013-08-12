@@ -1,0 +1,98 @@
+@import url(http://fonts.googleapis.com/css?family=La+Belle+Aurore|Open+Sans:300italic,400italic,700italic,400,300,700|Open+Sans+Condensed:300,700,300italic|Amatic+SC|Quattrocento:400,700);
+
+@font-face {font-family: 'simbolos'; src: url('fonts/simbolos.eot'); src: url('fonts/simbolos.eot?#iefix') format('embedded-opentype'), url('fonts/simbolos.woff') format('woff'), url('fonts/simbolos.ttf') format('truetype'), url('fonts/simbolos.svg') format('svg'); font-weight: normal; font-style: normal; }
+
+@font-face {font-family: 'League_Gothic'; src: url('fonts/League_Gothic-webfont.eot'); src: url('fonts/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/League_Gothic-webfont.woff') format('woff'), url('fonts/League_Gothic-webfont.ttf') format('truetype'), url('fonts/League_Gothic-webfont.svg') format('svg'); font-weight: normal; font-style: normal; }
+
+html,body,div,span,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,section,summary,time,audio,video{padding:0;margin:0;border:0}
+
+html{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-webkit-transform:translateZ(0px);transform:translateZ(0px); width: 15cm}
+
+*{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
+
+.nomobile, nav, #mainsidebar, aside{display:none;visibility:hidden}
+
+body{position:relative;top:0;right:0;bottom:0;left:0;font:14px/1.25 "Open Sans",arial,sans-serif;color:#222;background-color:#fff;overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;}
+
+a{color:#0882f0;text-decoration:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+
+#content{position:relative;top:0;right:0;bottom:0;left:0;width:100%;height:auto;overflow:hidden;background:#000 url(../images/loader.gif) no-repeat 50% 50%;-webkit-transition-property:top,bottom;transition-property:top,bottom;-webkit-transition-duration:.2s,.2s;transition-duration:.2s,.2s;-webkit-transition-timing-function:linear,linear;transition-timing-function:linear,linear}
+
+#wrapper{position:relative;left:0;padding:2em 1em 2em 1em;width:auto;overflow:hidden;line-height:175%;font-family:"Open Sans",sans-serif;color:#000;background:#ebf5f5 url('images/paper_texture2.png') repeat;clear:both}
+
+article{margin:0!important;padding:0!important;clear:both}
+
+section{margin-bottom:1em;clear:both}
+
+body{font-size:12px;line-height:1.5em;font-family:'Open Sans',sans-serif}
+
+h1, h2, h3, h4 {font-family:'League_Gothic',sans-serif;text-transform:uppercase;}
+
+
+h1{margin:0;font-size:2em;margin-bottom:.75em;line-height:1.5;font-weight:300;color:#ff7f00}
+
+h2{color:#408000;margin:0;font-size:1.5em;line-height:1em;margin-bottom:1em;font-weight:700}
+
+h3{margin:0;font-size:1.3333333333333333em;line-height:1.125em;margin-bottom:1.125em}
+
+h4{margin:0;font-size:1.1666666666666667em;line-height:1.2857142857142858em;margin-bottom:1.2857142857142858em}
+
+p,ul,blockquote,pre,td,th,label{margin:0;font-size:1em;line-height:1.5em;margin-bottom:1.5em}
+
+p.small{margin:0;font-size:.8333333333333334em;line-height:1.8em;margin-bottom:1.8em}
+
+table{border-collapse:collapse;margin-bottom:1.5em}
+
+article ul,article ol, .sidebar ul, .sidebar ol{padding:0 2em;list-style:none}
+
+
+figure{width:30%;margin:1em; float: left; position: relative}
+
+iframe,object,div+figure,section+figure,article>figure:first-child,h1+figure,h2+figure,h3+figure,header+figure{width:95%;margin:1em 2.5%;clear:both}
+
+.horizontal,.vertical,.full{display:block}
+
+img{position:relative;top:0;left:0;width:100%;height:auto}
+
+figcaption{position:absolute;bottom:0;left:0;width:100%;padding:4px;background-color:rgba(0,0,0,1);border-top:1px solid white;clear:both;padding .5em 0}
+
+figcaption *{font-family:"Courier New",Courier,Monaco,monospace!important;font-size:16px!important;line-height:100%!important;text-align:left!important;font-style:italic!important;font-weight:bold!important;color:#fff}
+
+figcaption a{color:#fc6!important;text-decoration:underline!important;border:none!important;background-color:inherit!important;background-image:none!important;-moz-box-shadow:none!important;-webkit-box-shadow:none!important;box-shadow:none!important;margin:0!important;padding:0!important}
+
+iframe{min-height:360px}
+
+.video{height:0;overflow:hidden;padding-bottom:56.25%;padding-top:30px;position:relative;min-height:480px}
+
+.video iframe,.video object,.video embed{height:100%;left:0;position:absolute;top:0;width:100%}
+
+.monospace{font-family:"American Typewriter",'Courier New',Courier,monospace;text-align:left}
+
+.ultrafina{font-family:'Open Sans',sans-serif;font-weight:300}
+
+.script{font-family:'La Belle Aurore',sans-serif;line-height:200%}
+
+.condensed{font-family:'League_Gothic',sans-serif;text-transform:uppercase;}
+
+.amatic{font-family:'Amatic SC',"Comic Sans MS",sans-serif}
+
+.symbol{font-family:'simbolos',sans-serif}
+
+
+nav{position:fixed;top:0;right:0;left:0;text-align: center;z-index:100000;padding:5px;
+box-sizing:border-box;display:-webkit-box;display:block;background-color:#1eb0e9;
+background-image:-webkit-linear-gradient(top,#1eb0e9 0,#109adc 100%);background-image:linear-gradient(to bottom,#1eb0e9 0,#109adc 100%);border-bottom:1px solid #0e5895;box-shadow:inset 0 1px 1px -1px rgba(255,255,255,.8);-webkit-box-orient:horizontal;box-orient:horizontal}
+
+#pagination a, #pagination .current{z-index:1000;font-size:.8em;padding:0 .33em;color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,.3);background-color:#1eb0e9;background-image:-webkit-linear-gradient(top,#1eb0e9 0,#0984c6 100%);background-image:linear-gradient(to bottom,#1eb0e9 0,#0984c6 100%);border:1px solid #0e5895;border-radius:4px;box-shadow:0 1px rgba(255,255,255,.25);-webkit-box-flex:0;box-flex:0;text-decoration:none;}
+#pagination a:hover{color:#ff0;background-color:#4876b1;background-image:none}
+#pagination a:active{color:#fff;background-color:#0876b1;background-image:none}
+
+.prev{position:absolute;top;5px;left:5px;margin-left:7px}
+.next{position:absolute;top:5px;right:5px;float:right;margin-right:7px}
+.prev,.next{font-size:1em; color:fff;text-shadow:1px 1px .25em rgba(0,0,0,0.8);}
+
+#pagination .current {background-color: #ccc; background-image: none; color: #888; font-weight:bold}
+
+#pagination .text-black {padding: 0 .5em; border-radius: 1em; border: 1px solid black; background: rgba(255,255,255,.5); text-shadow: 1px 1px 1px white}
+
+#fontsize {position:absolute; top:0; left:0; width:0; height:0;display:none;visibility:hidden}
