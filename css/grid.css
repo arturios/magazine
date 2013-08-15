@@ -1,154 +1,175 @@
 /*DEFINICION DE LAS CAJAS PRINCIPALES*/
+html, body {
+	overflow:hidden;
+}
 html,body,article,#wrapper {
-	position:relative; 
-	width:100%; 
-	height:100%; 
-	top:0; 
-	left:0; 
-	margin:0 auto; 
-	zoom:1; 
-	-webkit-text-size-adjust:100%; 
-	overflow:hidden; 
+	position:relative;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	margin:0 auto;
+	zoom:1;
+	-webkit-text-size-adjust:100%;
 }
 
 article,#wrapper {
-	-webkit-perspective:1200px; 
-	-moz-perspective:1200px; 
-	perspective:1200px; 
-	-webkit-transform-style:preserve-3d; 
-	-moz-transform-style:preserve-3d; 
-	transform-style:preserve-3d; 
-	background:url(images/loader.gif) no-repeat 50% 50%; 
-	box-shadow:0 0 2em black; 
+	-webkit-perspective:1200px;
+	-moz-perspective:1200px;
+	perspective:1200px;
+	-webkit-transform-style:preserve-3d;
+	-moz-transform-style:preserve-3d;
+	transform-style:preserve-3d;
+	background:url(images/loader.gif) no-repeat 50% 50%;
+	box-shadow:0 0 2em black;
+	z-index:100
 }
 
 /*
 #wrapper:before {
-	color:#fff; font-size:100px; position:absolute; padding:2em 0; top:0; width:100%; text-align:center; font-weight:300; color:#fdce28; text-shadow:-1px -1px 2px #3c3535,1px -1px 2px #3c3535,-1px 1px 2px #3c3535,1px 1px 2px #3c3535, 0 0 .25em white; 
+	content:"";
+	color:#fff;
+	font-size:100px;
+	position:absolute;
+	padding:2em 0;
+	top:0;
+	width:100%;
+	text-align:center;
+	font-weight:300;
+	color:#fdce28;
+	text-shadow:-1px -1px 2px #3c3535,1px -1px 2px #3c3535,-1px 1px 2px #3c3535,1px 1px 2px #3c3535, 0 0 .25em white;
 }
 
 #wrapper:after {
-	content:url('images/help.png'); position:fixed; right:1em; bottom:5em; z-index:100000
+	content:url('images/help.png');
+	position:fixed;
+	right:1em;
+	bottom:5em;
+	z-index:100000
 }
 
 */
 section {
-	position:absolute; 
-	width:100%; 
-	height:100%; 
-	top:0; 
-	left:0; 
-	visibility:hidden; 
-	overflow:hidden; 
-	-webkit-backface-visibility:hidden; 
-	-moz-backface-visibility:hidden; 
-	backface-visibility:hidden; 
-	-webkit-transform:translate3d(0, 0, 0); 
-	-moz-transform:translate3d(0, 0, 0); 
-	transform:translate3d(0, 0, 0); 
-	box-shadow:0 0 2em rgba(0,0,0,0.5)); 
-	-moz-box-shadow:0 0 2em rgba(0,0,0,0.5); 
-	-webkit-box-shadow:0 0 2em rgba(0,0,0,0.5); 
-	background-color:#fff; 
-	color:#848283; 
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	visibility:hidden;
+	overflow:hidden;
+	-webkit-backface-visibility:hidden;
+	-moz-backface-visibility:hidden;
+	backface-visibility:hidden;
+	-webkit-transform:translate3d(0, 0, 0);
+	-moz-transform:translate3d(0, 0, 0);
+	transform:translate3d(0, 0, 0);
+	box-shadow:0 0 2em rgba(0,0,0,0.5));
+	-moz-box-shadow:0 0 2em rgba(0,0,0,0.5);
+	-webkit-box-shadow:0 0 2em rgba(0,0,0,0.5);
+	background-color:#fff;
+	color:#848283;
+	float:left;
+	z-index:100;
+	background:white;
+	margin:0 auto
 }
 
 .section-current {
-	visibility:visible; 
+	visibility:visible;
 }
 
 .section-ontop {
-	z-index:999; 
+	z-index:999;
 }
 
 html {
 	background-color:#aaa
 }
 
-article,#wrapper {
-	overflow:auto; z-index:100
-}
-
 iframe {
-	width:100%; height:100%; overflow:hidden
-}
-
-.scroll {
-	overflow-y:auto
+	width:100%;
+	height:100%;
+	overflow:hidden
 }
 
 section,.hrt,.vrt,.frame,.box,.fixed {
 	overflow:hidden
 }
 
-section {
-	float:left; z-index:100; background:white; margin:0 auto
-}
-
 /*AJUSTE HORIZONTAL Y VERTICAL DE LAS IMAGENES*/
 .hrt {
-	height:auto; width:100%
+	height:auto;
+	width:100%
 }
 
 .vrt {
-	height:100%; width:auto
+	height:100%;
+	width:auto
 }
 
 .img-100 {
-	height:100%; width:100%
+	height:100%;
+	width:100%
 }
 
 .hrt,.vrt,.img-100 {
-	position:absolute; top:0; left:0; z-index:-1
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:-1
 }
 
 /*AJUSTE DE ESQUINA DE LAS IMAGANES*/
 .top-left {
-	top:0; left:0
+	background-position: left top;
 }
 
 .top-mid {
-	top:0; 
+	background-position: center top;
 }
 
 .top-right {
-	top:0; right:0
+	background-position: right top;
 }
 
 .mid-left {
-	left:0
+	background-position: left center;
 }
 
 .mid-mid {
+	background-position: center center;
 }
 
 .mid-right {
-	right:0
+	background-position: right center;
 }
 
 .bottom-left {
-	bottom:0; left:0
+	background-position: left bottom;
 }
 
 .bottom-mid {
-	bottom:0; 
+	background-position: center bottom;
 }
 
 .bottom-right {
-	bottom:0; right:0
+	background-position: right bottom;
 }
 
 /*DEFINICION DE TIPOS DE CAJAS*/
 .box {
-	float:left; position:absolute; z-index:2
+	float:left;
+	position:absolute;
+	z-index:2
 }
 
 .relative {
-	float:left; position:relative
+	float:left;
+	position:relative
 }
 
 .fixed {
-	position:fixed; 
+	position:fixed;
 }
 
 .static {
@@ -160,12 +181,20 @@ section {
 }
 
 .center {
-	display:block; height:100%; width:auto; margin-left:auto; margin-right:auto
+	display:block;
+	height:100%;
+	width:auto;
+	margin-left:auto;
+	margin-right:auto
 }
 
 /*INDEX Y GUIONADO DE SECCION Y TEXT*/
 .text {
-	z-index:3; overflow:hidden; -webkit-hyphens:auto; -moz-hyphens:auto; hyphens:auto
+	z-index:3;
+	overflow:hidden;
+	-webkit-hyphens:auto;
+	-moz-hyphens:auto;
+	hyphens:auto
 }
 
 /*overflow o no overflow */
@@ -179,7 +208,11 @@ section {
 
 /*ATAJOS PARA CAJAS DE LLENADO COMPLETO*/
 .frame,.frame-r {
-	position:absolute; top:0; left:0; width:100%; height:100%; 
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
 }
 
 .frame-r {
@@ -188,15 +221,30 @@ section {
 
 /* flotantes */
 .left,.float-left {
-	position:relative; float:left!important; 
+	position:relative;
+	float:left!important;
 }
 
 .right,.float-right {
-	position:relative; float:right!important; 
+	position:relative;
+	float:right!important;
 }
 
 .left,.right {
-	width:33%; margin:1em
+	width:33%;
+	margin:1em
+}
+
+
+.square:before{
+	content: "";
+	display: block;
+	padding-top: 100%;
+		/* initial ratio of 1:1*/
+}
+
+.square  {
+	position: relative !important;
 }
 
 /* GRID RELATIVO EN SI MISMO */
@@ -1039,4 +1087,70 @@ section {
 
 .width-4em {
 	width:4em
+}
+
+/* MAQUETACION USANDO EL NUMERO AUREO */
+
+.top-phi1 {
+	top:61.80339887500%;
+}
+
+.top-phi2 {
+	top:38.19660112502%;
+}
+
+.bottom-phi1 {
+	bottom:61.80339887500%;
+}
+
+.bottom-phi2 {
+	bottom:38.19660112502%;
+}
+
+.left-phi1 {
+	left:61.80339887500%;
+}
+
+.left-phi2 {
+	left:38.19660112502%;
+}
+
+.right-phi1 {
+	right:61.80339887500%;
+}
+
+.right-phi2 {
+	right:38.19660112502%;
+}
+
+.width-phi1 {
+	width:61.80339887500%;
+}
+
+.width-phi2 {
+	width:38.19660112502%;
+}
+
+.max-width-phi1 {
+	max-width:61.80339887500%;
+}
+
+.max-width-phi2 {
+	max-width:38.19660112502%;
+}
+
+.height-phi1 {
+	height:61.80339887500%;
+}
+
+.height-phi2 {
+	height:38.19660112502%;
+}
+
+.max-height-phi1 {
+	max-height:61.80339887500%;
+}
+
+.max-height-phi2 {
+	max-height:38.19660112502%;
 }

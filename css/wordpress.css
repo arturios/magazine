@@ -223,7 +223,7 @@ background-color:#888;
 	opacity:0;
 	position:absolute;
 	/* Opera stills show an outline if not hidden */
-visibility:hidden;
+    visibility:hidden;
 }
 
 /*iconos*/
