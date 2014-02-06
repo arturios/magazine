@@ -1050,12 +1050,25 @@ iframe {
 	top:38.19660112502%;
 }
 
+.top-phi3 {
+    top: 85.4101966250%
+}
+.top-phi4 {
+    top: 14.5898033750%
+}
+
 .bottom-phi1 {
 	bottom:61.80339887500%;
 }
 
 .bottom-phi2 {
 	bottom:38.19660112502%;
+}
+.bottom-phi3 {
+    bottom: 85.4101966250%
+}
+.bottom-phi4 {
+    bottom: 14.5898033750%
 }
 
 .left-phi1 {
@@ -1065,6 +1078,12 @@ iframe {
 .left-phi2 {
 	left:38.19660112502%;
 }
+.left-phi3 {
+    left: 85.4101966250%
+}
+.left-phi4 {
+    left: 14.5898033750%
+}
 
 .right-phi1 {
 	right:61.80339887500%;
@@ -1072,6 +1091,12 @@ iframe {
 
 .right-phi2 {
 	right:38.19660112502%;
+}
+.right-phi3 {
+    right: 85.4101966250%
+}
+.right-phi4 {
+    right: 14.5898033750%
 }
 
 .width-phi1 {
@@ -1081,6 +1106,12 @@ iframe {
 .width-phi2 {
 	width:38.19660112502%;
 }
+.width-phi3 {
+    width: 85.4101966250%
+}
+.width-phi4 {
+    width: 14.5898033750%
+}
 
 .max-width-phi1 {
 	max-width:61.80339887500%;
@@ -1089,13 +1120,24 @@ iframe {
 .max-width-phi2 {
 	max-width:38.19660112502%;
 }
+.max-width-phi3 {
+    max-width: 85.4101966250%
+}
+.max-width-phi4 {
+    max-width: 14.5898033750%
+}
 
 .height-phi1 {
 	height:61.80339887500%;
 }
-
 .height-phi2 {
 	height:38.19660112502%;
+}
+.height-phi3 {
+    height: 85.4101966250%
+}
+.height-phi4 {
+    height: 14.5898033750%
 }
 
 .max-height-phi1 {
@@ -1105,6 +1147,13 @@ iframe {
 .max-height-phi2 {
 	max-height:38.19660112502%;
 }
+.max-height-phi3 {
+    max-height: 85.4101966250%
+}
+.max-height-phi4 {
+    max-height: 14.5898033750%
+}
+
 
 figure img{  
   position: absolute; 

@@ -316,6 +316,56 @@ box-shadow:0 0 0 0 rgba(0, 0, 0,.5);
 transition:box-shadow .4s ease-in-out;
 }
 
+#social a:hover {
+    background-color:transparent;
+}
+#social ul {
+    position:relative;
+    list-style: none;
+    width: 100%;
+}
+#social ul li {
+    position:relative;
+    display:inline-block;
+    float:left;
+    color: #fff;
+    border-radius: .25em;
+    margin: .25em;
+    width: 40%;
+}
+#social ul li:before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width: 2em;
+    height:100%;
+    border-right: 1px solid #ccc;
+    background-color:rgba(127,127,127,.25);
+	border-top-left-radius:.25em;
+	border-bottom-left-radius:.25em;
+	-moz-border-radius-bottomleft:.25em;
+	-moz-border-radius-topleft:.25em;
+	-webkit-border-bottom-left-radius:.25em;
+	-webkit-border-top-left-radius:.25em
+}
+#social [class^="icon-"]:before,
+#social [class*=" icon-"]:before {
+    width: 1em;
+    margin-right:1em;
+    z-index:10;
+    color:#fff;
+}
+#social ul li a {
+    padding:.5em;
+    line-height:2em;
+    color: #ddd;
+}
+#social ul li a:hover {
+    color: #394264;
+    border-radius:.25em;
+}
+
 .input-container {
 position: relative;
 margin: 0 auto;
@@ -370,6 +420,7 @@ z-index:100;
 textarea{
 height:10em;
 }
+
 
 
 /* animaciones */
