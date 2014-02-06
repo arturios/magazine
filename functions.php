@@ -10,12 +10,6 @@ if ( !is_admin() ) {
 wp_register_style('desktop', get_template_directory_uri() . '/style.css', array(), '1.0', 'screen and (min-width: 721px)');
 wp_enqueue_style('desktop');
 
-wp_register_style('symbols', get_template_directory_uri() . '/symbols.css', array(), '3.0.1');
-wp_enqueue_style('symbols');
-
-wp_register_style('animations', get_template_directory_uri() . '/css/animations.css', array(), '1.0', 'screen and (min-width: 721px)');
-wp_enqueue_style('animations');
-
 wp_register_style('mobile', get_template_directory_uri() . '/mobile.css', array(), '1.0', 'handheld, screen and (max-width: 720px)');
 wp_enqueue_style('mobile'); // Enqueue it!
 
@@ -31,8 +25,8 @@ wp_deregister_script('jquery');
 wp_register_script('jquerymin', get_template_directory_uri() . '/js/jquery.min.js', array(jquery), '1.9.1',true);
 wp_enqueue_script('jquerymin');
 
-wp_register_script('hypher', get_template_directory_uri() . '/js/Hyphenator.js', array(), '4.1.0',true);
-wp_enqueue_script('hypher');
+// wp_register_script('hypher', get_template_directory_uri() . '/js/Hyphenator.js', array(), '4.1.0',true);
+// wp_enqueue_script('hypher');
 
 wp_register_script('swipe', get_template_directory_uri() . '/js/jquery.touchSwipe.min.js', array('jquery'), '1.0.0',true); 
 wp_enqueue_script('swipe');
@@ -47,15 +41,19 @@ function Revista_pagination()
 global $wp_query;
 $big = 999999999;
 echo paginate_links(array(
-'base' => str_replace($big, '%#%', get_pagenum_link($big)),
-'format' => '?paged=%#%',
-'show_all'     => True,
-'prev_text'    => __('<span class="icon-chevron-left"></span>'),
-'next_text'    => __('<span class="icon-chevron-right"></span>'),
-'current' => max(1, get_query_var('paged')),
-'total' => $wp_query->max_num_pages
+'base'         => str_replace($big, '%#%', get_pagenum_link($big)),
+'format'       => '?paged=%#%',
+'show_all'     => false,
+'prev_next'    => true,
+'prev_text'    => __('Anterior'),
+'next_text'    => __('Siguiente'),
+'current'      => max(1, get_query_var('paged')),
+'type'         => 'list',
+'total'        => $wp_query->max_num_pages
 ));
 }
+
+
 
 
 

@@ -42,25 +42,16 @@ if ($posttags) {
 <?php wp_head(); ?>
 <!-- /wp_head -->
 <!--[if lt IE 9]>
-<link rel='stylesheet' href="<?php echo get_template_directory_uri(); ?>/style.css">
-<style type="text/css">
-#mainsidebar, #sidebar2 {z-index:1000}
-#social a {background-color: white; color: black !important; padding: 0 4px}
+<link rel='stylesheet' href="<?php echo get_template_directory_uri(); ?>/css/ie.css">
 </style>
 <![endif]-->
-<style type="text/css">
-#content:before{content:'<?php bloginfo('name'); ?>'}
-</style>
 <noscript>
 <style type="text/css">
-figure .hrt{width:150%; left:-12.5%;height: auto}
-figure .vrt{height:150%; top: -12.5%; width: auto}
-#toggle:checked ~ #mainsidebar {top: 0}
-#content,#wrapper{background-color: gray; overflow-y: auto}
-section {position: relative; visibility: visible}
+body {visibility: visible}
+figure .hrt{width:150%; margin-left:-25%;height: auto}
+figure .vrt{height:150%; margin-top: -25%; width: auto}
 </style>
 </noscript>
 </head>
-<body <?php body_class(); ?>>
-<?php include (TEMPLATEPATH . '/inc/navigation.php' ); ?>
-<div id="wrapper" class="site-main content-area">
+<body role="document">
+<?php include (TEMPLATEPATH . '/inc/top_menu.php' ); ?>

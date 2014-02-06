@@ -1,4 +1,4 @@
- <section tabindex="0" class="">
+ <article tabindex="0" class="" id="comentarios">
  <div class="frame overflow-y">
  <div class="box top-1 left-2 width-20">
  <h1 class="condensed"><?php the_title(); ?></h1>
@@ -6,7 +6,7 @@
  <figure class="float-left width-4"><?php if ( has_post_thumbnail() ) {the_post_thumbnail('thumbnail');}?></figure>
  <div class="float-left max-width-16">
  <?php the_excerpt(); ?>
- <div class="hr-black">&nbsp;</div>
+ <div class="hr-white">&nbsp;</div>
  <div class="br">&nbsp;</div>
  </div>
  <div class="relative width-24">
@@ -67,7 +67,7 @@ return;
 <p>Debes estar <a href="<?php echo wp_login_url( get_permalink() ); ?>">conectado</a> para comentar</p>
 <?php else : ?>
 
-<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
+<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform" class="relative width-12 left-3">
 
 <?php if ( is_user_logged_in() ) : ?>
 
@@ -75,31 +75,35 @@ return;
 
 <?php else : ?>
 
-<div>
-<label for="author">Nombre <?php if ($req) echo "(obligatorio)"; ?></label>
-<input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="44" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
+<label for="author">Nombre <?php if ($req) echo "(obligatorio)"; ?>:</label>
+<div class="input-container">
+<input type="text" name="author" id="author" placeholder="tu nombre o alias" value="<?php echo esc_attr($comment_author); ?>" size="44" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
+<span class="input-icon icon-user"></span>
 </div>
 
-<div>
-<label for="email">Correo (no se publicará <?php if ($req) echo "y es obligatorio"; ?>)</label>
-<input type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="44" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
+<label for="email">Correo (no se publicará <?php if ($req) echo "y es obligatorio"; ?>):</label>
+<div class="input-container">
+<input type="text" name="email" id="email" placeholder="tu_correo@obligatorio.es" value="<?php echo esc_attr($comment_author_email); ?>" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
+<span class="input-icon icon-envelope"></span>
 </div>
 
-<div>
-<label for="url">Página</label>
-<input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="44" tabindex="3" />
+<label for="url">Página:</label>
+<div class="input-container">
+<input type="text" name="url" placeholder="tu_pagina.com" id="url" value="<?php echo esc_attr($comment_author_url); ?>" tabindex="3" />
+<span class="input-icon icon-external-link"></span>
 </div>
 
 <?php endif; ?>
 
 <!--<p>You can use these tags: <code><?php echo allowed_tags(); ?></code></p>-->
 
-<div>
-<h3 class="padding-top border-bottom">Comentario:</h3>
-<textarea name="comment" id="comment" cols="44" rows="10" tabindex="4"></textarea>
+<label for="coment">Comentario:</label>
+<div class="input-container">
+<textarea name="comment" id="comment" placeholder="texto del comentario" tabindex="4"></textarea>
+<span class="input-icon icon-edit"></span>
 </div>
 <br />
-<div>
+<div class="input-container">
 <input name="submit" type="submit" id="submit" tabindex="5" value="Envíanos el comentario" />
 <?php comment_id_fields(); ?>
 </div>
@@ -118,5 +122,5 @@ return;
 </div>
 </div>
 </div>
-</section>
+</article>
 

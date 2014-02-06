@@ -1,0 +1,17 @@
+
+/* 
+Theme Name: simple magazine Theme
+Theme URI: none
+Description: para hacer revistas
+Author: Arturo R&iacute;os
+Author URI: http://localhost
+Version: 1.2.1
+*/
+
+
+
+@import url('normalize.css'); /* normalize http://necolas.github.io/normalize.css/ */
+@import url('typography.css'); /* carga las tipografías y tamaños a usar */
+@import url('main_format.css'); /* formato general de los textos */
+@import url('icons.css'); /* carga las tipografías de iconos */
+@import url('mobile.css'); /* carga el formato de móvil */

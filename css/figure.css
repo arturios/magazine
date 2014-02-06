@@ -1,0 +1,47 @@
+figure img{  
+  position: absolute; 
+  width:auto;
+  height:auto;
+  padding:0;
+}
+
+.hrt {
+    width: 100%;
+    height:auto;
+}
+.vrt {
+    height:100%;
+    width:auto;
+}
+.img-100 {
+	height:100%;
+	width:100%;
+}
+
+.hrt,.vrt,.img-100 {
+	position:absolute;
+	z-index:-1;
+}
+
+figure{
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-position:center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+figure.left,figure.float-left {
+	float:left!important;
+}
+
+figure.right, figure.float-right {
+	float:right!important;
+}
+
+figure.left,figure.right,figure.float-left,figure.float-right {
+	position:relative !important ;
+	width:33% !important;
+	margin:1em
+}

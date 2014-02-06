@@ -10,7 +10,7 @@
 <a href="https://plus.google.com/share?url=<?php the_permalink();?>" target="_blank" title="Compartir en Google+" class="icon-google-plus">Google +</a>
 </li>
 <li>
-<a href="http://www.tuenti.com/share?url=<?php the_permalink();?>" target="_blank" title="Comenta en Tuenti" class="icon-tuenti">Tuenti</a>
+<a href="http://www.tuenti.com/share?url=<?php the_permalink();?>" target="_blank" title="Comenta en Tuenti" class="icon-comment">Tuenti</a>
 </li>
 <li>
 <a href="http://www.meneame.net/submit.php?url=<?php the_permalink();?>" target="_blank" title="Enviar este artículo a Meneame" class="icon-hand-right">Menéame</a>

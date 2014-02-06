@@ -7,143 +7,129 @@ a:hover {
 }
 
 .transparent {
-	background-color:transparent!important
+	background-color:transparent
 }
-
 .black {
-	background-color:#3c3535!important
+	background-color:#333
 }
-
-.dark-blue {
-	background-color:#1060ce!important
-}
-
-.bblack {
-	background-color:#000!important
-}
-
 .gray {
-	background-color:#848283!important
+	background-color:#808080
 }
-
-.green {
-	background-color:#899449!important
-}
-
-.red {
-	background-color:#c71f2d!important
-}
-
-.brown {
-	background-color:#633f33!important
-}
-
-.white {
-	background-color:#fff!important
-}
-
 .lightgray {
-	background-color:#e2ddda!important
+	background-color:#ccc
 }
-
-.lightblue {
-	background-color:#ebf5f5!important
+.white {
+	background-color:#f2f2f2
 }
-
+.wwhite {
+	background-color:#fff
+}
+.bblack {
+    background-color: #000;
+}
+.blueblack {
+	background-color:#04162f
+}
+.dark-blue,.darkblue {
+	background-color:#126ded
+}
 .blue {
-	background-color:#73c1e7!important
+	background-color:#a0c5f8
 }
-
+.lightblue {
+	background-color:#e7f0fd
+}
+.green {
+	background-color:#9eab54
+}
+.lightgreen {
+	background-color:#d8ddbb
+}
+.red {
+	background-color:#931520
+}
 .orange {
-	background-color:#d39c43!important
+	background-color:#df8020
 }
-
-.beige {
-	background-color:#b39f8d!important
-}
-
 .yellow {
-	background-color:#fdce28!important
+	background-color:#dfbf20
+}
+.beige {
+	background-color:#D2CDC0;
+}
+.brown {
+	background-color:#432b23
+}
+.darkgreen {
+	background-color:#5f6732
 }
 
-.black,.dark-blue,.bblack,.gray,.red,.green,.brown {
-	color:#fff
-}
+.white {color:#808080;}
+.lightblue,.lightgreen,.lightyellow,.lightgray,.blue,.yellow,.beige {color:#04162f;}
+.white a,.lightblue a,.lightgreen a,.lightyellow a,.lightgray a,.blue a,.yellow a,.beige a,.orange a {color:#126ded;}
+.white a:hover,.lightblue a:hover,.lightgreen a:hover,.lightyellow a:hover,.lightgray a:hover,.blue a:hover,.yellow a:hover,.beige a:hover,.orange a:hover {color:#df2030;}
 
-.black a,.dark-blue a,.bblack a,.gray a,.red a,.green a,.brown a {
-	color:#aaa
-}
-
-.text-white a:hover,.text-lightgray a:hover,.text-lightblue a:hover,.text-blue a:hover,.text-orange a:hover,.text-beige a:hover,.text-yellow a:hover,.black a:hover,.dark-blue a:hover,.bblack a:hover,.gray a:hover,.red a:hover,.green a:hover,.brown a:hover {
-	color:#444!important;
-	text-shadow:0 0 .5em #999,0 0 .4em #aaa,0 0 .6em #ddd,0 0 .8em #eee,0 0 1em #fff,0 0 1.5em #fff!important
-}
-
-.white,.lightgray,.lightblue,.blue,.orange,.beige,.yellow {
-	color:#3c3535
-}
-
-.white a,.lightgray a,.lightblue a,.blue a,.orange a,.beige a,.yellow a {
-	color:#777
-}
-
-.text-black a:hover,.text-dark-blue a:hover,.text-bblack a:hover,.text-gray a:hover,.text-red a:hover,.text-green a:hover,.text-brown a:hover,.white a:hover,.lightgray a:hover,.lightblue a:hover,.blue a:hover,.orange a:hover,.beige a:hover,.yellow a:hover {
-	color:#eee;
-	text-shadow:-1px -1px 2px #000,1px -1px 2px #000,-1px 1px 2px #000,1px 1px 2px #000!important
-}
-
-.text-white {
-	color:#fff!important
-}
+.gray,.darkblue,.dark-blue,.green,.darkgreen,.black,.brown,.red,.blueblack,.bblack,.orange {color:#f2f2f2}
+.gray a,.darkblue a,.dark-blue a,.green a,.darkgreen a,.black a,.brown a,.red a,.blueblack a,.bblack a {color:#dfbf20}
+.gray a:hover,.darkblue a:hover,.dark-blue a:hover,.darkgreen a:hover,.black a:hover,.brown a:hover,.blueblack a:hover,.bblack a:hover,.red a:hover {color:#df8020}
+.green a:hover{color:#04162f}
 
 .text-black {
-	color:#3c3535!important
+	color:#333 !important
 }
-
-.text-bblack {
-	color:#000!important
-}
-
 .text-gray {
-	color:#848283!important
+	color:#808080 !important
 }
-
 .text-lightgray {
-	color:#b5bab6!important
+	color:#ccc !important
 }
-
-.text-red {
-	color:#c71f2d!important
+.text-white {
+	color:#f2f2f2 !important
 }
-
-.text-green {
-	color:#899449!important
+.text-wwhite {
+	color:#fff !important
 }
-
+.text-bblack {
+    color:#000;
+}
+.text-blueblack {
+	color:#04162f !important
+}
+.text-dark-blue,.text-darkblue {
+	color:#126ded !important
+}
 .text-blue {
-	color:#73c1e7!important
+	color:#a0c5f8 !important
 }
-
-.text-brown {
-	color:#633f33!important
-}
-
-.text-orange {
-	color:#d39c43!important
-}
-
-.text-beige {
-	color:#b39f8d!important
-}
-
-.text-yellow {
-	color:#fdce28!important
-}
-
-.text-dark-blue {
-	color:#1060ce!important
-}
-
 .text-lightblue {
-	color:#ebf5f5!important
+	color:#e7f0fd !important
 }
+.text-green {
+	color:#9eab54 !important
+}
+.text-lightgreen {
+	color:#d8ddbb !important
+}
+.text-red {
+	color:#931520 !important
+}
+.text-orange {
+	color:#df8020 !important
+}
+.text-yellow {
+	color:#dfbf20 !important
+}
+.text-beige {
+	color:#D2CDC0 !important
+}
+.text-brown {
+	color:#432b23 !important
+}
+.text-darkgreen {
+	color:#5f6732 !important
+}
+
+a.text-white:hover,a.text-lightblue:hover,a.text-lightgreen:hover,a.text-lightyellow:hover,a.text-lightgray:hover,a.text-blue:hover,a.text-yellow:hover,a.text-beige:hover,a.text-orange:hover {color:#df2030  !important;}
+
+a.text-gray:hover,a.text-darkblue:hover,a.text-dark-blue:hover,a.text-darkgreen:hover,a.text-black:hover,a.text-brown:hover,a.text-blueblack:hover,a.text-bblack:hover,a.text-red:hover {color:#df8020  !important}
+a.text-green:hover{color:#04162f  !important}

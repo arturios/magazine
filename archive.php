@@ -1,15 +1,4 @@
-<?php get_header(); ?>
-<article <?php post_class(); ?>>
-<div id="fontsize">8.25</div>
-<section tabindex="0" class="white text-white text-stroke">
-<figure class="frame grid">
-<img src="<?php echo get_header_image(); ?>" class="hrt full" alt="portada" />
-</figure>
-<div class="box bottom-0 left-0 width-12 height-4 nomobile">
-<img src="<?php echo get_template_directory_uri(); ?>/images/logotipo.png" class="vrt" alt="logo" />
-</div>
-<header class="relative top-0 left-0 z-index-10 padding-bottom">
-
+<?php include (TEMPLATEPATH . '/inc/header2.php' ); ?>
 <?php /* If this is a category archive */ if (is_category()) { ?>
 <h1 class="condensed font-size-900 no-padding line-height-100 text-3d">Artículos de… &nbsp;</h1>
 <br />
@@ -44,11 +33,12 @@
 
 </header>
 
-<div class="relative left-0 width-24 overflow-y z-index-10">
+<div class="relative left-0 width-24 overflow-y z-index-10" role="article">
 <?php get_template_part('loop'); ?>
 </div>
 
-</section>
 </article>
-</div>
+<div id="fontsize">8.25</div>
+<?php get_sidebar(); ?>
+</section>
 <?php get_footer(); ?>

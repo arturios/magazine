@@ -1,5 +1,5 @@
 <div class="padding">
-<?php global $query_string; query_posts( $query_string . '&order=ASC' ); if (have_posts()) : while (have_posts()) : the_post(); ?> 
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
 
 <div class="relative width-24">
 
@@ -12,7 +12,7 @@
       <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="text-blue font-size-150 condensed text-spacing loop"><?php the_title(); ?></a>
     </h2>
     <!-- /Post Title -->
-    <div class="width-12 line-height-110 padding-bottom">
+    <div class="width-18 line-height-110 padding-bottom">
       <!-- Post Except -->
       <div class="serif"><?php the_excerpt(); ?></div>
       <!-- /Post Except -->
@@ -44,7 +44,7 @@
       <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="text-yellow font-size-150 condensed loop"><?php the_title(); ?></a>
     </h2>
     <!-- /Post Title -->
-    <div class="width-12 float-right text-right line-height-110 padding-bottom">
+    <div class="width-18 float-right text-right line-height-110 padding-bottom">
       <!-- Post Except -->
       <?php the_excerpt(); ?>
       <!-- /Post Except -->
