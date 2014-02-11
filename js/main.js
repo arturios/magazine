@@ -303,7 +303,13 @@ function loadUrl(pagina) {
 	if (pagina == undefined) {
 		return;
 	}
-	history.pushState({
+	if (!support) {
+		document.location.href = pagina;
+        return;
+	};
+
+
+    history.pushState({
 		path: pagina
 	}, pagina, pagina);
 	$('nav').load(pagina + ' nav > *');
