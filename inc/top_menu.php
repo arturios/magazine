@@ -1,3 +1,6 @@
+
+<div class="box bottom-0 left-0 width-24 height-2em z-index-100"><figure class="text-center width-2em nogrid"><img src="<?php echo get_template_directory_uri(); ?>/images/scroll%20down.png" class="height-24 vrt"></figure></div>
+
 <nav class="top_menu">
 <ul>
 <li>

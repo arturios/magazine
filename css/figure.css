@@ -24,13 +24,13 @@ figure img{
 }
 
 figure{
-background-repeat:no-repeat;
-background-attachment:fixed;
+background-repeat:no-repeat !important;
+background-attachment:fixed !important;
 background-position:center center;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
+-webkit-background-size: cover !important;
+-moz-background-size: cover !important;
+-o-background-size: cover !important;
+background-size: cover !important;
 }
 figure.left,figure.float-left {
 	float:left!important;

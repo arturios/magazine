@@ -357,7 +357,7 @@ figure:after {
 	-moz-opacity:.5;
 	opacity:.5
 }
-
+.nogrid:after {background: none !important}
 .mm {
 	background-image:url('../images/mm.png');
 	background-repeat:repeat

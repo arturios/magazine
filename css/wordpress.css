@@ -2,10 +2,10 @@ body {
 background:#D2CDC0 url(../images/ajax-loader.gif) no-repeat 50% 50%;
 }
 
-.sidebar a, #pagination a, #pagination .current, .sidebar > div, #mainsidebar {
+.sidebar a, #pagination a, #pagination .current, .sidebar > div, #mainsidebar, #comentarios {
 color:#fff;
 text-decoration:none;
-font-size:1em;
+font-size:14px;
 line-height:1.5em;
 padding:.25em;
 min-width:2.5em;
@@ -77,25 +77,27 @@ margin:.5em 0
 #mainsidebar, #comentarios{
 position:relative;
 width:100%;
-height:100%;
+height: 100%;
 top:0;
 left:0;
-bottom:0;
-right:0;
-margin: auto;
-zoom:1;
-background-image: none;
 background-color:#394264;
 color: #fff;
+overflow-y: auto;
 }
 
 /*formato del sidebar */
 .sidebar {
 position:relative;
 top:0 left:0;
-width:30%;
+width:45%;
 float:left;
-margin:0 1em;
+margin:0;
+padding: 1em;
+background-color:#394264;
+}
+
+@media screen and (max-width:800px) {
+.sidebar {width: 100%;}
 }
 
 .sidebar > div {
