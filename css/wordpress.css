@@ -5,7 +5,11 @@ background:#D2CDC0 url(../images/ajax-loader.gif) no-repeat 50% 50%;
 .sidebar a, #pagination a, #pagination .current, .sidebar > div, #mainsidebar, #comentarios {
 color:#fff;
 text-decoration:none;
+<<<<<<< HEAD
 font-size:14px;
+=======
+font-size:14px !important;
+>>>>>>> d469a11ce852c10dd069527d7c65e312541ec92f
 line-height:1.5em;
 padding:.25em;
 min-width:2.5em;
