@@ -31,7 +31,7 @@
 
 <?php } ?>
 
-</header>
+</div>
 
 <div class="relative left-0 width-24 overflow-y z-index-10" role="article">
 <?php get_template_part('loop'); ?>

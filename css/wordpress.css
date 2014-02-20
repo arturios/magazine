@@ -5,11 +5,8 @@ background:#D2CDC0 url(../images/ajax-loader.gif) no-repeat 50% 50%;
 .sidebar a, #pagination a, #pagination .current, .sidebar > div, #mainsidebar, #comentarios {
 color:#fff;
 text-decoration:none;
-<<<<<<< HEAD
 font-size:14px;
-=======
-font-size:14px !important;
->>>>>>> d469a11ce852c10dd069527d7c65e312541ec92f
+font-size: 1vw;
 line-height:1.5em;
 padding:.25em;
 min-width:2.5em;
@@ -93,7 +90,7 @@ overflow-y: auto;
 .sidebar {
 position:relative;
 top:0 left:0;
-width:45%;
+width:30%;
 float:left;
 margin:0;
 padding: 1em;
@@ -290,11 +287,11 @@ box-shadow:0 0 0 0 rgba(0, 0, 0,.5);
 transition:box-shadow .4s ease-in-out;
 }
 
-.top_menu:hover + section article{
+.top_menu:hover + section {
 	-webkit-filter:brightness(0.25) saturate(0);
 	filter:brightness(0.25) saturate(0);
 }
-article {
+section {
 -webkit-transition:all .4s ease-in-out;
 -moz-transition:all .4s ease-in-out;
 -o-transition:all .4s ease-in-out;
@@ -448,3 +445,29 @@ height:10em;
 @keyframes moveToRight { 
 	to { transform: translateX(100%); }
 }
+
+
+/*parallax */
+
+section{
+  overflow-x:hidden;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  -webkit-perspective: 1px;
+  -webkit-transform-style: preserve-3d;
+  -moz-perspective: 1px;
+  -moz-transform-style: preserve-3d;
+  -ie-perspective: 1px;
+  -ie-transform-style: preserve-3d;
+  -o-perspective: 1px;
+  -o-transform-style: preserve-3d;
+}
+.parallax{
+    transform: translate3d(0,0,-2px) scale(3);
+    -webkit-transform: translate3d(0,0,-2px) scale(3);
+    -moz-transform: translate3d(0,0,-2px) scale(3);
+    -ie-transform: translate3d(0,0,-2px) scale(3);
+    -o-transform: translate3d(0,0,-2px) scale(3);
+}
+
+/* */
