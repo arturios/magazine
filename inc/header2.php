@@ -5,7 +5,7 @@
 <img src="<?php echo get_header_image(); ?>" class="hrt full" alt="portada" />
 </figure>
 <span class="box bottom-0 left-0 nomobile z-index-10">
-<img src="<?php echo get_template_directory_uri(); ?>/images/logotipo.png" class="height-1" alt="logo" />
+<img src="<?php echo get_template_directory_uri(); ?>/images/logotipo.png" class="width-8" alt="logo" />
 </span>
 </header>
 <article tabindex="0" class="transparent text-white text-stroke">

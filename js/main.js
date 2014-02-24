@@ -153,7 +153,7 @@ function Resize_Page() {
 	sheight = (100 * ratio) + '%';
 	if (ratio > 1) {
 		sheight = '100%';
-		swidth = (100 * ratio) + '%';
+		swidth = (100 / ratio) + '%';
 	}
 	$('.square').css({
 		width: swidth,
