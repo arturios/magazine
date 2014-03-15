@@ -11,17 +11,6 @@ html, body, section, article{
     overflow:hidden;
 	zoom:1;
 	-webkit-text-size-adjust:100%;
-    /*
-	-webkit-perspective:1200px;
-	-moz-perspective:1200px;
-	perspective:1200px;
-	-webkit-transform-style:preserve-3d;
-	-moz-transform-style:preserve-3d;
-	transform-style:preserve-3d;
-	-webkit-transform:translate3d(0, 0, 0);
-	-moz-transform:translate3d(0, 0, 0);
-	transform:translate3d(0, 0, 0);
-    */
     background-color:#f2f2f2;
 }
 
@@ -31,12 +20,6 @@ section {
 section, article {
     position:relative;
 }
-
-article {
-/*	box-shadow:0 0 2em rgba(0,0,0,0.5));
-	-moz-box-shadow:0 0 2em rgba(0,0,0,0.5);
-	-webkit-box-shadow:0 0 2em rgba(0,0,0,0.5);
-*/}
 
 iframe {
 	width:100%;

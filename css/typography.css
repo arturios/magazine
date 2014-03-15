@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,700italic|Oswald|Quattrocento:400,700);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,400italic,700italic|Oswald|Quattrocento:400,700);
 
 /*DEFINICION DE TIPOGRAFIAS*/
 /* */
@@ -13,11 +13,9 @@ h1,h2,h3,h4,h5,h6,.listad,.capital:first-letter, .serif{
 html>body{font-size:14px}
 body{
     line-height:1.5em; 
-    border:2px solid #000; 
-    background-color:#111;
 }
 
 /*TIPOGRAFIAS ESPECIALES*/
 .monospace{font-family:"American Typewriter",'Courier New',Courier,monospace;text-align:left}
-.ultrafina{font-family:'Lato',sans-serif;font-weight:300; letter-spacing:0.05em}
+.ultrafina{font-family:'Lato',sans-serif;font-weight:100; letter-spacing:0.05em}
 .condensed{font-family:'Oswald',sans-serif;text-transform:uppercase;}

@@ -222,27 +222,27 @@ vertical-align:middle;
 }
 
 .padding {
-	padding:1em !important
+	padding:1rem !important
 }
 
 .padding-left {
-	padding-left:1em !important
+	padding-left:1rem !important
 }
 
 .padding-right {
-	padding-right:1em !important
+	padding-right:1rem !important
 }
 
 .padding-top {
-	padding-top:1em !important
+	padding-top:1rem !important
 }
 
 .padding-bottom {
-	padding-bottom:1em !important
+	padding-bottom:1rem !important
 }
 
 .padding-title {
-	padding:.66666666666666665em
+	padding:.66666666666666665rem
 }
 
 .padding-double {
@@ -252,6 +252,16 @@ vertical-align:middle;
 .padding-small {
 	padding:4px;
 	margin:4px
+}
+
+.padding-05em {
+	position:absolute !important;
+	top:.5em !important;
+	left:.5em !important;
+	bottom:.5em !important;
+	right:.5em !important;
+	width:auto !important;
+	height:auto !important
 }
 
 .padding-1em {

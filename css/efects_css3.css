@@ -8,8 +8,7 @@
 }
 
 .text-stroke {
-	text-shadow:-1px -1px 2px #3c3535,1px -1px 2px #3c3535,-1px 1px 2px #3c3535,1px 1px 2px #3c3535;
-	padding-right:4px
+	text-shadow:-1px -1px 0 #3c3535,1px -1px 0 #3c3535,-1px 1px 0 #3c3535,1px 1px 0 #3c3535;
 }
 
 .text-3d {

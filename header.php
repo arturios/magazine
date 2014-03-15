@@ -13,7 +13,7 @@
 <title><?php if (is_home() || is_front_page()) { echo bloginfo('name'); } else { echo wp_title(''); } ?></title>
 
 <!-- Meta -->
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=yes">
 <meta name="description" content="<?php bloginfo('description'); ?>">
 <meta name="description" content="<?php if((is_home()) || (is_front_page())) {
 echo bloginfo('name'); bloginfo('description');

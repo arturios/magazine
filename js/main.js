@@ -68,7 +68,7 @@ $(document).keydown(function (event) {
 
 function inicio() {
 	$('section').scrollTop(0);
-	$('section').removeClass('section-moveToLeft section-moveToRight');
+	$('section').removeClass('section-moveToRight section-moveToLeft');
 	if (support) {
 		$('.full').ConvertToBackground();
 	}
@@ -88,14 +88,16 @@ function inicio() {
 	})
 
 	$('section').scrollStopped(function () {
-		goto(0);
+		if ((document.documentElement.clientWidth / window.innerWidth) == 1) {goto(0);}
 	});
 	fsize = $('#fontsize').html();
 	if (fsize == undefined) {
 		fsize = 9;
 	}
 	$("section").swipe({
+/* */  allowPageScroll:"auto", /* */
 		swipe: function (event, direction, distance, duration, fingerCount) {
+    		if ((document.documentElement.clientWidth / window.innerWidth) !== 1) {return;}
 			if (direction == 'up') {
 				goto(1);
 			}
@@ -116,9 +118,6 @@ function inicio() {
 		//Default is 75px, set to 0 for demo so any distance triggers swipe
 		threshold: 75
 	});
-
-	goto(0);
-	Resize_Page();
 }
 
 function goto(inc) {
@@ -140,9 +139,8 @@ function Resize_Page() {
 	var Def_width = 640;
 	var Def_height = 480;
 	var ajuste = 1;
-	ratio_i = Def_width / Def_height;
-	inicial = Math.sqrt((Def_width * Def_height)); // + (Def_height * Def_height));
-	final = Math.sqrt(($('article').width() * $('article').height())); // + ($('article').height() * $('article').height()));
+	inicial = Math.sqrt((Def_width * Def_height));
+	final = Math.sqrt(($('article').width() * $('article').height()));
 	ratio = $('article').width() / $('article').height();
 	font_size = ajuste * (fsize / inicial) * final * (1 + (1 - ratio) / 16);
 	$('body').css({

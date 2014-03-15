@@ -72,7 +72,8 @@ p {padding:0;margin:0}
 p+p {text-indent: 0 !important; padding-top:1em}
 
 /*FORMATO DE LA WEB*/
-section * {padding:.5em;}
+section *{padding:.5em;}
+section span {padding:0}
 
 iframe, object, figure, img, figure img,figure img .vrt,figure img .hrt {
   position: relative; 
