@@ -54,7 +54,7 @@
 	transform:translate();
 	-ms-transform:translate();
 }
-.keynote:hover+section, .keynote:focus+section, .keynote:active+section {
+.keynote:hover+article, .keynote:focus+article, .keynote:active+article {
 	z-index:100
 }
 .slide a:hover {

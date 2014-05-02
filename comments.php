@@ -1,4 +1,4 @@
- <article tabindex="0" class="" id="comentarios">
+ <article tabindex="0" class="dark-blue" id="comentarios">
  <div class="frame overflow-y">
  <div class="box top-1 left-2 width-20">
  <h1 class="condensed"><?php the_title(); ?></h1>

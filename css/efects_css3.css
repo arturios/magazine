@@ -361,3 +361,25 @@
 	-webkit-filter:hue-rotate(180deg);
 	filter:hue-rotate(180deg)
 }
+/*parallax */
+
+section,.parent_parallax {
+  overflow-x:hidden;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  -webkit-perspective: 1px;
+  -webkit-transform-style: preserve-3d;
+  -moz-perspective: 1px;
+  -moz-transform-style: preserve-3d;
+  -ie-perspective: 1px;
+  -ie-transform-style: preserve-3d;
+  -o-perspective: 1px;
+  -o-transform-style: preserve-3d;
+}
+.parallax {
+    transform: translate3d(0,0,-2px) scale(3);
+    -webkit-transform: translate3d(0,0,-2px) scale(3);
+    -moz-transform: translate3d(0,0,-2px) scale(3);
+    -ie-transform: translate3d(0,0,-2px) scale(3);
+    -o-transform: translate3d(0,0,-2px) scale(3);
+}

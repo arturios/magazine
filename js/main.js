@@ -75,6 +75,7 @@ function inicio() {
 	else {
 		$('.full').resizeToParent();
 	}
+    Resize_Page();
 	$('a.loop,.sidebar a, .top_menu a').click(function (e) {
 		e.preventDefault();
 		pagina = $(this).attr('href');
@@ -90,14 +91,12 @@ function inicio() {
 	$('section').scrollStopped(function () {
 		if ((document.documentElement.clientWidth / window.innerWidth) == 1) {goto(0);}
 	});
-	fsize = $('#fontsize').html();
-	if (fsize == undefined) {
-		fsize = 9;
-	}
 	$("section").swipe({
 /* */  allowPageScroll:"auto", /* */
 		swipe: function (event, direction, distance, duration, fingerCount) {
     		if ((document.documentElement.clientWidth / window.innerWidth) !== 1) {return;}
+        	if ($('body').width() < 721) {return;}
+
 			if (direction == 'up') {
 				goto(1);
 			}
@@ -116,11 +115,12 @@ function inicio() {
 			}
 		},
 		//Default is 75px, set to 0 for demo so any distance triggers swipe
-		threshold: 75
+		threshold: 40
 	});
 }
 
 function goto(inc) {
+	if ($('body').width() < 721) {return;}
 	pagenumber = (inc * $('article').height()) + parseInt($('section').scrollTop() / $('article').height() + .5) * $('article').height();
 	Duration = 500 * (Math.abs(pagenumber - $('section').scrollTop()) / $('article').height());
 	if (Duration !== 0) {
@@ -132,21 +132,27 @@ function goto(inc) {
 	}
 }
 
+function Resize_fonts(){
+	fsize = $('#fontsize').html();
+	if (fsize == undefined) {
+		fsize = 9;
+	}
+	var ajuste = .95;
+	initial_value = 554.2562584220408;//Math.sqrt((640 * 480));
+	end_value = Math.sqrt(($('article').width() * $('article').height()));
+	ratio = $('article').width() / $('article').height();
+    if (ratio < 1) {ajuste = .85;}
+	font_size = ajuste * (fsize / initial_value) * end_value * (1 + (1 - ratio) / 16);
+	$('body').css({
+		fontSize: font_size + 'px'
+	});
+}
+
 function Resize_Page() {
 	if (!support) {
 		$('.full').resizeToParent();
 	};
-	var Def_width = 640;
-	var Def_height = 480;
-	var ajuste = 1;
-	inicial = Math.sqrt((Def_width * Def_height));
-	final = Math.sqrt(($('article').width() * $('article').height()));
-	ratio = $('article').width() / $('article').height();
-	font_size = ajuste * (fsize / inicial) * final * (1 + (1 - ratio) / 16);
-	$('body').css({
-		fontSize: font_size + 'px'
-	});
-
+    Resize_fonts();
 	swidth = '100%';
 	sheight = (100 * ratio) + '%';
 	if (ratio > 1) {
@@ -160,7 +166,7 @@ function Resize_Page() {
 
 	if ($('body').width() < 721) {
 		$('body').css({
-			fontSize: '3vw'
+			fontSize: '18px'
 		});
 		$('body, section, article').css({
 			width: '100%'
@@ -188,7 +194,8 @@ jQuery.fn.resizeToParent = function (options) {
 	var defaults = {
 		parent: "figure"
 	};
-	var options = jQuery.extend(defaults, options);
+	if ($('body').width() < 721) {return;}
+    var options = jQuery.extend(defaults, options);
 	return this.each(function () {
 		var o = options;
 		var obj = jQuery(this);
@@ -245,6 +252,7 @@ jQuery.fn.ConvertToBackground = function (options) {
 	var defaults = {
 		parent: "figure"
 	};
+    if ($('body').width() < 721) {return;}
 	var options = jQuery.extend(defaults, options);
 	return this.each(function () {
 		var o = options;
@@ -306,7 +314,6 @@ function loadUrl(pagina) {
         return;
 	};
 
-
     history.pushState({
 		path: pagina
 	}, pagina, pagina);
@@ -317,6 +324,7 @@ function loadUrl(pagina) {
 		$('section').load(pagina + ' section > *', function (response, status, xhr) {
 			if (status == 'success') {
 				$('section').fadeIn(500, function () {
+                    Resize_fonts();
 					inicio();
 				});
 			}

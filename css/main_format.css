@@ -15,7 +15,7 @@ li p, li ul{
 }
 /* you shall not pass */
 .text {
-    z-index:3;
+    z-index:100;
     word-wrap: break-word;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
@@ -40,14 +40,18 @@ h2, .h2-like {
 	line-height:1em;
 	margin-bottom:1em;
 }
-
+p+h2 {
+    margin-top:1em
+}
 h3, .h3-like {
 	margin:0;
 	font-size:1.375em;
 	line-height:1.0909090909090908em;
 	margin-bottom:1.0909090909090908em;
 }
-
+p+h3 {
+	margin-top:1.0909090909090908em;
+}
 h4, .h4-like {
 	margin:0;
 	font-size:1.25em;
@@ -55,7 +59,9 @@ h4, .h4-like {
 	margin-bottom:1.2em;
 	font-weight:bold;
 }
-
+p+h4{
+    margin-top:1.2em;
+}
 h5, .h5-like {
 	margin:0;
 	font-size:1.25em;
@@ -64,7 +70,6 @@ h5, .h5-like {
 	font-weight:normal;
 	font-variant:small-caps;
 }
-
 ul, ol {
 	margin:0 0 .25em 1.5em;
 }
