@@ -371,6 +371,8 @@ figure:after {
 }
 [class^="texture-"]:after,
 [class*=" texture-"]:after,
+[class^="preset-"]:after,
+[class*=" preset-"]:after,
 figure:after {
 	content:" ";
 	position:absolute;
@@ -380,7 +382,14 @@ figure:after {
 	height:100%;
 	background-repeat:repeat;    
 }
-
+[class^="preset-"]:after,
+[class*=" preset-"]:after {
+    background:url('') no-repeat center center;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}
 .texture-sepia:after {
 	background-image:url('../images/sepia.png');
 }
@@ -419,4 +428,25 @@ figure:after {
 
 .texture-encalado:after {
 	background-image:url('../images/encalado.png');
+}
+.preset-1:after {
+	background-image:url('../images/preset1.svg');
+}
+.preset-2:after {
+	background-image:url('../images/preset2.svg');
+}
+.preset-3:after {
+	background-image:url('../images/preset3.svg');
+}
+.preset-4:after {
+	background-image:url('../images/preset4.svg');
+}
+.preset-5:after {
+	background-image:url('../images/preset5.svg');
+}
+.preset-6:after {
+	background-image:url('../images/preset6.svg');
+}
+.preset-7:after {
+	background-image:url('../images/preset7.svg');
 }

@@ -20,10 +20,6 @@ section {
 section, article {
     position:relative;
 }
-article {
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-}
 
 iframe {
 	width:100%;

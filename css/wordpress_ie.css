@@ -1,7 +1,7 @@
 article{width:99%;}
 section { overflow-x:hidden}
 
-nav, .top_menu {
+nav {
 position:absolute;
 top:0;
 left:0;
@@ -9,7 +9,7 @@ z-index:500;
 width:100%;
 }
 
-.top_menu ul {
+nav ul {
 font-size:1em;
 position:relative;
 float:right;
@@ -23,14 +23,14 @@ border-left:1px solid black;
 border-bottom:1px solid black;
 }
 
-.top_menu li {
+nav li {
 position:relative;
 float:left;
 padding:0 1em;
 text-align:center;
 }
 
-.top_menu li > * {
+nav li > * {
 display:inline;
 float:left;
 color:#000;
@@ -38,7 +38,7 @@ text-decoration:none;
 width:auto;
 }
 
-.top_menu li >*:hover {
+nav li >*:hover {
     color:#CC324B
 }
 

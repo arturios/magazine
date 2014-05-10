@@ -259,12 +259,12 @@ body a:hover,aside a:hover,aside a:active {
 	display: inline;
 }
 
-#social {
+.label {
 	position: relative;
 	font-size: .7em;
 }
 
-#social li {
+.label li {
 	display: inline;
 	float: left;
 	width: 33%;
@@ -272,7 +272,7 @@ body a:hover,aside a:hover,aside a:active {
 	text-align: center;
 }
 
-#social ul {
+.label ul {
 	position: relative;
 	width: 100%;
 	display: block;
@@ -283,18 +283,18 @@ body a:hover,aside a:hover,aside a:active {
 	color: #ecf0f1;
 }
 
-#social a {
+.label a {
 	display: block;
 	color: #ecf0f1;
 	text-decoration: none;
 	width: auto;
 }
 
-#social a:hover {
+.label a:hover {
 	color: #ecf0f1;
 }
 
-#social [class^=icon-]:before,#social [class*=" icon-"]:before {
+.label [class^=icon-]:before,.label [class*=" icon-"]:before {
 	color: #ecf0f1;
 	text-shadow: none;
 	font-family: simbolos;

@@ -26,7 +26,7 @@
 	background-color:#4f5d73;
 }
 
-.darkgreen {
+.darkgreen, .dark-green {
 	background-color:#5f6732;
 }
 
@@ -34,15 +34,15 @@
 	background-color:gray;
 }
 
-.gray a,.darkblue a,.dark-blue a,.green a,.darkgreen a,.black a,.brown a,.red a,.blueblack a,.bblack a, .purple a, .quiet a {
+.gray a,.darkblue a,.dark-blue a,.green a,.darkgreen a,.dark-green a,.black a,.brown a,.red a,.blueblack a,.bblack a, .purple a, .quiet a {
 	color:#f5cf87 !important;
 }
 
-.gray a:hover,.darkblue a:hover,.dark-blue a:hover,.darkgreen a:hover,.black a:hover,.brown a:hover,.blueblack a:hover,.bblack a:hover,.red a:hover, .purple a:hover, .quiet a:hover {
+.gray a:hover,.darkblue a:hover,.dark-blue a:hover,.darkgreen a:hover,.dark-green a:hover,.black a:hover,.brown a:hover,.blueblack a:hover,.bblack a:hover,.red a:hover, .purple a:hover, .quiet a:hover {
 	color:#e0995e;
 }
 
-.gray,.darkblue,.dark-blue,.green,.darkgreen,.black,.brown,.red,.blueblack,.bblack,.orange, .purple, .quiet {
+.gray,.darkblue,.dark-blue,.green,.darkgreen, .dark-green,.black,.brown,.red,.blueblack,.bblack,.orange, .purple, .quiet {
 	color:#f2f2f2;
 }
 
@@ -106,7 +106,7 @@
 	color:#4f5d73!important;
 }
 
-.text-darkgreen {
+.text-darkgreen, .text-dark-green {
 	color:#5f6732!important;
 }
 

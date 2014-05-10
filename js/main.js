@@ -76,7 +76,7 @@ function inicio() {
 		$('.full').resizeToParent();
 	}
     Resize_Page();
-	$('a.loop,.sidebar a, .top_menu a').click(function (e) {
+	$('a.loop,.sidebar a, nav a').click(function (e) {
 		e.preventDefault();
 		pagina = $(this).attr('href');
 		if ($(this).hasClass('prev')) {
