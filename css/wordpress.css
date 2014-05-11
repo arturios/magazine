@@ -11,7 +11,7 @@ article {
     border-right: 1px solid black;
 }
 
-header:first-child::after,article:first-child::after, aside:last-child::after{
+section ~ header::after,article:first-child::after,aside:last-child::after{
     font-size: 1.2em !important;
     position: absolute;
     bottom:0;
@@ -30,7 +30,7 @@ header:first-child::after,article:first-child::after, aside:last-child::after{
     z-index:100;
 }
 
-header:first-child::after,article:first-child::after {
+section ~ header:first-child::after,article:first-child::after {
     content:"\f078";
 }
 aside:last-child::after {
@@ -225,7 +225,7 @@ nav .current {
     position: relative;
     color:#aaa; /*#ccc;*/
     background-color: #ccc;
-    border: 3px solid #000;
+    border: .1em solid #000;
 }
 
 nav .current:after, nav .current:before {
@@ -242,14 +242,14 @@ nav .current:after, nav .current:before {
 nav .current:after {
 	border-color: rgba(204, 204, 204, 0);
 	border-top-color: #ccc;
-	border-width: 10px;
-	margin-left: -10px;
+	border-width: .5em;
+	margin-left: -.5em;
 }
 nav .current:before {
 	border-color: rgba(0, 0, 0, 0);
 	border-top-color: #000;
-	border-width: 13px;
-	margin-left: -13px;
+	border-width: .6em;
+	margin-left: -.6em;
 }
 nav ul li >*:hover {
     color:#e74c3c;/* #11a8ab;*/
