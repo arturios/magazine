@@ -9,6 +9,6 @@ Version: 1.2
 */
 
 @import url('./css/normalize.css'); /* normalize http://necolas.github.io/normalize.css/ */
-@import url('./css/font-awesome.css'); /* carga los iconos*/
+@import url('./fonts/css/font-awesome.min.css'); /* carga los iconos*/
 @import url('./css/main_format.css'); /* formato general de los textos */
 @import url('./css/mobile.css'); /* formato movil */

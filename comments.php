@@ -78,19 +78,19 @@ return;
 <label for="author">Nombre <?php if ($req) echo "(obligatorio)"; ?>:</label>
 <div class="input-container">
 <input type="text" name="author" id="author" placeholder="tu nombre o alias" value="<?php echo esc_attr($comment_author); ?>" size="44" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
-<span class="input-icon icon-user"></span>
+<span class="input-icon fa-user"></span>
 </div>
 
 <label for="email">Correo (no se publicará <?php if ($req) echo "y es obligatorio"; ?>):</label>
 <div class="input-container">
 <input type="text" name="email" id="email" placeholder="tu_correo@obligatorio.es" value="<?php echo esc_attr($comment_author_email); ?>" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
-<span class="input-icon icon-envelope"></span>
+<span class="input-icon fa-envelope"></span>
 </div>
 
 <label for="url">Página:</label>
 <div class="input-container">
 <input type="text" name="url" placeholder="tu_pagina.com" id="url" value="<?php echo esc_attr($comment_author_url); ?>" tabindex="3" />
-<span class="input-icon icon-external-link"></span>
+<span class="input-icon fa-external-link"></span>
 </div>
 
 <?php endif; ?>
@@ -100,7 +100,7 @@ return;
 <label for="coment">Comentario:</label>
 <div class="input-container">
 <textarea name="comment" id="comment" placeholder="texto del comentario" tabindex="4"></textarea>
-<span class="input-icon icon-edit"></span>
+<span class="input-icon fa-edit"></span>
 </div>
 <br />
 <div class="input-container">

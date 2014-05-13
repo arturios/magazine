@@ -45,8 +45,8 @@ echo paginate_links(array(
 'format'       => '?paged=%#%',
 'show_all'     => false,
 'prev_next'    => true,
-'prev_text'    => __('Anterior'),
-'next_text'    => __('Siguiente'),
+'prev_text'    => __('<'),
+'next_text'    => __('>'),
 'current'      => max(1, get_query_var('paged')),
 'type'         => 'list',
 'total'        => $wp_query->max_num_pages
@@ -100,6 +100,11 @@ register_sidebar(array(
 'after_title' => '</h2>'
 ));
 }
+
+function register_menu() {
+  register_nav_menu('header-menu',__( 'Header Menu' ));
+}
+add_action( 'init', 'register_menu' );
 
 function Revista_custom_header_setup() {
 $args = array(

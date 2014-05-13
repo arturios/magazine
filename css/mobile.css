@@ -297,7 +297,7 @@ body a:hover,aside a:hover,aside a:active {
 .label [class^=icon-]:before,.label [class*=" icon-"]:before {
 	color: #ecf0f1;
 	text-shadow: none;
-	font-family: simbolos;
+	font-family: "FontAwesome";
 	speak: none;
 	font-style: normal;
 	font-weight: 400;
@@ -391,7 +391,7 @@ a.prev:before,a.next:after,nav .icon-home:before {
 	position: absolute;
 	top: 0;
 	left: 0;
-	font-family: simbolos;
+	font-family: "FontAwesome";
 	line-height: 24px;
     background-color: #c0392b !important;
 }
