@@ -7,13 +7,13 @@ Author URI: http://localhost
 Version: 1.2
 */
 
-@import url('./css/normalize.css'); /* normalize http://necolas.github.io/normalize.css/ */
-@import url('./css/typography.css'); /* carga las tipografías y tamaños a usar */
-@import url('./fonts/css/font-awesome.min.css'); /* carga los iconos*/
-@import url('./css/main_format.css'); /* formato general de los textos */
-@import url('./css/grid.css'); /* carga el grid fluido de 24x24 */
-@import url('./css/efects.css'); /* diversos efectos css2 */
-@import url('./css/efects_css3.css'); /* diversos efectos css3 */
-@import url('./css/colors.css'); /* paleta de colores */ 
-@import url('./css/keynote.css'); /* plantilla css para hacer presentaciones y efectos */
-@import url('./css/wordpress.css'); /* específica para wordpress */
+  @import url('./css/normalize.css'); /* normalize http://necolas.github.io/normalize.css/ */
+  @import url('./css/typography.css'); /* carga las tipografías y tamaños a usar */
+  @import url('./fonts/css/font-awesome.min.css'); /* carga los iconos*/
+  @import url('./css/main_format.css'); /* formato general de los textos */
+  @import url('./css/grid.css'); /* carga el grid fluido de 24x24 */
+  @import url('./css/efects.css'); /* diversos efectos css2 */
+  @import url('./css/efects_css3.css'); /* diversos efectos css3 */
+  @import url('./css/colors.css'); /* paleta de colores */ 
+  @import url('./css/keynote.css'); /* plantilla css para hacer presentaciones y efectos */
+  @import url('./css/wordpress.css'); /* específica para wordpress */

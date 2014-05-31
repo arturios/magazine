@@ -16,11 +16,14 @@ li p, li ul{
 /* you shall not pass */
 .text {
     z-index:100;
-    word-wrap: break-word;
-    -webkit-hyphens: auto;
+    word-wrap:break-word;
+    word-break:normal;
+    -webkit-hyphens:auto;
+    -webkit-hyphenate-character:"\2010";
+    -webkit-hyphenate-limit-after:1;
+    -webkit-hyphenate-limit-before:3;
     -moz-hyphens: auto;
     -ms-hyphens: auto;
-    -o-hyphens: auto;
     hyphens: auto;
 }
 

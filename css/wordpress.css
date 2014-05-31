@@ -6,37 +6,29 @@ section {
 }
 
 /*Flechas scroll down y up */
-article {
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-}
-
-section ~ header::after,article:first-child::after,aside:last-child::after{
-    font-size: 1.2em !important;
+section > header::after,article:first-child::after,aside:last-child::after{
+    font-size: 2em !important;
     position: absolute;
     bottom:0;
     left:50%;
     width: auto;
     height: 2em;
-    margin: 0 0 -1em -1em;
-    padding: 0 .5em;
-    border-radius: 50%;
+    margin: 0 0 -1em -.5em;
     text-align: center;
-    background-color: rgba(255, 255, 255,.7);
-    border: 2px solid #fff;
-    box-shadow: 0 0 0 4px rgba(0, 0, 0,.8);
-    color:#000;
+    color:#fff;
+    text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
     font-family: "FontAwesome";
     z-index:100;
+	filter:alpha(opacity=70);
+	-moz-opacity:.7;
+	opacity:.7
 }
 
-section ~ header:first-child::after,article:first-child::after {
+section > header:first-child::after,article:first-child::after {
     content:"\f078";
 }
 aside:last-child::after {
-    top:0;
-    padding-top: .6em;
-    margin-top: -1em;
+    top:.5em;
     content: "\f077";
 }
 
@@ -46,8 +38,8 @@ aside:last-child::after {
 #mainsidebar,
 #comentarios {
     text-decoration: none;
-    font-size: 14px;
-    font-size: 1vw;
+/*    font-size: 14px;
+    font-size: 1vw;*/
     line-height: 1.5em;
     padding: .25em;
     min-width: 2.5em;
@@ -142,7 +134,7 @@ nav {
     top: 0;
     left: 0;
     margin: 0;
-    padding: .25em 0 0 2.33em;
+    padding: .25em 0 0 4.33em;
     z-index: 3;
     width: 100%;
     background-color: transparent;
@@ -154,12 +146,11 @@ nav:after{
     font-family: "FontAwesome";
     font-size:105%;
     height: 1.5em;
-    color: #fff;
+    color: rgba(255,255,255,1.0);
     padding: .25em;
     margin: 0 0 0 .25em;
     content:"\f039";
-    background-color: rgba(0,0,0,.5);
-    border: 1px solid #000;
+    text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
 }
 nav:hover {
     background-color: rgba(255,255,255,.8);/*rgba(52, 152, 219,.7);*/
@@ -171,8 +162,7 @@ nav:hover {
 nav:hover:after{
     margin-bottom: .5em;
     color:#e74c3c;
-    background-color: rgba(255,255,255,1.0);
-    border: 1px solid rgba(0,0,0,1.0);
+    text-shadow:none;
 }
 nav div {
     float: left;
@@ -406,74 +396,6 @@ input[type=submit]:hover {
 textarea {
     height: 10em
 }
-/* animaciones */
-.section-moveToLeft {
-    -webkit-animation: moveToLeft .5s ease both;
-    -moz-animation: moveToLeft .5s ease both;
-    animation: moveToLeft .5s ease both;
-}
-.section-moveToRight {
-    -webkit-animation: moveToRight .6s ease both;
-    -moz-animation: moveToRight .6s ease both;
-    animation: moveToRight .6s ease both;
-}
-@-webkit-keyframes moveToLeft { 
-    to {
-        -webkit-transform: translateX(-100%)
-    }
-}
-@-moz-keyframes moveToLeft { 
-    to {
-        -moz-transform: translateX(-100%)
-    }
-}
-@keyframes moveToLeft { 
-    to {
-        transform: translateX(-100%)
-    }
-}
-@-webkit-keyframes moveToRight { 
-    to {
-        -webkit-transform: translateX(100%)
-    }
-}
-@-moz-keyframes moveToRight { 
-    to {
-        -moz-transform: translateX(100%)
-    }
-}
-@keyframes moveToRight { 
-    to {
-        transform: translateX(100%)
-    }
-}
-
-nav,
-nav ul, 
-nav ul li, 
-nav ul li>*,
-nav:after,
-section,
-.help + div,
-.label ul li:before,
-.label ul li:after,
-.label [class^="fa-"]:before,
-.label [class*=" fa-"]:before,
-.label ul li a,
-input[type=submit],
-.sidebar a,
-ul.menu,
-.menu ul,
-ul.menu ul,
-.menu ul ul
-{
-    -webkit-transition: all .4s ease-in-out;
-    -moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -ms-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-}
-
 
 /* menus */
 
@@ -557,4 +479,170 @@ ul.menu .focus > ul,
 
 .menu-toggle {
 	display: none;
+}
+
+
+/* animaciones */
+.section-moveToLeft {
+    -webkit-animation: moveToLeft .5s ease both;
+    -moz-animation: moveToLeft .5s ease both;
+    animation: moveToLeft .5s ease both;
+}
+.section-moveToRight {
+    -webkit-animation: moveToRight .6s ease both;
+    -moz-animation: moveToRight .6s ease both;
+    animation: moveToRight .6s ease both;
+}
+@-webkit-keyframes moveToLeft { 
+    to {
+        -webkit-transform: translateX(-100%)
+    }
+}
+@-moz-keyframes moveToLeft { 
+    to {
+        -moz-transform: translateX(-100%)
+    }
+}
+@keyframes moveToLeft { 
+    to {
+        transform: translateX(-100%)
+    }
+}
+@-webkit-keyframes moveToRight { 
+    to {
+        -webkit-transform: translateX(100%)
+    }
+}
+@-moz-keyframes moveToRight { 
+    to {
+        -moz-transform: translateX(100%)
+    }
+}
+@keyframes moveToRight { 
+    to {
+        transform: translateX(100%)
+    }
+}
+
+nav,
+nav ul, 
+nav ul li, 
+nav ul li>*,
+nav:after,
+section,
+.help + div,
+.label ul li:before,
+.label ul li:after,
+.label [class^="fa-"]:before,
+.label [class*=" fa-"]:before,
+.label ul li a,
+input[type=submit],
+.sidebar a,
+ul.menu,
+.menu ul,
+ul.menu ul,
+.menu ul ul
+{
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-.5em);
+    -moz-transform: translateY(-.5em);
+    -ms-transform: translateY(-.5em);
+    transform: translateY(-.5em);
+  }
+
+  60% {
+    -webkit-transform: translateY(-.25em);
+    -moz-transform: translateY(-.25em);
+    -ms-transform: translateY(-.25em);
+    transform: translateY(-.25em);
+  }
+}
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-.5em);
+    -moz-transform: translateY(-.5em);
+    -ms-transform: translateY(-.5em);
+    transform: translateY(-.5em);
+  }
+
+  60% {
+    -webkit-transform: translateY(-.25em);
+    -moz-transform: translateY(-.25em);
+    -ms-transform: translateY(-.25em);
+    transform: translateY(-.25em);
+  }
+}
+@-ms-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-.5em);
+    -moz-transform: translateY(-.5em);
+    -ms-transform: translateY(-.5em);
+    transform: translateY(-.5em);
+  }
+
+  60% {
+    -webkit-transform: translateY(-.25em);
+    -moz-transform: translateY(-.25em);
+    -ms-transform: translateY(-.25em);
+    transform: translateY(-.25em);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-.5em);
+    -moz-transform: translateY(-.5em);
+    -ms-transform: translateY(-.5em);
+    transform: translateY(-.5em);
+  }
+
+  60% {
+    -webkit-transform: translateY(-.25em);
+    -moz-transform: translateY(-.25em);
+    -ms-transform: translateY(-.25em);
+    transform: translateY(-.25em);
+  }
+}
+
+section > header::after,article:first-child::after,aside:last-child::after {
+  -webkit-animation: bounce 2s infinite;
+  -moz-animation: bounce 2s infinite;
+  -ms-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
 }

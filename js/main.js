@@ -139,8 +139,8 @@ function Resize_fonts(){
 	}
 	var ajuste = .95;
 	initial_value = 554.2562584220408;//Math.sqrt((640 * 480));
-	end_value = Math.sqrt(($('article').width() * $('article').height()));
-	ratio = $('article').width() / $('article').height();
+	end_value = Math.sqrt(($('section').width() * $('article').height()));
+	ratio = $('section').width() / $('section').height();
     if (ratio < 1) {ajuste = .85;}
 	font_size = ajuste * (fsize / initial_value) * end_value * (1 + (1 - ratio) / 16);
 	$('body').css({
@@ -178,6 +178,20 @@ function Resize_Page() {
 			left: 0,
 			display: 'block'
 		});
+        /*solucionando el problema del safari en ios*/
+        font_size = $(window).height()*.04;
+		$('nav').css({
+			fontSize: font_size + 'px'
+		});
+
+        vw = $(window).width();
+		$('nav ul li a, .next,.prev').css({
+			width: (vw)*.7 + 'px'
+		});
+		$('li a.page-numbers, li span.page-numbers').css({
+			width: (vw)*.345 + 'px'
+		});
+//        $('.next,.prev').parent().css('clear','both'});
 		$('#cabecera .full').resizeToParent();
 	}
 	goto(0);
