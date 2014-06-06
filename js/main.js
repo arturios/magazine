@@ -91,11 +91,12 @@ function inicio() {
 	$('section').scrollStopped(function () {
 		if ((document.documentElement.clientWidth / window.innerWidth) == 1) {goto(0);}
 	});
+    /*
 	$("section").swipe({
-/* */  allowPageScroll:"auto", /* */
+        allowPageScroll:"auto",
 		swipe: function (event, direction, distance, duration, fingerCount) {
     		if ((document.documentElement.clientWidth / window.innerWidth) !== 1) {return;}
-        	if ($('body').width() < 721) {return;}
+        	if (($('body').width() < 721) | !Modernizr.touch) {return;}
 
 			if (direction == 'up') {
 				goto(1);
@@ -117,6 +118,7 @@ function inicio() {
 		//Default is 75px, set to 0 for demo so any distance triggers swipe
 		threshold: 40
 	});
+    */
 }
 
 function goto(inc) {
@@ -168,10 +170,7 @@ function Resize_Page() {
 		$('body').css({
 			fontSize: '18px'
 		});
-		$('body, section, article').css({
-			width: '100%'
-		});
-		$('.horizontal, .vertical, .full').css({
+		$('body, section, article, .horizontal, .vertical, .full, .square, .vrt, .hrt').css({
 			width: '100%',
 			height: 'auto',
 			top: 0,
@@ -185,7 +184,7 @@ function Resize_Page() {
 		});
 
         vw = $(window).width();
-		$('nav ul li a, .next,.prev').css({
+		$('nav div ul li a, .next,.prev').css({
 			width: (vw)*.7 + 'px'
 		});
 		$('li a.page-numbers, li span.page-numbers').css({

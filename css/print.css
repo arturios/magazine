@@ -463,3 +463,15 @@ background-color:#c0392b!important;
 input[type=text]::-webkit-input-placeholder,input[type=text]:-moz-input-placeholder,input[type=text]::-moz-input-placeholder,input[type=text]:-ms-input-placeholder {
 color:#ecf0f1;
 }
+
+[class^=texture-]:after,[class*=" texture-"]:after,[class^=preset-]:after,[class*=" preset-"]:after,figure:after {
+content:none;
+position:relative;
+top:0;
+left:0;
+width:0;
+height:0;
+background-image: none !important;
+}
+
+nav, aside, #comentarios {display: none; visibility: hidden;}
