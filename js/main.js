@@ -91,7 +91,6 @@ function inicio() {
 	$('section').scrollStopped(function () {
 		if ((document.documentElement.clientWidth / window.innerWidth) == 1) {goto(0);}
 	});
-    /*
 	$("section").swipe({
         allowPageScroll:"auto",
 		swipe: function (event, direction, distance, duration, fingerCount) {
@@ -118,7 +117,6 @@ function inicio() {
 		//Default is 75px, set to 0 for demo so any distance triggers swipe
 		threshold: 40
 	});
-    */
 }
 
 function goto(inc) {
