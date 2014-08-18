@@ -1,7 +1,7 @@
-<div class="label">
+<div class="social">
 <ul>
 <li class="facebook">
-<a href='http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&t=<?php the_title(); ?>' class="fa-facebook-square" title="Compartir en facebook" target="_blank">Facebook</a>
+<a href='http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php the_title(); ?>' class="fa-facebook-square" title="Compartir en facebook" target="_blank">Facebook</a>
 </li>
 <li class="twitter">
 <a href="http://twitter.com/home?status=Leyendo%20este%20post%20<?php the_permalink(); ?>" target="_blank" title="Enviar a Twitter" class="fa-twitter">Twitter</a>

@@ -52,13 +52,13 @@ $(document).keydown(function (event) {
 	if (event.keyCode == 39) {
 		event.preventDefault();
 		pagina = $('.next').attr('href');
-		$('section').addClass('section-moveToLeft');
+		$('article').addClass('article-moveToLeft');
 		loadUrl(pagina);
 	};
 	if (event.keyCode == 37) {
 		event.preventDefault();
 		pagina = $('.prev').attr('href');
-		$('section').addClass('section-moveToRight');
+		$('article').addClass('article-moveToRight');
 		loadUrl(pagina);
 	};
 });
@@ -67,8 +67,8 @@ $(document).keydown(function (event) {
 /* */
 
 function inicio() {
-	$('section').scrollTop(0);
-	$('section').removeClass('section-moveToRight section-moveToLeft');
+	$('article').scrollTop(0);
+	$('article').removeClass('article-moveToRight article-moveToLeft');
 	if (support) {
 		$('.full').ConvertToBackground();
 	}
@@ -80,18 +80,18 @@ function inicio() {
 		e.preventDefault();
 		pagina = $(this).attr('href');
 		if ($(this).hasClass('prev')) {
-			$('section').addClass('section-moveToRight');
+			$('article').addClass('article-moveToRight');
 		}
 		if ($(this).hasClass('next')) {
-			$('section').addClass('section-moveToLeft');
+			$('article').addClass('article-moveToLeft');
 		}
 		loadUrl(pagina);
 	})
 
-	$('section').scrollStopped(function () {
+	$('article').scrollStopped(function () {
 		if ((document.documentElement.clientWidth / window.innerWidth) == 1) {goto(0);}
 	});
-	$("section").swipe({
+	$("article").swipe({
         allowPageScroll:"auto",
 		swipe: function (event, direction, distance, duration, fingerCount) {
     		if ((document.documentElement.clientWidth / window.innerWidth) !== 1) {return;}
@@ -105,12 +105,12 @@ function inicio() {
 			}
 			if (direction == 'left') {
 				pagina = $('.next').attr('href');
-				$('section').addClass('section-moveToLeft');
+				$('article').addClass('article-moveToLeft');
 				loadUrl(pagina);
 			}
 			if (direction == 'right') {
 				pagina = $('.prev').attr('href');
-				$('section').addClass('section-moveToRight');
+				$('article').addClass('article-moveToRight');
 				loadUrl(pagina);
 			}
 		},
@@ -121,12 +121,12 @@ function inicio() {
 
 function goto(inc) {
 	if ($('body').width() < 721) {return;}
-	pagenumber = (inc * $('article').height()) + parseInt($('section').scrollTop() / $('article').height() + .5) * $('article').height();
-	Duration = 500 * (Math.abs(pagenumber - $('section').scrollTop()) / $('article').height());
+	pagenumber = (inc * $('section').height()) + parseInt($('article').scrollTop() / $('section').height() + .5) * $('section').height();
+	Duration = 500 * (Math.abs(pagenumber - $('article').scrollTop()) / $('section').height());
 	if (Duration !== 0) {
-		$('section').scrollTop($('section').scrollTop() + 1);
-		$('section').scrollTop($('section').scrollTop() - 1);
-		$('section:not(:animated)').animate({
+		$('article').scrollTop($('article').scrollTop() + 1);
+		$('article').scrollTop($('article').scrollTop() - 1);
+		$('article:not(:animated)').animate({
 			scrollTop: pagenumber
 		}, Duration);
 	}
@@ -139,8 +139,8 @@ function Resize_fonts(){
 	}
 	var ajuste = .95;
 	initial_value = 554.2562584220408;//Math.sqrt((640 * 480));
-	end_value = Math.sqrt(($('section').width() * $('article').height()));
-	ratio = $('section').width() / $('section').height();
+	end_value = Math.sqrt(($('article').width() * $('section').height()));
+	ratio = $('article').width() / $('article').height();
     if (ratio < 1) {ajuste = .85;}
 	font_size = ajuste * (fsize / initial_value) * end_value * (1 + (1 - ratio) / 16);
 	$('body').css({
@@ -168,7 +168,7 @@ function Resize_Page() {
 		$('body').css({
 			fontSize: '18px'
 		});
-		$('body, section, article, .horizontal, .vertical, .full, .square, .vrt, .hrt').css({
+		$('body, article, section, .horizontal, .vertical, .full, .square, .vrt, .hrt').css({
 			width: '100%',
 			height: 'auto',
 			top: 0,
@@ -329,12 +329,12 @@ function loadUrl(pagina) {
 		path: pagina
 	}, pagina, pagina);
 	$('nav').load(pagina + ' nav > *');
-	$('section').scrollTop(0);
+	$('article').scrollTop(0);
     Document.title = "";
-	$('section').fadeOut(500, function () {
-		$('section').load(pagina + ' section > *', function (response, status, xhr) {
+	$('article').fadeOut(500, function () {
+		$('article').load(pagina + ' article > *', function (response, status, xhr) {
 			if (status == 'success') {
-				$('section').fadeIn(500, function () {
+				$('article').fadeIn(500, function () {
                     Resize_fonts();
 					inicio();
 				});

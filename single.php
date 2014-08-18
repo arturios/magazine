@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-	<section id="post-<?php the_ID(); ?>" role="main">    
+	<article id="post-<?php the_ID(); ?>" role="main">    
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 			<?php the_content(); // Dynamic Content ?>    
 			<?php comments_template(); ?>
@@ -10,5 +10,5 @@
    		  	</article>
 	 	<?php endif; ?> 
         <?php get_sidebar(); ?>
-  	</section>
+  	</article>
 <?php get_footer(); ?>

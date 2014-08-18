@@ -33,7 +33,7 @@ if ($posttags) {
     echo $tag->name . ', '; 
   }
 }
-?>magazine">
+?>magazine,revista, nudista">
 <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />

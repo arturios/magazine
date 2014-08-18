@@ -6,9 +6,9 @@
 <div class="relative left-0 width-24 overflow-y z-index-10">
 <?php get_template_part('loop'); ?>
 </div>
-</article>
+</section>
 <div id="fontsize">8.25</div>
 <?php get_sidebar(); ?>
-</section>
+</article>
 </div>
 <?php get_footer(); ?>

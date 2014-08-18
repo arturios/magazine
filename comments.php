@@ -1,4 +1,4 @@
- <article tabindex="0" class="dark-blue" id="comentarios">
+ <section tabindex="0" class="dark-blue" id="comentarios">
  <div class="frame overflow-y">
  <div class="box top-1 left-2 width-20">
  <h1 class="condensed"><?php the_title(); ?></h1>
@@ -97,7 +97,7 @@ return;
 
 <!--<p>You can use these tags: <code><?php echo allowed_tags(); ?></code></p>-->
 
-<label for="coment">Comentario:</label>
+<label for="comment">Comentario:</label>
 <div class="input-container">
 <textarea name="comment" id="comment" placeholder="texto del comentario" tabindex="4"></textarea>
 <span class="input-icon fa-edit"></span>
@@ -122,5 +122,5 @@ return;
 </div>
 </div>
 </div>
-</article>
+</section>
 
