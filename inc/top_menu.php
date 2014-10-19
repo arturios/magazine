@@ -1,5 +1,5 @@
 <nav role="navigation">
-
+<p class="padding-bottom">Menú</p>
 <div class="menu">
 <span>
 <form action="<?php bloginfo('siteurl'); ?>" id="searchform" method="get" role="search">

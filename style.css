@@ -422,7 +422,7 @@ input[type=text]::-webkit-input-placeholder,input[type=text]:-moz-input-placehol
 /* nav */
 
 nav #searchform {font-size: 15px;}
-nav #searchform .input-icon{left:20px;top:15px; color:#fff;}
+nav #searchform .input-icon{position: relative; left:-5px;top:-50px; color:#fff;text-align: left;}
 
 #menuopenclose {
 	position: absolute;
@@ -478,9 +478,6 @@ nav {
 	text-align: center;
 	font-variant: small-caps;
     letter-spacing: .125rem;   
-}
-.menu {
-    padding-top: 4rem;
 }
 .menu, .menu ul {
 	list-style-type: none;
@@ -556,7 +553,7 @@ article:after {
     left: 0;
     width: 0;
     height: 0;
-    background: rgba(255,255,255,.25);
+    background: rgba(0,0,0,.75);
 }
 nav:hover ~ .menuopenclose {
     width: 0;
@@ -567,12 +564,14 @@ nav:hover ~ .menuopenclose {
 }
 .menuopenclose:hover ~ article, nav:hover ~ article { 
     left: 18rem;
+/*
+    box-shadow: -.5rem 0 1px #000
     -webkit-filter: blur(10px); 
     -moz-filter: blur(10px); 
     -o-filter: blur(10px); 
     -ms-filter: blur(10px); 
     filter: blur(10px);
-    box-shadow: -.5rem 0 1px #000
+*/
 }
 .menuopenclose:hover ~ article:after, nav:hover ~ article:after {
     width: 100%;

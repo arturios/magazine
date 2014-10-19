@@ -13,6 +13,8 @@
 <title><?php if (is_home() || is_front_page()) { echo bloginfo('name'); } else { echo wp_title(''); } ?></title>
 
 <!-- Meta -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=yes">
 <meta name="description" content="<?php bloginfo('description'); ?>">
 <meta name="description" content="<?php if((is_home()) || (is_front_page())) {
