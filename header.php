@@ -33,7 +33,7 @@ if ($posttags) {
     echo $tag->name . ', '; 
   }
 }
-?>magazine,revista, nudista">
+?>magazine,revista,nudista,nudismo,naturista,naturismo">
 <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -41,10 +41,6 @@ if ($posttags) {
 <!-- wp_head -->
 <?php wp_head(); ?>
 <!-- /wp_head -->
-<!--[if lt IE 9]>
-<link rel='stylesheet' href="<?php echo get_template_directory_uri(); ?>/css/ie.css">
-</style>
-<![endif]-->
 <noscript>
 <style type="text/css">
 body {visibility: visible}

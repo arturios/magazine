@@ -28,8 +28,8 @@ wp_enqueue_script('jquerymin');
 // wp_register_script('hypher', get_template_directory_uri() . '/js/Hyphenator.js', array(), '4.1.0',true);
 // wp_enqueue_script('hypher');
 
- wp_register_script('swipe', get_template_directory_uri() . '/js/jquery.touchSwipe.min.js', array('jquery'), '1.0.0',true); 
- wp_enqueue_script('swipe');
+ // wp_register_script('swipe', get_template_directory_uri() . '/js/jquery.touchSwipe.min.js', array('jquery'), '1.0.0',true); 
+ // wp_enqueue_script('swipe');
 
 wp_register_script('main', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0',true); 
 wp_enqueue_script('main');
@@ -45,8 +45,8 @@ echo paginate_links(array(
 'format'       => '?paged=%#%',
 'show_all'     => false,
 'prev_next'    => true,
-'prev_text'    => __('<'),
-'next_text'    => __('>'),
+'prev_text'    => __('anterior'),
+'next_text'    => __('siguiente'),
 'current'      => max(1, get_query_var('paged')),
 'type'         => 'list',
 'total'        => $wp_query->max_num_pages
@@ -99,6 +99,8 @@ register_sidebar(array(
 'before_title' => '<h2>',
 'after_title' => '</h2>'
 ));
+
+
 }
 
 function register_menu() {

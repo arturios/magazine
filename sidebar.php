@@ -9,7 +9,4 @@
 <div class="sidebar">
 <?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-3')) ?>
 </div>
-<div class="relative left-4 width-16 raised">
-<?php include (TEMPLATEPATH . '/inc/social.php' ); ?>
-</div>
 </aside>

@@ -1,9 +1,14 @@
  <section tabindex="0" class="dark-blue" id="comentarios">
  <div class="frame overflow-y">
  <div class="box top-1 left-2 width-20">
- <h1 class="condensed"><?php the_title(); ?></h1>
+ <h2 class="condensed"><?php the_title(); ?></h2>
  <div class="relative width-24">
- <figure class="float-left width-4"><?php if ( has_post_thumbnail() ) {the_post_thumbnail('thumbnail');}?></figure>
+<?php if ( has_post_thumbnail() ) : ?>
+ <figure class="float-left width-4 square circle border-05 border-white raised">
+     <?php the_post_thumbnail('large', array( 'class' => 'full')); ?>
+ </figure>
+<?php endif; ?>
+
  <div class="float-left max-width-16">
  <?php the_excerpt(); ?>
  <div class="hr-white">&nbsp;</div>
@@ -25,7 +30,7 @@ return;
 
 <?php if ( have_comments() ) : ?>
 
-<h2 id="comments"><?php comments_number('Sin comentarios', 'Un comentario', '% comentarios' );?></h2>
+<h3 id="comments"><?php comments_number('Sin comentarios', 'Un comentario', '% comentarios' );?></h3>
 
 <div class="navigation">
 <div class="next-posts"><?php previous_comments_link() ?></div>
@@ -57,7 +62,7 @@ return;
 
 <div id="respond">
 
-<h2><?php comment_form_title( 'Dinos que te parece', 'Responde a %s' ); ?></h2>
+<h4><?php comment_form_title( 'Dinos que te parece', 'Responde a %s' ); ?></h4>
 
 <div class="cancel-comment-reply">
 <?php cancel_comment_reply_link(); ?>
