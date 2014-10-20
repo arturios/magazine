@@ -1,5 +1,5 @@
 <nav role="navigation">
-<p class="padding-bottom">Menú</p>
+<div class="menu"><span class="padding-bottom">Menú</span></div>
 <div class="menu">
 <span>
 <form action="<?php bloginfo('siteurl'); ?>" id="searchform" method="get" role="search">
@@ -23,4 +23,4 @@
 </div>
 
 </nav>
-<div class="menuopenclose" title="Menú">&nbsp;</div>
+<div onclick="" class="menuopenclose" title="Menú">&nbsp;</div>
