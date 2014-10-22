@@ -91,7 +91,7 @@ function Resize_Page() {
 		$('body').css({
 			fontSize: '18px'
 		});
-		$('body, article, section, .horizontal, .vertical, .full, .square, .vrt, .hrt, img').css({
+		$('img').css({
 			width: '100%',
 			height: 'auto',
 			top: 0,
