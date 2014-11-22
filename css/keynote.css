@@ -1,0 +1,50 @@
+.keynote {
+	z-index: 1;
+}
+
+.slide {
+	visibility: hidden;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	-o-transition: all .5s;
+	-ms-transition: all .5s;
+	transition: all .5s;
+	z-index: -1;
+	zoom: 1;
+}
+
+.to-up {
+	margin-top: -100%;
+}
+
+.to-down {
+	margin-top: 100%;
+}
+
+.to-left {
+	margin-left: -100%;
+}
+
+.to-right {
+	margin-left: 100%;
+}
+
+.fade {
+	filter: alpha(opacity=0);
+	-moz-opacity: 0;
+	opacity: 0;
+}
+
+.keynote:hover>.slide,.keynote:focus>.slide,.keynote:active>.slide {
+	filter: alpha(opacity=100);
+	-moz-opacity: 1;
+	opacity: 1;
+	visibility: visible;
+	margin-top: 0;
+	margin-left: 0;
+	z-index: 1;
+}
+
+.keynote:hover>article,.keynote:focus>article,.keynote:active>article {
+	z-index: 2;
+}

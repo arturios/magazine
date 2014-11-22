@@ -15,7 +15,7 @@
 <!-- Meta -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=yes">
+<meta name="viewport" content="user-scalable=yes,initial-scale=1.0, minimum-scale=0.5 maximum-scale=4.0">
 <meta name="description" content="<?php bloginfo('description'); ?>">
 <meta name="description" content="<?php if((is_home()) || (is_front_page())) {
 echo bloginfo('name'); bloginfo('description');
@@ -45,9 +45,31 @@ if ($posttags) {
 <!-- /wp_head -->
 <noscript>
 <style type="text/css">
-body {visibility: visible}
-figure .hrt{width:150%; margin-left:-25%;height: auto}
-figure .vrt{height:150%; margin-top: -25%; width: auto}
+img.full {
+	/* Preserve aspet ratio */
+	min-width: 100%;
+	min-height: 100%;
+}
+
+img.left {
+	left: 0;
+	margin-left: 0;
+}
+
+img.right {
+	right: 0;
+	margin-right: 0;
+}
+
+img.top {
+	top: 0;
+	margin-top: 0;
+}
+img.bottom {
+	bottom: 0;
+	margin-bottom: 0;
+}
+
 </style>
 </noscript>
 </head>

@@ -1,0 +1,18 @@
+@import url('../fonts/css/font-awesome.min.css');
+
+[class^=fa-]:before,[class*=" fa-"]:before {
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: 400;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1.5em;
+	text-align: center;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1em;
+	margin-right: .2em;
+	margin-left: .2em;
+}

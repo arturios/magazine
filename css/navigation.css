@@ -1,0 +1,178 @@
+nav #searchform {
+	font-size: 15px;
+}
+
+nav #searchform .input-icon {
+	position: relative;
+	left: 0;
+	top: -52px;
+	color: #fff;
+	text-align: left;
+	width: 1em;
+}
+
+.menuopenclose {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 3vw;
+	height: 3vw;
+	display: block;
+	font-size: 3vw;
+	font-family: 'FontAwesome';
+	color: #fff;
+	text-shadow: -1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
+	z-index: 100000;
+}
+
+.menuopenclose:before {
+	position: fixed;
+	padding-top: .5rem;
+	top: 0;
+	left: 0;
+	width: 3vw;
+	height: 3vw;
+	content: "\f0c9";
+	margin: .25em;
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 20rem;
+	height: 100%;
+	padding-right: 18px;
+	margin-right: 18px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	font-size: 1.5rem;
+	line-height: 1em;
+	background: #3B414B;
+	color: #11a8ab; 
+	font-family: "Roboto Condensed",sans-serif;
+	text-align: center;
+	font-variant: small-caps;
+	letter-spacing: .125rem;
+	-webkit-transform: rotateY(-90deg);
+	-moz-transform: rotateY(-90deg);
+	-ms-transform: rotateY(-90deg);
+	-o-transform: rotateY(-90deg);
+	transform: rotateY(-90deg);
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0 !important;
+	padding: 0 !important;
+	width: 18rem;
+}
+nav li {
+    margin: 0;
+    padding: 0;
+}
+nav a, nav span {
+	display: block;
+	width: 16rem;
+	padding: .25rem;
+	margin: .25rem .25rem .25rem 1rem;
+	border: 1px solid rgba(255,255,255,0);
+}
+
+nav .social {
+	position: relative;
+	float: left;
+	clear: both;
+	top: 0;
+	left: 0;
+	margin: 0;
+	text-align: center;
+	width: 18rem;
+}
+
+.social li {
+	position: relative;
+	display: inline-block;
+}
+
+.social a {
+	padding: .25em;
+}
+
+.social a:before {
+	padding-right: 1em;
+}
+
+nav a {
+	color: #86939F;
+	text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+	color: #11a8ab;
+	border: 1px solid #11a8ab;
+	background-color: rgba(0,0,0,.125);
+}
+
+nav ul li .page-numbers:before {
+	content: "Ir a la p\00e1gina ";
+}
+
+nav ul li .dots:before {
+	content: "";
+}
+
+nav ul li .current:before {
+	content: "P\00e1gina actual ";
+}
+
+nav ul li .current:after {
+	font-family: "FontAwesome";
+	content: " \F0DA";
+}
+
+article:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	background: rgba(0,0,0,.75);
+    background-image: url(../images/noise.png);
+    background-repeat: repeat;
+	z-index: 10000;
+}
+
+.menuopenclose:hover:before, nav:hover ~ .menuopenclose:before {
+	width: 20rem;
+	height: 2rem;
+}
+
+.menuopenclose:hover ~ nav, nav:hover {
+	-webkit-transform-origin: 100% 50%;
+	-moz-transform-origin: 100% 50%;
+	-ms-transform-origin: 100% 50%;
+	-o-transform-origin: 100% 50%;
+	transform-origin: 100% 50%;
+	-webkit-transform: perspective(600px) rotateY(0deg);
+	-moz-transform: perspective(600px) rotateY(0deg);
+	-ms-transform: perspective(600px) rotateY(0deg);
+	-o-transform: perspective(600px) rotateY(0deg);
+	transform: perspective(600px) rotateY(0deg);
+}
+
+.menuopenclose:hover ~ article, nav:hover ~ article {
+/*	left: 20rem; */
+	-webkit-transform: translateX(20rem);
+	-moz-transform: translateX(20rem);
+	-ms-transform: translateX(20rem);
+	-o-transform: translateX(20rem);
+	transform: translateX(20rem);
+}
+
+.menuopenclose:hover ~ article:after, nav:hover ~ article:after {
+	width: 100%;
+	height: 100%;
+}

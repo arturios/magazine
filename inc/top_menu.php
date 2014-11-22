@@ -1,5 +1,6 @@
+<div class="menuopenclose" title="Menú">&nbsp;</div>
 <nav role="navigation">
-<p class="padding-bottom">Menú</p>
+<p class="padding">Menú</p>
 <div class="menu">
 <span>
 <form action="<?php bloginfo('siteurl'); ?>" id="searchform" method="get" role="search">
@@ -21,6 +22,4 @@
 
 <?php include (TEMPLATEPATH . '/inc/social.php' ); ?>
 </div>
-
 </nav>
-<div class="menuopenclose" title="Menú">&nbsp;</div>

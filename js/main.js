@@ -76,6 +76,7 @@ function goto(inc) {
 		return;
 	}
 	pagenumber = (inc * $('section').height()) + parseInt($('article').scrollTop() / $('section').height() + .5) * $('section').height();
+    pagenumberH = 0;
 	Duration = 500 * (Math.abs(pagenumber - $('article').scrollTop()) / $('section').height());
 	if (Duration !== 0) {
 		$('article').scrollTop($('article').scrollTop() + 1);
@@ -110,8 +111,8 @@ function Resize_Page() {
 		}
 		var ajuste = .9;
 		initial_value = 554.2562584220408; //Math.sqrt((640 * 480));
-		end_value = Math.sqrt(($('article').width() * $('section').height()));
-		ratio = $('article').width() / $('article').height();
+		end_value = Math.sqrt(($('section').width() * $('section').height()));
+		ratio = $('section').width() / $('section').height();
 		if (ratio < 1) {
 			ajuste = .85;
 		}
