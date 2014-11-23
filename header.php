@@ -46,30 +46,19 @@ if ($posttags) {
 <noscript>
 <style type="text/css">
 img.full {
-	/* Preserve aspet ratio */
-	min-width: 100%;
-	min-height: 100%;
+    top:auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    min-width: 100%;
+    height:auto;
 }
-
-img.left {
-	left: 0;
-	margin-left: 0;
+@media screen and (max-aspect-ratio: 3/2){
+	img.full{
+		min-height: 100%;
+		width: auto;
+	}
 }
-
-img.right {
-	right: 0;
-	margin-right: 0;
-}
-
-img.top {
-	top: 0;
-	margin-top: 0;
-}
-img.bottom {
-	bottom: 0;
-	margin-bottom: 0;
-}
-
 </style>
 </noscript>
 </head>

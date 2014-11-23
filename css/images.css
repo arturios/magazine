@@ -67,30 +67,19 @@ figure.bottom {
 	background-position: bottom;
 }
 
-
-/* */
-img.full {
-	top:auto;
-	left: auto;
-	right: auto;
-	bottom: auto;
-}
-
 img.left {
-	left: 0;
-	right: auto;
+    left: 0;
+    right: auto;
 }
-
-img.right {
-	right: 0;
-	left: auto;
-}
-
 img.top {
-	top: 0;
-	bottom: auto;
+    top: 0;
+    bottom: auto;
+}
+img.right {
+    right: 0;
+    left: auto;
 }
 img.bottom {
-	bottom: 0;
-	top: auto;
+    bottom: 0;
+    top:auto;
 }

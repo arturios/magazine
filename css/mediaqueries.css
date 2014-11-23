@@ -37,9 +37,3 @@
 		column-count: 1;
 	}
 }
-@media screen and (max-aspect-ratio: 3/2){
-	img.full{
-		height: 100%;
-		width: auto;
-	}
-}
