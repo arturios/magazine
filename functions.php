@@ -25,12 +25,6 @@ wp_deregister_script('jquery');
 wp_register_script('jquerymin', get_template_directory_uri() . '/js/jquery.min.js', array(jquery), '1.9.1',true);
 wp_enqueue_script('jquerymin');
 
-// wp_register_script('hypher', get_template_directory_uri() . '/js/Hyphenator.js', array(), '4.1.0',true);
-// wp_enqueue_script('hypher');
-
- //wp_register_script('swipe', get_template_directory_uri() . '/js/jquery.touchSwipe.min.js', array('jquery'), '1.0.0',true); 
- //wp_enqueue_script('swipe');
-
 wp_register_script('main', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0',true); 
 wp_enqueue_script('main');
 }
@@ -48,13 +42,19 @@ echo paginate_links(array(
 'prev_text'    => __('anterior'),
 'next_text'    => __('siguiente'),
 'current'      => max(1, get_query_var('paged')),
-'type'         => 'list',
-'total'        => $wp_query->max_num_pages
+'total'        => $wp_query->max_num_pages,
+'before_page_number' => 'Página ',
+'after_page_number' => ''
 ));
 }
 
-
-
+function Revista_Pages(){
+echo paginate_links(array(
+'prev_next'    => true,
+'prev_text'    => __('&nbsp;'),
+'next_text'    => __('&nbsp;')
+));	
+}
 
 
 // Clean up the <head>

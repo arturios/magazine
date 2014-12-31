@@ -6,13 +6,13 @@
 
 <?php if(!empty($post->post_excerpt)): ?>
   <!-- div -->
-  <div class="float-left width-9">  
+  <div class="left-1 float-left width-9">  
     <!-- Post Title -->
     <h2 class="padding-top text-left no-padding">
       <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="text-blue font-size-150 condensed text-spacing loop"><?php the_title(); ?></a>
     </h2>
     <!-- /Post Title -->
-    <div class="width-18 line-height-110 padding-bottom">
+    <div class="width-20 line-height-110 padding-bottom">
       <!-- Post Except -->
       <div class="serif"><?php the_excerpt(); ?></div>
       <!-- /Post Except -->
@@ -21,7 +21,7 @@
   <!-- /div -->
 <?php else: ?>
   <!-- div -->
-  <div class="float-left width-14">  
+  <div class="left-1 float-left width-11">  
     <!-- Post Title -->
     <h2 class="padding-top text-left no-padding">
       <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="loop font-size-250 condensed text-white sans line-height-120 no-padding"><?php the_title(); ?></a>
@@ -38,13 +38,13 @@
 
 <?php if(!empty($post->post_excerpt)): ?>
   <!-- div -->
-  <div class="float-right width-9">  
+  <div class="right-1 float-right width-9">  
     <!-- Post Title -->
     <h2 class="padding-top text-right no-padding">
       <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="text-yellow font-size-150 condensed loop"><?php the_title(); ?></a>
     </h2>
     <!-- /Post Title -->
-    <div class="width-18 float-right text-right line-height-110 padding-bottom">
+    <div class="width-20 float-right text-right line-height-110 padding-bottom">
       <!-- Post Except -->
       <?php the_excerpt(); ?>
       <!-- /Post Except -->
@@ -53,7 +53,7 @@
   <!-- /div -->
 <?php else: ?>
   <!-- div -->
-  <div class="float-right width-14">  
+  <div class="right-1 float-right width-11">  
     <!-- Post Title -->
     <h2 class="padding-top text-right no-padding">
       <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="text-white font-size-250 condensed line-height-120 text-spacing no-padding loop"><?php the_title(); ?></a>

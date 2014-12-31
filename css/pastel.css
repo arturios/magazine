@@ -1,0 +1,66 @@
+/* CSS - Cascading Style Sheet */
+/* Palette color codes */
+/* Palette URL: http://paletton.com/#uid=3020I0k7tt700uZ41AlbAoIg5kI */
+
+/* Feel free to copy&paste color codes to your application */
+
+
+/* As hex codes */
+
+.rosa { background-color: #E8B5B2 }	/* Main Primary background-color */
+.blanco { background-color: #F7F7F7 }
+.rosita { background-color: #FFE1DF }
+.teja { background-color: #C5817E }
+.teja_oscuro { background-color: #A55652 } /* 955251 */
+
+.azul { background-color: #768796 }	/* Main Secondary background-color (1) */
+.gris { background-color: #A0A0A0 }
+.gris_azulado { background-color: #9FAAB4 }
+.azul_oscuro { background-color: #556B7F }
+.noche { background-color: #39536B }
+
+.verde { background-color: #D5DFAB }	/* Main Secondary background-color (2) */
+.gris_claro { background-color: #EDEDED }
+.verde_claro { background-color: #F1F7D8 }
+.verde_oscuro { background-color: #B0BD79 }
+.bosque { background-color: #8F9F4F }
+
+.teja,.teja_oscuro,.azul,.gris,.gris_azulado,.azul_oscuro,.noche,.verde_oscuro,.bosque {color: #F7F7F7 !important}
+.rosa,.blanco,.rosita,.gris_claro,.verde,.verde_claro {color: #39536B !important}
+
+
+.text-rosa { color: #E8B5B2 }	/* Main Primary color */
+.text-blanco { color: #F7F7F7 }
+.text-rosita { color: #FFE1DF }
+.text-teja { color: #C5817E }
+.text-teja_oscuro { color: #A55652 }
+
+.text-azul { color: #768796 }	/* Main Secondary color (1) */
+.text-gris { color: #A0A0A0 }
+.text-gris_azulado { color: #9FAAB4 }
+.text-azul_oscuro { color: #556B7F }
+.text-noche { color: #39536B }
+
+.text-verde { color: #D5DFAB }	/* Main Secondary color (2) */
+.text-gris_claro { color: #EDEDED }
+.text-verde_claro { color: #F1F7D8 }
+.text-verde_oscuro { color: #B0BD79 }
+.text-bosque { color: #8F9F4F }
+
+.border-rosa { border-color: #E8B5B2 }	/* Main Primary color */
+.border-blanco { border-color: #F7F7F7 }
+.border-rosita { border-color: #FFE1DF }
+.border-teja { border-color: #C5817E }
+.border-teja_oscuro { border-color: #A55652 }
+
+.border-azul { border-color: #768796 }	/* Main Secondary color (1) */
+.border-gris { border-color: #A0A0A0 }
+.border-gris_azulado { border-color: #9FAAB4 }
+.border-azul_oscuro { border-color: #556B7F }
+.border-noche { border-color: #39536B }
+
+.border-verde { border-color: #D5DFAB }	/* Main Secondary color (2) */
+.border-gris_claro { border-color: #EDEDED }
+.border-verde_claro { border-color: #F1F7D8 }
+.border-verde_oscuro { border-color: #B0BD79 }
+.border-bosque { border-color: #8F9F4F }

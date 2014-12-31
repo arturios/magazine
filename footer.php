@@ -1,4 +1,5 @@
 <?php wp_footer(); ?>
+<?php include (TEMPLATEPATH . '/inc/pages.php' ); ?>
 <!-- Google Analytics -->
 <script type="text/javascript">
 

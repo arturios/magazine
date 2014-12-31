@@ -36,7 +36,7 @@ input[type=text],input[type=submit],textarea {
 	margin-left: 0;
 	margin-bottom: 1.333em;
 	padding-left: 3em;
-	background: rgba(0,0,0,.125);
+	background-color: rgba(0,0,0,.125);
 	color: #fff;
 	border: solid 1px #3B414B;
 }
@@ -53,13 +53,7 @@ input[type=submit] {
 	min-width: 33.333%;
 	text-align: center;
 	clear: both;
-	background-color: rgba(255,255,255,.25);
 	padding: 0 1em;
-}
-
-input[type=submit]:hover {
-	background-color: rgba(0,0,0,.125);
-	border: 1px solid #11a8ab;
 }
 
 .input-icon {
@@ -67,14 +61,9 @@ input[type=submit]:hover {
 	position: absolute;
 	left: .25em;
 	top: .25em;
-	color: #9099b7;
 	z-index: 3;
 }
 
 textarea:focus {
 	height: 10em;
-}
-
-input[type=text]::-webkit-input-placeholder,input[type=text]:-moz-input-placeholder,input[type=text]::-moz-input-placeholder,input[type=text]:-ms-input-placeholder {
-	color: #fff;
 }

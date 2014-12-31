@@ -16,7 +16,7 @@ section,aside,details,figcaption,figure,footer,header,hgroup,main,nav,article,su
 	position: absolute;
 }
 
-figure {
+figure, figure:before {
 	background: url() no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -82,4 +82,40 @@ img.right {
 img.bottom {
     bottom: 0;
     top:auto;
+}
+
+figure:focus {
+	position: fixed;
+	top: 0;
+	left: 0;
+    right: 0;
+    bottom: 0;
+	padding: 0;
+    width: 75%;
+    height: 75%;
+	margin: auto;
+    background-color: #333;
+	background-repeat: no-repeat;
+	background-size: contain;
+    background-position: center center !important;
+	-moz-transform: rotate(0);
+	-o-transform: rotate(0);
+	transform: rotate(0);
+	-webkit-transform: rotate(0);
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    opacity: 1;
+	z-index: 10000;
+	outline: 0;
+	overflow-y: auto;
+	border: 1rem solid white;
+    border-radius: .5rem;
+    box-shadow: 0 0 1em black;
+}
+
+figure:focus div {display: none;visibility: hidden}
+
+
+figure:focus:after {
+	background-image: url(../images/grid.png);
 }

@@ -296,9 +296,7 @@ ul.padding li,ol.padding li {
     padding: 0 .5em;
     text-align: center;
     line-height: 1.5em;
-    color: #fff;
     border-radius: .125em;
-    background-color: rgba(0,0,0,.16666);
     background-image: url(images/grid.png);
     background-repeat: repeat;
     text-align: center;

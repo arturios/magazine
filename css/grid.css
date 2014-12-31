@@ -1162,3 +1162,9 @@ h1.box,h2.box,h3.box,h4.box,h5.box,h6.box {
 .max-width-24 {
 	max-width: 100%;
 }
+
+
+
+body {
+	font-size: calc(8px * 100vw * 100vh / 307200) !important;
+}

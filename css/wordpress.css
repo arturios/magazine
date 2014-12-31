@@ -6,8 +6,6 @@ article>header::after,section:first-child::after,aside:last-child::after {
 	width: auto;
 	height: 2em;
 	text-align: center;
-	color: #fff;
-	text-shadow: -1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
 	font-family: FontAwesome;
 	z-index: 100;
 	filter: alpha(opacity=70);
@@ -43,16 +41,6 @@ aside:last-child::after {
 
 .sidebar li {
 	margin: .5em 0;
-}
-.sidebar a {
-	border:1px solid rgba(0,0,0,0);
-}
-
-.sidebar a:hover,
-.sidebar a:focus {
-	color: #11a8ab;
-	border: 1px solid #11a8ab;
-	background-color: rgba(0,0,0,.125);
 }
 
 aside,#comentarios {

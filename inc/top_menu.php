@@ -1,4 +1,4 @@
-<div class="menuopenclose" title="Menú">&nbsp;</div>
+<div class="menuopenclose" title="Menú"><span class="menuicon"></span></div>
 <nav role="navigation">
 <p class="padding">Menú</p>
 <div class="menu">

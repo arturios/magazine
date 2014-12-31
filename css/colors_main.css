@@ -1,0 +1,80 @@
+/* colores */
+
+html,body,article,section {
+	background-color: #e7e9e7;
+}
+
+.menuopenclose:hover {
+	color: #11a8ab;
+	border: 1px solid #11a8ab;
+}
+
+.capital:first-letter {
+	color: #fff;
+	background-color: rgba(0,0,0,.16666);
+}
+
+input[type=text],input[type=submit],textarea {
+	background-color: rgba(0,0,0,.125);
+	color: #fff;
+	border: solid 1px #3B414B;
+}
+
+input[type=submit] {
+	background-color: rgba(255,255,255,.25);
+}
+
+input[type=submit]:hover {
+	background-color: rgba(0,0,0,.125);
+	border: 1px solid #11a8ab;
+}
+
+input:focus,textarea:focus {
+	border: 1px solid #11a8ab;
+}
+
+.input-icon {
+	color: #9099b7;
+}
+
+input[type=text]::-webkit-input-placeholder,input[type=text]:-moz-input-placeholder,input[type=text]::-moz-input-placeholder,input[type=text]:-ms-input-placeholder, nav #searchform .input-icon {
+	color: #fff;
+}
+
+.menuopenclose {
+	background-color: rgba(0,0,0,.33);
+}
+
+nav {
+	background-color: #3B414B;
+	color: #11a8ab;
+}
+
+nav a {
+	color: #86939F;
+}
+
+article>header::after,section:first-child::after,aside:last-child::after {
+	color: #fff;
+	text-shadow: -1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
+}
+
+.sidebar a {
+	border: 1px solid rgba(0,0,0,0);
+}
+
+.sidebar a:hover,
+.sidebar a:focus {
+	color: #11a8ab;
+	border: 1px solid #11a8ab;
+	background-color: rgba(0,0,0,.125);
+}
+
+.widget_tag_cloud a {
+	background: 0;
+}
+
+.widget_tag_cloud a {
+	background: 0;
+}
+	

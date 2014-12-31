@@ -54,6 +54,10 @@ a {
 	background: none;
 	text-decoration: none;
 }
+br {
+    clear: none;
+    display: none;
+}
 
 h1,h2,h3,h4,h5,h6,.listad,.serif {
 	font-family: "Roboto Slab",Georgia,serif;
@@ -98,12 +102,12 @@ p {
 	padding: 0;
 }
 /* intruduce un indentado entre párrafos */
+
+*+p,.noindent {
+	text-indent: 0;
+}
 p+p {
 	text-indent: 2em;
-}
-
-.noindent {
-	text-indent: 0 !important;
 }
 
 p+h2,p+div {
@@ -190,9 +194,7 @@ li p,li ul {
 	padding: 0 .5em;
 	text-align: center;
 	line-height: 1.5em;
-	color: #fff;
 	border-radius: .125em;
-	background-color: rgba(0,0,0,.16666);
 	background-image: url(../images/grid.png);
 	background-repeat: repeat;
 	text-align: center;

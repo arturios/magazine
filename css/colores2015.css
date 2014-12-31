@@ -1,0 +1,363 @@
+/* colores */
+
+.marsala {
+	background-color: #955251;
+}
+
+.aguamarina {
+	background-color: #9DC6D8;
+}
+
+.scuba {
+	background-color: #00B2CA;
+}
+
+.verdoso {
+	background-color: #7DCFB6;
+}
+
+.azul_clasico {
+	background-color: #1D4E89;
+}
+
+.almendra {
+	background-color: #D2B29A;
+}
+
+.fresa {
+	background-color: #E3868F;
+}
+
+.mandarina {
+	background-color: #F79256;
+}
+
+.natillas {
+	background-color: #EAD98B;
+}
+
+.gris {
+	background-color: #C6CBCC;
+}
+
+.anochecer {
+	background-color: #7DA1BF;
+}
+
+.arbol {
+	background-color: #4E6E38;
+}
+
+.madreselva {
+	background-color: #7F8040;
+}
+
+.arenisca {
+	background-color: #C78D6B;
+}
+
+.titanio {
+	background-color: #888688;
+}
+
+.lavanda {
+	background-color: #B38FB1;
+}
+
+.noche {
+	background-color: #4f5053;
+}
+
+.blanco {
+	background-color: #fff;
+}
+
+.negro {
+	background-color: #000;
+}
+
+.marsala,.scuba,.azul_clasico,.fresa,.mandarina,.anochecer,.arbol,.madreselva,.arenisca,.titanio,.lavanda,.noche,.negro {
+	color: #fff;
+}
+
+.aguamarina,.verdoso,.almendra,.natillas,.gris,.blanco {
+	color: #4f5053;
+}
+
+
+/* colores */
+
+.text-marsala {
+	color: #955251;
+    /*combina con:
+    arenisca
+    azul_clasico
+    */;
+}
+
+.text-aguamarina {
+	color: #9DC6D8;
+    /*combina con:
+    verdoso
+    azul_clasico
+    */;
+}
+
+.text-scuba {
+	color: #00B2CA;
+    /*combina con:
+    verdoso
+    azul_clasico
+    */;
+}
+
+.text-verdoso {
+	color: #7DCFB6;
+    /*combina con:
+    scuba
+    azul_clasico
+    */;
+}
+
+.text-azul_clasico {
+	color: #1D4E89;
+    /*combina con:
+    arenisca
+    marsala
+    */;
+}
+
+.text-almendra {
+	color: #D2B29A;
+    /*combina con:
+    lavanda
+    */;
+}
+
+.text-fresa {
+	color: #E3868F;
+    /*combina con:
+    almendra
+    mandarina
+    */;
+}
+
+.text-mandarina {
+	color: #F79256;
+    /*combina con:
+    almendra
+    fresa
+    */;
+}
+
+.text-natillas {
+	color: #EAD98B;
+    /*combina con:
+    azul_clasico
+    */;
+}
+
+.text-gris {
+	color: #C6CBCC;
+    /*combina con:
+    anochecer
+    arbol
+    */;
+}
+
+.text-anochecer {
+	color: #7DA1BF;
+    /*combina con:
+    gris
+    arbol
+    */;
+}
+
+.text-arbol {
+	color: #4E6E38;
+    /*combina con:
+    gris
+    anochecer
+    */;
+}
+
+.text-madreselva {
+	color: #7F8040;
+    /*combina con:
+    lavanda
+    titanio
+    */;
+}
+
+.text-arenisca {
+	color: #C78D6B;
+    /*combina con:
+    marsala
+    azul_clasico
+    */;
+}
+
+.text-titanio {
+	color: #888688;
+    /*combina con:
+    lavanda
+    madreselva
+    */;
+}
+
+.text-lavanda {
+	color: #B38FB1;
+    /*combina con:
+    almendra
+    */;
+}
+
+.text-noche {
+	color: #4f5053;
+}
+
+.text-blanco {
+	color: #fff;
+}
+
+.text-negro {
+	color: #000;
+}
+/* colores */
+
+.border-marsala {
+	border-color: #955251;
+    /*combina con:
+    arenisca
+    azul_clasico
+    */;
+}
+
+.border-aguamarina {
+	border-color: #9DC6D8;
+    /*combina con:
+    verdoso
+    azul_clasico
+    */;
+}
+
+.border-scuba {
+	border-color: #00B2CA;
+    /*combina con:
+    verdoso
+    azul_clasico
+    */;
+}
+
+.border-verdoso {
+	border-color: #7DCFB6;
+    /*combina con:
+    scuba
+    azul_clasico
+    */;
+}
+
+.border-azul_clasico {
+	border-color: #1D4E89;
+    /*combina con:
+    arenisca
+    marsala
+    */;
+}
+
+.border-almendra {
+	border-color: #D2B29A;
+    /*combina con:
+    lavanda
+    */;
+}
+
+.border-fresa {
+	border-color: #E3868F;
+    /*combina con:
+    almendra
+    mandarina
+    */;
+}
+
+.border-mandarina {
+	border-color: #F79256;
+    /*combina con:
+    almendra
+    fresa
+    */;
+}
+
+.border-natillas {
+	border-color: #EAD98B;
+    /*combina con:
+    azul_clasico
+    */;
+}
+
+.border-gris {
+	border-color: #C6CBCC;
+    /*combina con:
+    anochecer
+    arbol
+    */;
+}
+
+.border-anochecer {
+	border-color: #7DA1BF;
+    /*combina con:
+    gris
+    arbol
+    */;
+}
+
+.border-arbol {
+	border-color: #4E6E38;
+    /*combina con:
+    gris
+    anochecer
+    */;
+}
+
+.border-madreselva {
+	border-color: #7F8040;
+    /*combina con:
+    lavanda
+    titanio
+    */;
+}
+
+.border-arenisca {
+	border-color: #C78D6B;
+    /*combina con:
+    marsala
+    azul_clasico
+    */;
+}
+
+.border-titanio {
+	border-color: #888688;
+    /*combina con:
+    lavanda
+    madreselva
+    */;
+}
+
+.border-lavanda {
+	border-color: #B38FB1;
+    /*combina con:
+    almendra
+    */;
+}
+
+.border-noche {
+	border-color: #4f5053;
+}
+
+.border-blanco {
+	border-color: #fff;
+}
+
+.border-negro {
+	border-color: #000;
+}

@@ -248,5 +248,5 @@ $.fn.scrollStopped = function(callback) {
 };
 
 function loadUrl(pagina) {
-	document.location.href = pagina;
+	setTimeout(function(){document.location.href = pagina},1000);
 }
