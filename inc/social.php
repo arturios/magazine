@@ -1,5 +1,5 @@
 <ul class="social">
-<span>Compartir en:</span>
+<li>Compartir en:</li>
 <li class="facebook">
 <a href='http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php the_title(); ?>' class="fa-facebook-square" title="Compartir en facebook" target="_blank">Facebook</a>
 </li>

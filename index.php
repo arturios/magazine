@@ -7,8 +7,7 @@
 <?php get_template_part('loop'); ?>
 </div>
 </section>
-<div id="fontsize">9.5</div>
+<div id="fontsize">11</div>
 <?php get_sidebar(); ?>
 </article>
-</div>
 <?php get_footer(); ?>
