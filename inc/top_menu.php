@@ -2,8 +2,8 @@
 <nav role="navigation">
 <p class="padding">Menú</p>
 <div class="menu">
-<form action="<?php bloginfo('siteurl'); ?>" id="searchform" method="get" role="search">
-<input type="text" name="s" placeholder="Buscar por..." class="text-input" id="s" value="" tabindex="3" />
+<form action="<?php bloginfo('siteurl'); ?>" method="get" role="search">
+<input type="text" name="s" placeholder="Buscar por..." class="text-input" value="" tabindex="3" />
 <div class="input-icon fa-search"></div>
 </form>
 </div>

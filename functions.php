@@ -143,4 +143,5 @@ if ( ! empty( $header_image ) ) : ?>
 add_theme_support( 'custom-background' );
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'automatic-feed-links' );
+remove_filter ('the_content',  'wpautop');
 ?>
