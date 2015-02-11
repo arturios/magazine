@@ -8,7 +8,5 @@
 </div>
 </section>
 <div id="fontsize">8.25</div>
-<?php get_sidebar(); ?>
 </article>
-</div>
 <?php get_footer(); ?>

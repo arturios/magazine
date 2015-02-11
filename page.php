@@ -8,6 +8,5 @@
    		 		<h1><?php _e( 'Vaya, no hay nada que enseñar.', 'SoyNudistaBase' ); ?></h1>
    		  	</section>
 	 	<?php endif; ?> 
-        <?php get_sidebar(); ?>
   	</article>
 <?php get_footer(); ?>

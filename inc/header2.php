@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <article class="white zoomIn" role="main">
-<section tabindex="0" class="beige text-stroke parallax">
+<section tabindex="0" class="beige text-stroke">
 <figure class="box top-0 left-0 width-24 height-24">
 <img src="<?php echo get_header_image(); ?>" class="hrt full" alt="portada" />
 </figure>

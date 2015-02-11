@@ -1,3 +1,7 @@
+html>body {
+	font-size: 14px;
+}
+
 html,body,article,section {
 	position: relative;
 	width: 100%;
@@ -7,12 +11,15 @@ html,body,article,section {
 	overflow: hidden;
 	zoom: 1;
 	-webkit-text-size-adjust: 100%;
-	background-color: #e7e9e7;
+	background-color: #eeeeee;
 	margin: auto;
 }
 
 article {
+    position: absolute;
+    padding-top: 3.2rem;
 	overflow-y: auto !important;
+	z-index: 100;
 }
 .box {
 	position: absolute !important;
@@ -1161,10 +1168,4 @@ h1.box,h2.box,h3.box,h4.box,h5.box,h6.box {
 
 .max-width-24 {
 	max-width: 100%;
-}
-
-
-
-body {
-	font-size: calc(8px * 100vw * 100vh / 307200) !important;
 }

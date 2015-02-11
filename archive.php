@@ -39,6 +39,5 @@
 
 </section>
 <div id="fontsize">8.25</div>
-<?php get_sidebar(); ?>
 </article>
 <?php get_footer(); ?>

@@ -9,6 +9,5 @@
    		 		<h1><?php _e( 'Vaya, no hay nada que enseñar.', 'SoyNudistaBase' ); ?></h1>
    		  	</article>
 	 	<?php endif; ?> 
-        <?php get_sidebar(); ?>
   	</article>
 <?php get_footer(); ?>

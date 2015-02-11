@@ -1,7 +1,6 @@
 <form action="<?php bloginfo('siteurl'); ?>" id="searchform" method="get" role="search">
-<div class="input-container">
-<input type="text" name="s" placeholder="Buscar por..." class="text-input" id="s" value="" tabindex="3" />
-<span class="input-icon fa-search"></span>
-</div>
-<input type="submit" value="Buscar" id="searchsubmit" />
+      <div class="input-field col s6">
+		  <input type="text" class="validate" name="s" class="text-input" id="s" value="" tabindex="3" />
+		  <label for="first_name">Buscar en la revista:</label>
+      </div>
 </form>

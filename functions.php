@@ -7,26 +7,23 @@ automatic_feed_links();
 
 if ( !is_admin() ) {
 
-wp_register_style('desktop', get_template_directory_uri() . '/style.css', array(), '1.0', 'screen and (min-width: 721px)');
+wp_register_style('desktop', get_template_directory_uri() . '/style.css', array(), '1.0', 'screen and (min-width: 741px)');
 wp_enqueue_style('desktop');
 
-wp_register_style('mobile', get_template_directory_uri() . '/mobile.css', array(), '1.0', 'handheld, screen and (max-width: 720px)');
+wp_register_style('mobile', get_template_directory_uri() . '/mobile.css', array(), '1.0', 'handheld, screen and (max-width: 740px)');
 wp_enqueue_style('mobile'); // Enqueue it!
 
 wp_register_style('print', get_template_directory_uri() . '/print.css', array(), '1.0', 'print');
 wp_enqueue_style('print'); // Enqueue it!
-
-wp_register_script('modernizr', get_template_directory_uri() . '/js/modernizr.min.js', array(), '2.6.2'); 
-wp_enqueue_script('modernizr');
-
-
-wp_deregister_script('jquery');
 
 wp_register_script('jquerymin', get_template_directory_uri() . '/js/jquery.min.js', array(jquery), '1.9.1',true);
 wp_enqueue_script('jquerymin');
 
 wp_register_script('main', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0',true); 
 wp_enqueue_script('main');
+
+wp_register_script('materialize', get_template_directory_uri() . '/js/materialize.min.js', array('jquery'), '1.0.0',true); 
+wp_enqueue_script('materialize');
 }
 
 
@@ -39,21 +36,11 @@ echo paginate_links(array(
 'format'       => '?paged=%#%',
 'show_all'     => false,
 'prev_next'    => true,
-'prev_text'    => __('anterior'),
-'next_text'    => __('siguiente'),
+'prev_text'    => __('<span class="mdi-navigation-chevron-left"></span>'),
+'next_text'    => __('<span class="mdi-navigation-chevron-right"></span>'),
 'current'      => max(1, get_query_var('paged')),
 'total'        => $wp_query->max_num_pages,
-'before_page_number' => 'Página ',
-'after_page_number' => ''
 ));
-}
-
-function Revista_Pages(){
-echo paginate_links(array(
-'prev_next'    => true,
-'prev_text'    => __('&nbsp;'),
-'next_text'    => __('&nbsp;')
-));	
 }
 
 
@@ -69,32 +56,20 @@ if (function_exists('register_sidebar')) {
 
 // Define Sidebar Widget Area 1
 register_sidebar(array(
-'name' => 'Sidebar Widgets',
-'id' => 'widget-area-1',
-'description' => 'Sidebar principal.',
+'name' => 'Left Sidebar',
+'id' => 'left-sidebar',
+'description' => 'Left Sidebar widgets',
 'before_widget' => '<div id="%1$s" class="widget %2$s">',
 'after_widget' => '</div>',
 'before_title' => '<h2>',
 'after_title' => '</h2>'
 ));
 
-// Define Sidebar Widget Area 2
 register_sidebar(array(
-'name' => __('Widget Area 2', 'Revista'),
-'description' => __('Sidebar secundario', 'Revista'),
-'id' => 'widget-area-2',
-'before_widget' => '<div id="%1$s" class="%2$s">',
-'after_widget' => '</div>',
-'before_title' => '<h2>',
-'after_title' => '</h2>'
-));
-
-// Define Sidebar Widget Area 3
-register_sidebar(array(
-'name' => __('Widget Area 3', 'Revista'),
-'description' => __('Sidebar terciario', 'Revista'),
-'id' => 'widget-area-3',
-'before_widget' => '<div id="%1$s" class="%2$s">',
+'name' => 'Right Sidebar',
+'id' => 'right-sidebar',
+'description' => 'Right Sidebar widgets',
+'before_widget' => '<div id="%1$s" class="widget %2$s">',
 'after_widget' => '</div>',
 'before_title' => '<h2>',
 'after_title' => '</h2>'

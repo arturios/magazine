@@ -23,21 +23,40 @@
 	zoom: 1;
 }
 
-section {
-	position: relative;
-	width: 297mm; /* */
-	height: 210mm; /* */
+body {
+    background-image: url();
+    background-color: white;
+}
+
+body, article, section {
+	position: relative !important;
+	width: 297mm !important;
+	height: auto !important;
 	top: 0;
 	left: 0;
-	overflow: hidden;
+    margin: 0;
+    padding: 0;
+	overflow: auto;
 	-webkit-text-size-adjust: 100%;
-	background-color: #e7e9e7;
-	margin: auto;
-	page-break-after: always;
-	page-break-before: always;
-	page-break-inside:auto;
-	font-size: 77%;
+    -webkit-font-size: 80%;
 }
+article {
+	page-break-before: always; 
+	page-break-inside: auto;  
+}
+section {
+    height: 210mm !important;
+}
+
+figure:after {
+    background-image: url();
+    background: none;
+}
+.text-stroke,.capital:first-letter {
+	text-shadow: none;
+    -webkit-text-stroke: 1px rgba(60, 53, 53,.3333);
+}
+
 nav, .menuopenclose, aside, #comentarios {
 	visibility: hidden;
 	display: none;

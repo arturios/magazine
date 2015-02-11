@@ -8,10 +8,6 @@ svg:not(:root) {
 	overflow: hidden;
 }
 
-section,aside,details,figcaption,figure,footer,header,hgroup,main,nav,article,summary {
-	display: block;
-}
-
 .hrt,.vrt,.img-100 {
 	position: absolute;
 }
@@ -67,23 +63,6 @@ figure.bottom {
 	background-position: bottom;
 }
 
-img.left {
-    left: 0;
-    right: auto;
-}
-img.top {
-    top: 0;
-    bottom: auto;
-}
-img.right {
-    right: 0;
-    left: auto;
-}
-img.bottom {
-    bottom: 0;
-    top:auto;
-}
-
 figure:focus {
 	position: fixed;
 	top: 0;
@@ -98,10 +77,6 @@ figure:focus {
 	background-repeat: no-repeat;
 	background-size: contain;
     background-position: center center !important;
-	-moz-transform: rotate(0);
-	-o-transform: rotate(0);
-	transform: rotate(0);
-	-webkit-transform: rotate(0);
     filter: alpha(opacity=100);
     -moz-opacity: 1;
     opacity: 1;
@@ -115,6 +90,10 @@ figure:focus {
 
 figure:focus div {display: none;visibility: hidden}
 
+figure:focus img {
+	object-fit: contain;
+	object-position: center center;
+}
 
 figure:focus:after {
 	background-image: url(../images/grid.png);

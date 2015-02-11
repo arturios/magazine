@@ -80,39 +80,43 @@ return;
 
 <?php else : ?>
 
-<label for="author">Nombre <?php if ($req) echo "(obligatorio)"; ?>:</label>
-<div class="input-container">
-<input type="text" name="author" id="author" placeholder="tu nombre o alias" value="<?php echo esc_attr($comment_author); ?>" size="44" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
-<span class="input-icon fa-user"></span>
+<div class="input-field">
+<i class="mdi-action-account-circle prefix"></i>
+<input type="text" class="validate" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="44"  tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
+<label for="author" class="">Nombre <?php if ($req) echo "(obligatorio)"; ?>:</label>
 </div>
 
-<label for="email">Correo (no se publicará <?php if ($req) echo "y es obligatorio"; ?>):</label>
-<div class="input-container">
-<input type="text" name="email" id="email" placeholder="tu_correo@obligatorio.es" value="<?php echo esc_attr($comment_author_email); ?>" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
-<span class="input-icon fa-envelope"></span>
+<div class="input-field">
+<i class="mdi-communication-email prefix"></i>
+<input type="text" class="validate" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
+<label for="email">Correo (no se publicará <?php if ($req) echo "y es obligatorio"; ?> ):</label>
 </div>
 
+<div class="input-field">
+<i class="mdi-av-web prefix"></i>
+<input type="text" class="validate" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" tabindex="3" />
 <label for="url">Página:</label>
-<div class="input-container">
-<input type="text" name="url" placeholder="tu_pagina.com" id="url" value="<?php echo esc_attr($comment_author_url); ?>" tabindex="3" />
-<span class="input-icon fa-external-link"></span>
 </div>
 
 <?php endif; ?>
 
 <!--<p>You can use these tags: <code><?php echo allowed_tags(); ?></code></p>-->
 
+<div class="input-field">
+<i class="mdi-editor-mode-edit prefix"></i>
+<textarea name="comment" class="materialize-textarea" id="comment" tabindex="4"></textarea>
 <label for="comment">Comentario:</label>
-<div class="input-container">
-<textarea name="comment" id="comment" placeholder="texto del comentario" tabindex="4"></textarea>
-<span class="input-icon fa-edit"></span>
 </div>
+<button class="btn waves-effect waves-light" type="submit" name="action">Enviar
+    <i class="mdi-content-send right"></i>
+</button>
 <br />
-<div class="input-container">
-<input name="submit" type="submit" id="submit" tabindex="5" value="Envíanos el comentario" />
-<?php comment_id_fields(); ?>
+<!--
+<div class="input-field">
+<input name="submit" type="submit" id="submit" class="invisible" tabindex="5" value="Envíanos el comentario" />
 </div>
-
+-->
+<?php comment_id_fields(); ?>
 <?php do_action('comment_form', $post->ID); ?>
 
 </form>
