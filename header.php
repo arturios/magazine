@@ -42,37 +42,9 @@ if ($posttags) {
 <!-- /wp_head -->
 <noscript>
 <style type="text/css">
-	/* crea el estilo de los enlaces en las barras laterales sin js */
-
-aside ul li a{
-	position: relative;
-	float: left;
-	clear: both;
-	width: 100%;
-	text-align: center;
-	background-color: #03a9f4;
-	display: inline-block;
-	height: 36px;
-	margin-bottom: 15px;
-	padding: 0 2rem;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
-	background-clip: padding-box;
-	line-height: 36px;
-	text-transform: uppercase;
-	border: none;
-	outline: 0;
-	-webkit-tap-highlight-color: transparent;	
-	-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-	-moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
-}
-
-aside ul li a:hover {
-	-webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-	-moz-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
+/* crea el estilo de los enlaces en las barras laterales sin js */
+	
+article {overflow-y: auto}
 
 /* forms */
 
@@ -84,44 +56,189 @@ aside ul li a:hover {
 	-o-transform: translateY(-130%);
 	transform: translateY(-130%);
 }
-@media (max-width:740px) {
-	
-/* imagenes sin js 
-/* En el momento de escribir esto solo unos pocos navegadores soportan object-fit */
-
-figure img.full {
-	position:absolute;
-	object-fit: cover;
-	width: 100%;
-	height: 100%;	
+body, #content {
+    overflow-y: auto;
+}
+article {
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    opacity: 1;
 }
 
-img.left {
-    left: 0;
-    right: auto;
-	object-position: left;
+article,.parent_parallax {
+	overflow-x: hidden;
+	perspective: 1px;
+	transform-style: preserve-3d;
+	-webkit-perspective: 1px;
+	-webkit-transform-style: preserve-3d;
+	-moz-perspective: 1px;
+	-moz-transform-style: preserve-3d;
+	-ie-perspective: 1px;
+	-ie-transform-style: preserve-3d;
+	-o-perspective: 1px;
+	-o-transform-style: preserve-3d;
 }
-img.top {
-    top: 0;
-    bottom: auto;
-	object-position: top;
+
+.cssparallax {
+	position: relative !important;
+	z-index: 0 !important;
+	transform: translate3d(0,0,-2px) scale(3);
+	-webkit-transform: translate3d(0,0,-2px) scale(3);
+	-moz-transform: translate3d(0,0,-2px) scale(3);
+	-ie-transform: translate3d(0,0,-2px) scale(3);
+	-o-transform: translate3d(0,0,-2px) scale(3);
 }
-img.right {
-    right: 0;
-    left: auto;
-	object-position: right;
+
+section:after {
+    content: "\e89d";
+    top:0;
 }
-img.bottom {
-    bottom: 0;
-    top:auto;
-	object-position: bottom;
+
+section:before {
+    content: "\e89e";
+    bottom:15px;
 }
+
+section:first-child:after{
+    content: "";
 }
+
+section:last-child:before{
+    content: "";
+}
+
+section:before{
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+section:after{
+  -moz-animation: bounce1 2s infinite;
+  -webkit-animation: bounce1 2s infinite;
+  animation: bounce1 2s infinite;
+}
+
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+
+@-moz-keyframes bounce1 {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+  60% {
+    -moz-transform: translateY(15px);
+    transform: translateY(15px);
+  }
+}
+@-webkit-keyframes bounce1 {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+  60% {
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
+  }
+}
+@keyframes bounce1 {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+  60% {
+    -moz-transform: translateY(15px);
+    -ms-transform: translateY(15px);
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
+  }
+}
+
 </style>
 </noscript>
 </head>
 <body role="document">
-<!-- no sólo avisa de las cookies, sino que sirve para que el #¢∞"·% safari de iOS pinte su barra en pantalla completa y no fastidie el menú -->
-<div class="cookies blue-grey darken-4 grey-text text-lighten-3">Si continua navegando es que acepta el uso en esta página de cookies propias y de terceros, más información <a href="http://ene-naturismo.org/revista/politica-de-cookies/" class="orange-text">aquí</a>.</div>
-<?php include (TEMPLATEPATH . '/inc/navigation.php' ); ?>
 <?php include (TEMPLATEPATH . '/inc/menu.php' ); ?>
+<?php include (TEMPLATEPATH . '/inc/navigation.php' ); ?>
+
+<!-- no sólo avisa de las cookies, sino que sirve para que el #¢∞"·% safari de iOS pinte su barra en pantalla completa pero no fastidie el menú -->
+<div class="cookies blue-grey darken-4 grey-text text-lighten-3" role="alert">Si continua navegando es que acepta el uso en esta página de cookies propias y de terceros, más información <a href="http://ene-naturismo.org/revista/politica-de-cookies/" class="orange-text">aquí</a>.</div>
+  
+    
+<!-- desplegadores de las barras laterales -->
+<?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>
+    <a href="#" id="m-left" class="menuopenclose waves-effect" title="Enlaces" role="menuitem">
+        <span class="mdi-navigation-arrow-forward"></span>
+    </a>
+<?php endif; ?>
+<?php if ( is_active_sidebar( 'right-sidebar' ) ) : ?>
+    <a href="#" id="m-right" class="menuopenclose waves-effect" title="Enlaces" role="menuitem">
+        <span class="mdi-navigation-arrow-back"></span>
+    </a>
+<?php endif; ?>
+<?php include (TEMPLATEPATH . '/inc/preloader.php' ); ?>
+<div id="content" role="main">

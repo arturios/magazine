@@ -1,29 +1,24 @@
-<div class="padding">
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <div class="relative width-24">
+<div class="box bottom-0 left-0 width-24 z-index-10 border-top border-black min-height-phi4">
+    <div class="box top-0 left-0 width-24 height-24 blue-grey darken-4 opacity-70 nomobile z-index--10"></div>
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+        <div class="relative width-4 left">
+			<div class="width-24 padding">
             <?php if(!empty($post->post_excerpt)): ?>
-                <div class="left-1 float-left width-9">
-                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="padding-top text-left text-blue font-size-150 condensed text-spacing waves-effect width-24"><?php the_title(); ?></a>
-                    <div class="width-20 line-height-110 padding-bottom serif">
-                        <?php the_excerpt(); ?>
-                    </div>
+				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="condensed text-spacing waves-effect waves-light line-height-100 width-24">
+						<?php the_title(); ?>
+				</a>
+                <div class="small">
+                	<?php the_excerpt(); ?>
                 </div>
-            <?php else: ?>
-                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="left-1 width-11 text-left waves-effect font-size-250 condensed text-white sans line-height-120 padding-top"><?php the_title(); ?></a>
-            <?php endif; ?>
-            <?php the_post(); ?>
-            <?php if(!empty($post->post_excerpt)): ?>
-            <div class="right-1 float-right width-9">
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="text-right padding-top text-yellow font-size-150 condensed waves-effect width-24"><?php the_title(); ?></a>
-                <div class="float-right width-20 text-right line-height-110 padding-bottom">
-                    <?php the_excerpt(); ?>
-                </div>
-            </div>
-            <?php else: ?>
-            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="right-1 float-right width-11 text-right text-white font-size-250 condensed line-height-120 text-spacing waves-effect padding-top"><?php the_title(); ?></a>
-            <?php endif; ?>
-        </div>
-	<?php endwhile; ?>
+			<?php else: ?>
+        		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="waves-effect waves-light condensed text-white font-size-150 line-height-100 width-24">
+					<?php the_title(); ?>
+				</a>
+			<?php endif; ?>
+            <div class="relative left width-24 padding-double nomobile"></div>
+		</div>
+	</div>
+<?php endwhile; ?>
 	<?php else: ?>
 	<div>
 		<h2>No hay ningún resultado, lo siento.</h2>

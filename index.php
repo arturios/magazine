@@ -1,11 +1,15 @@
 <?php include (TEMPLATEPATH . '/inc/header2.php' ); ?>
-<h1 class="serif font-size-900 padding-left line-height-100 text-3d"><?php bloginfo('name'); ?></h1>
+<div class="box top-0 left-0 width-24 height-16 table">
+	<div class="v-center text-center">
+<h1 class="condensed font-size-900 text-shadow"><?php bloginfo('name'); ?></h1>
 <br />
-<h2 class="box bottom-0 left-0 width-24 font-size-200 text-yellow padding-top padding-left sans"><?php bloginfo('description'); ?>&nbsp;<span class="box right-0 bottom-0 small"><small class="padding-right"><?php the_time("F"); ?> de <?php the_time("Y"); ?></small></span></h2>
+<h2 class="relative left-8 width-8 padding border border-white"><?php bloginfo('description'); ?><span class="frame nomobile blue-grey darken-3 opacity-50 z-index--10"></span></h2>
+	<p class="box right-0 top-0 padding-right text-stroke padding-left"><?php the_time("F"); ?> de <?php the_time("Y"); ?></p>
+	</div>
 </div>
-<div class="relative left-0 width-24 overflow-y z-index-10">
+
+
 <?php get_template_part('loop'); ?>
-</div>
 </section>
 <div id="fontsize">11</div>
 </article>

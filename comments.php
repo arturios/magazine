@@ -1,5 +1,5 @@
- <section tabindex="0" class="dark-blue" id="comentarios">
- <div class="frame overflow-y">
+<section tabindex="0" class="dark-blue">
+ <div id="coments" class="box top-0 left-6 width-12 height-24 overflow-y">
  <div class="box top-1 left-2 width-20">
  <h2 class="condensed"><?php the_title(); ?></h2>
  <div class="relative width-24">
@@ -9,11 +9,9 @@
  </figure>
 <?php endif; ?>
 
- <div class="float-left max-width-16">
- <?php the_excerpt(); ?>
+  <?php the_excerpt(); ?>
  <div class="hr-white">&nbsp;</div>
  <div class="br">&nbsp;</div>
- </div>
  <div class="relative width-24">
 
 <?php
@@ -72,7 +70,7 @@ return;
 <p>Debes estar <a href="<?php echo wp_login_url( get_permalink() ); ?>">conectado</a> para comentar</p>
 <?php else : ?>
 
-<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform" class="relative width-12 left-3">
+<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform" class="padding">
 
 <?php if ( is_user_logged_in() ) : ?>
 
@@ -111,11 +109,7 @@ return;
     <i class="mdi-content-send right"></i>
 </button>
 <br />
-<!--
-<div class="input-field">
-<input name="submit" type="submit" id="submit" class="invisible" tabindex="5" value="Envíanos el comentario" />
-</div>
--->
+
 <?php comment_id_fields(); ?>
 <?php do_action('comment_form', $post->ID); ?>
 

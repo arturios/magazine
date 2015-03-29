@@ -1,8 +1,8 @@
 @import "./css/materialize.min.css";
 
 /*reset my colors */
-body,.gray,.darkblue,.dark-blue,.green,.darkgreen,.dark-green,.black,.brown,.red,.blueblack,.bblack,.orange,.purple,.quiet,.beige,.lightblue,.lightgreen,.lightyellow,.lightgray,.blue,.yellow,.white,.wwhite {
-	background-color:#e7e9e7!important;
+body,.gray,.darkblue,.dark-blue,.green,.darkgreen,.dark-green,.black,.brown,.red,.blueblack,.bblack,.orange,.purple,.quiet,.beige,.lightblue,.lightgreen,.lightyellow,.lightgray,.blue,.yellow,.white,.wwhite, #content, article, section, aside {
+	background-color:#eceff1 !important;
 	color:#3c3535
 }
 
@@ -13,7 +13,7 @@ body,.gray,.darkblue,.dark-blue,.green,.darkgreen,.dark-green,.black,.brown,.red
 }
 
 /* padding */
-article,aside {
+body,aside {
 	padding:1rem;
 	text-align:left
 }
@@ -91,7 +91,7 @@ article,aside {
 	padding-bottom:3em
 }
 
-article,section,div,iframe,object,header,figure,img,figure img,.cookies {
+body,#content, article,section,aside,div,iframe,object,header,figure,img,figure img,.cookies {
 	position:relative;
 	overflow:hidden;
 	width:100%;
@@ -107,6 +107,10 @@ article,section,div,iframe,object,header,figure,img,figure img,.cookies {
 	background-repeat:no-repeat;
 	background-size:0;
 	margin:0;
+}
+
+html, body {
+    overflow-y: auto;
 }
 
 figure {
@@ -155,19 +159,25 @@ iframe,object {
 	min-height:360px!important;
 	overflow-y:auto
 }
+nav {
+    background-color: transparent;
+    width: auto;
+    box-shadow: none;
+}
 
 #navigation {
 	position:fixed;
 	top:0;
 	left:0;
-	width:100%;
+	width: 100%;
 	line-height:1.5rem;
 	height:3.5rem;
 	z-index:101;
 	background-color: #263238;
 	color:#fff;
 	margin:0;
-	text-align:center
+	text-align:center;
+    box-shadow: none !important;
 }
 
 #navigation > ul {
@@ -187,7 +197,6 @@ iframe,object {
 .prev {
     position: relative;
     float: left;
-    margin-left: 4rem;
 }
 
 .next {
@@ -195,30 +204,27 @@ iframe,object {
 	float: right;
 }
 
-#menu {
-	position:fixed;
-	top:0;
-	left:0;
-	width:3rem!important;
-	z-index:99999
-}
-
 .button-collapse {
-	position:absolute;
-	top:0;
-	left:0;
+    position: fixed;
+    top:0;
+    line-height: 2.2rem;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Condensed",sans-serif !important;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
 }
 
-.sub-menu {
-    z-index: 100000 !important;
+.dropdown-content {
+	z-index: 1000000;
 }
 
 .cookies {
 	position:relative;
 	width:auto;
 	text-align:center;
-	padding:3.5rem 1rem 0;
-	margin:1rem;
+	padding:1rem;
+	margin:0;
 	font-size:80%;
 	border-bottom:1px solid #000
 }
@@ -261,11 +267,7 @@ iframe,object {
 	line-height: 200%;
 }
 
-#navigation {
-	box-shadow: none !important;
-}
-
-.nomobile,.no-mobile,.menuopenclose,.invisible,.brand-logo,#fontsize,#feedly-mini,figure>div {
+.nomobile,.no-mobile,.menuopenclose,.invisible,.brand-logo,#fontsize,#feedly-mini,figure>div, .player,#desktop, .drag-target {
 	display:none;
 	visibility:hidden;
 	opacity:0;
