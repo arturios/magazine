@@ -1,63 +1,66 @@
-@import url('./css/html5reset.css');
-@import url('./css/typography.css');
-@import url('./css/icons.css');
+@import url('./css/materialize.min.css');
 @import url('./css/main.css');
-
 @import url('./css/images.css');
 @import url('./css/grid.css');
-@import url('./css/css2.css');
-@import url('./css/css3.css');
-
+@import url('./css/effects_css.css');
 @import url('./css/colors.css');
-@import url('./css/colors_main.css');
-
 /* print */
+
 @page {
 	size: A4 landscape;
 	page-break-inside: always;
 	page-break-after: always;
 	page-break-before: always;
 	overflow: auto;
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 	zoom: 1;
 }
 
 body {
-    background-image: url();
-    background-color: white;
+	background-image: url();
+	background-color: white;
 }
 
-body, article, section {
+body,
+article,
+section {
 	position: relative !important;
 	width: 297mm !important;
 	height: auto !important;
 	top: 0;
 	left: 0;
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 	overflow: auto;
 	-webkit-text-size-adjust: 100%;
-    -webkit-font-size: 80%;
+	-webkit-font-size: 80%;
 }
+
 article {
-	page-break-before: always; 
-	page-break-inside: auto;  
+	page-break-before: always;
+	page-break-inside: auto;
 }
+
 section {
-    height: 210mm !important;
+	height: 210mm !important;
 }
 
 figure:after {
-    background-image: url();
-    background: none;
-}
-.text-stroke,.capital:first-letter {
-	text-shadow: none;
-    -webkit-text-stroke: 1px rgba(60, 53, 53,.3333);
+	background-image: url();
+	background: none;
 }
 
-nav, .menuopenclose, aside, #comentarios {
+.text-stroke,
+.capital:first-letter {
+	text-shadow: none;
+	-webkit-text-stroke: 1px rgba(60, 53, 53, .3333);
+}
+
+nav,
+.menuopenclose,
+aside,
+#comentarios {
 	visibility: hidden;
 	display: none;
 	opacity: 0;

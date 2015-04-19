@@ -11,6 +11,6 @@
 
 <?php get_template_part('loop'); ?>
 </section>
-<div id="fontsize">11</div>
+<style type="text/css">article{font-size:90%}</style>
 </article>
 <?php get_footer(); ?>

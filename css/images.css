@@ -1,136 +1,128 @@
 img {
-	border: 0;
-	ms-interpolation-mode: bicubic;
-	max-width: none;
+    border: 0;
+    ms-interpolation-mode: bicubic;
+    max-width: none;
 }
 
 svg:not(:root) {
-	overflow: hidden;
+    overflow: hidden;
 }
 
-.hrt,.vrt,.img-100 {
-	position: absolute;
+.hrt,
+.vrt,
+.img-100 {
+    position: absolute;
 }
 
-figure, figure:before {
-	background: url() no-repeat center center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	overflow: hidden;
-	margin: 0;
+figure {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 figcaption {
-	z-index: 10;
+    z-index: 10;
 }
 
 .hrt {
-	width: 100%;
-	height: auto;
+    width: 100%;
+    height: auto;
 }
 
 .vrt {
-	height: 100%;
-	width: auto;
+    height: 100%;
+    width: auto;
 }
 
-.cien, .img-100 {
-	width: 100%;
-	height: 100%;
+.cien,
+.img-100 {
+    width: 100%;
+    height: 100%;
 }
 
 img.center {
-	position: relative;
-	margin: 0 auto;
-	text-align: center;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
 }
 
 figure img {
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-figure.top {
-	background-position: top;
-}
-
-figure.right {
-	background-position: right;
-}
-
-figure.left {
-	background-position: left;
-}
-
-figure.bottom {
-	background-position: bottom;
+    position: absolute;
+    object-fit: contain;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 figure img.full {
-	position:absolute;
-	object-fit: cover;
+    position: absolute;
+    object-fit: cover;
     object-position: center center;
-	width: 100%;
-	height: 100%;	
 }
 
-img.left {
-    left: 0;
-    right: auto;
-	object-position: left;
-}
-img.top {
-    top: 0;
-    bottom: auto;
-	object-position: top;
-}
-img.right {
-    right: 0;
-    left: auto;
-	object-position: right;
-}
-img.bottom {
-    bottom: 0;
-    top:auto;
-	object-position: bottom;
+.full.left {
+    right: -25%;
+    width: 125%;
+    object-position: left;
 }
 
-/* * /
+.full.top {
+    bottom: -25%;
+    height: 125%;
+    object-position: top;
+}
+
+.full.right {
+    left: -25%;
+    width: 125%;
+    object-position: right;
+}
+
+.full.bottom {
+    top: -25%;
+    height: 125%;
+    object-position: bottom;
+}
+/* */
+
 figure:focus {
-	position: fixed;
-	top: 0;
-	left: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
     right: 0;
     bottom: 0;
-	padding: 0;
-    width: 75%;
-    height: 75%;
-	margin: auto;
-    background-color: #333;
-	background-repeat: no-repeat;
-	background-size: contain;
-    background-position: center center !important;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: rgba(51, 51, 51,.8);
+    background-size: contain;
     filter: alpha(opacity=100);
     -moz-opacity: 1;
     opacity: 1;
-	z-index: 10000;
-	outline: 0;
-	overflow-y: auto;
-	border: 1rem solid white;
-    border-radius: .5rem;
-    box-shadow: 0 0 1em black;
+    z-index: 10000;
+    outline: 0;
+    overflow-y: auto;
+    border: none;
 }
 
-figure:focus div {display: none;visibility: hidden}
+figure:focus div {
+    display: none;
+    visibility: hidden
+}
 
 figure:focus img {
-	object-fit: contain;
-	object-position: center center;
-}
-
-figure:focus:after {
-	background-image: url(../images/grid.png);
+    position: relative;
+    float: left;
+    text-align: center;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    padding: 5% 2.5% 0 2.5%;
+    margin: auto;
+    width: 95% !important;
+    height: 95% !important;
+    object-fit: contain;
+    object-position: center center !important;
 }

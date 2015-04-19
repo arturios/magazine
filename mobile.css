@@ -21,8 +21,9 @@ body,aside {
 /* links */
 article a,aside a {
 	position: relative;
-	float: left;
+	float: none;
 	clear: both;
+    display: block;
 	width: 100%;
 	text-align: center;
 	background-color: #03a9f4;

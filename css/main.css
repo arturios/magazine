@@ -1,51 +1,64 @@
 /* tipografias */
 
 @font-face {
-  font-family: "Roboto Slab";
-  src: url(../font/roboto/RobotoSlab-Regular-webfont.ttf);
-  font-weight: 400; }
+	font-family: "Roboto Slab";
+	src: url(../font/roboto/RobotoSlab-Regular-webfont.ttf);
+	font-weight: 400;
+}
 
 @font-face {
-  font-family: "Roboto Condensed";
-  src: url(../font/roboto/robotocondensed-regular-webfont.ttf);
-  font-weight: 400; }
-
-h1,h2,h3,h4,h5,h6,.listad,.serif {
-	font-family: "Roboto Slab",Georgia,serif;
+	font-family: "Roboto Condensed";
+	src: url(../font/roboto/robotocondensed-regular-webfont.ttf);
+	font-weight: 400;
 }
-.monospace, .capital:first-letter {
-	font-family: "American Typewriter",'Courier New',Courier,monospace !important;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.listad,
+.serif {
+	font-family: "Roboto Slab", Georgia, serif;
+}
+
+.monospace,
+.capital:first-letter {
+	font-family: "American Typewriter", 'Courier New', Courier, monospace !important;
 	text-align: left;
 }
 
 .ultrafina {
 	font-family: roboto, sans-serif !important;
-	font-weight: 100  !important;
+	font-weight: 100 !important;
 	letter-spacing: .05em;
 }
 
 .condensed {
-	font-family: "Roboto Condensed",sans-serif !important;
+	font-family: "Roboto Condensed", sans-serif !important;
 	text-transform: uppercase;
 }
 
 .sans {
-	font-family: "Roboto",sans-serif !important;
+	font-family: "Roboto", sans-serif !important;
 }
-
 /* configuracion general */
 
-*,*:before,*:after {
+*,
+*:before,
+*:after {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
 
 html>body {
-	font-size: 14px;
+	font-size: calc(.866vw + .8vh);
 }
 
-a:active,a:hover {
+a:active,
+a:hover {
 	outline: 0;
 }
 
@@ -53,7 +66,8 @@ a:focus {
 	outline: thin dotted;
 }
 
-.text,p {
+.text,
+p {
 	z-index: 3;
 	word-wrap: break-word;
 	word-break: normal;
@@ -67,9 +81,18 @@ a:focus {
 	orphans: 2;
 	widows: 2;
 }
-
 /* Definición de los títulos */
-h1,h2,h3,h4,h5,.h1-like,.h2-like,.h3-like,.h4-like,.h5-like {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1-like,
+.h2-like,
+.h3-like,
+.h4-like,
+.h5-like {
 	text-rendering: optimizeLegibility;
 	margin: 0;
 	padding: 0;
@@ -82,7 +105,7 @@ html {
 }
 
 body {
-	line-height: 1.5em;
+	line-height: 150%;
 	margin: 0;
 	background: #ccc;
 }
@@ -91,37 +114,53 @@ a {
 	background: none;
 	text-decoration: none;
 }
+
 br {
-    clear: none;
-    display: none;
+	clear: none;
+	display: none;
 }
 
-h1,.h1-like {
+h1,
+.h1-like,
+article h1,
+article.h1-like {
 	font-size: 2em;
 	margin-bottom: 1.5em;
-	line-height: 1.5;
+	line-height: 1.5em;
 }
 
-h2,.h2-like {
+h2,
+.h2-like,
+article h2,
+article.h2-like {
 	font-size: 1.5em;
 	line-height: 1em;
 	margin: 0 0 1em;
 }
 
-h3,.h3-like {
+h3,
+.h3-like,
+article h3,
+article.h3-like{
 	font-size: 1.375em;
 	line-height: 1.09090909091em;
 	margin: 0 0 1.09090909091em;
 }
 
-h4,.h4-like {
+h4,
+.h4-like,
+article h4,
+article.h4-like{
 	font-size: 1.25em;
 	line-height: 1.2em;
 	font-weight: 700;
 	margin: 0 0 1.2em;
 }
 
-h5,.h5-like {
+h5,
+.h5-like,
+article h5,
+article.h5-like {
 	font-size: 1.25em;
 	line-height: 1.2em;
 	font-weight: 400;
@@ -136,14 +175,17 @@ p {
 }
 /* intruduce un indentado entre párrafos */
 
-*+p,.noindent {
+*+p,
+.noindent {
 	text-indent: 0;
 }
+
 p+p {
 	text-indent: 2em;
 }
 
-p+h2,p+div {
+p+h2,
+p+div {
 	margin-top: 1em;
 }
 
@@ -160,12 +202,15 @@ blockquote {
 	padding: 0 1.5em;
 }
 
-small,cite,.small {
+small,
+cite,
+.small {
 	font-size: .75em;
-	line-height: 1.25em;
+	line-height: 125%;
 }
 
-object,embed {
+object,
+embed {
 	clear: both;
 	height: auto;
 	left: 0;
@@ -212,7 +257,8 @@ object,embed {
 	list-style-type: upper-alpha;
 }
 
-li p,li ul {
+li p,
+li ul {
 	margin-bottom: 0;
 	margin-top: 0;
 }
@@ -226,7 +272,7 @@ li p,li ul {
 	height: 1.5em;
 	padding: 0 .5em;
 	text-align: center;
-	line-height: 1.5em;
+	line-height: 150%;
 	border-radius: .125em;
 	background-image: url(../images/grid.png);
 	background-repeat: repeat;
@@ -235,7 +281,8 @@ li p,li ul {
 	margin: .125em .25em .25em 0;
 }
 
-.nodesktop,.no-desktop {
+.nodesktop,
+.no-desktop {
 	display: none;
 	visibility: hidden;
 	width: 0;
@@ -278,7 +325,8 @@ li p,li ul {
 	z-index: 100 !important;
 }
 
-.br,.clear {
+.br,
+.clear {
 	display: block;
 }
 
@@ -293,31 +341,17 @@ iframe {
 	overflow: hidden;
 }
 
-h1.box,h2.box,h3.box,h4.box,h5.box,h6.box {
+h1.box,
+h2.box,
+h3.box,
+h4.box,
+h5.box,
+h6.box {
 	line-height: 125% !important;
 	margin: 0;
 	padding: 0;
 }
 
-.cookies {
-	position: fixed;
-	top:0;
-	left: 0;
-	width: 100%;
-	height: 1rem;
-	font-size: 11px;
-	line-height: 1rem;
-	z-index: 101;
-	padding: 0 4rem;
-    text-align: right;
+article p {
+	line-height: 150%;
 }
-
-
-/* inicio * /
-
-article {
-	filter: alpha(opacity=0);
-	-moz-opacity: 0;
-	opacity: 0;
-}
-/* */

@@ -9,4 +9,4 @@
         <?php dynamic_sidebar('right-sidebar'); ?>
     </aside>
 <?php endif; ?>
-<div class="cover frame blue-grey darken-4"></div>
+    <div class="cover frame blue-grey darken-4"></div>

@@ -1,0 +1,175 @@
+/* crea el estilo de los enlaces en las barras laterales sin js */
+	
+article {overflow-y: auto}
+
+/* forms */
+
+.input-field label {
+	font-size: 0.8rem;
+	-webkit-transform: translateY(-130%);
+	-moz-transform: translateY(-130%);
+	-ms-transform: translateY(-130%);
+	-o-transform: translateY(-130%);
+	transform: translateY(-130%);
+}
+body, #content {
+    overflow-y: auto;
+}
+article {
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    opacity: 1;
+}
+
+article,.parent_parallax {
+	overflow-x: hidden;
+	perspective: 1px;
+	transform-style: preserve-3d;
+	-webkit-perspective: 1px;
+	-webkit-transform-style: preserve-3d;
+	-moz-perspective: 1px;
+	-moz-transform-style: preserve-3d;
+	-ie-perspective: 1px;
+	-ie-transform-style: preserve-3d;
+	-o-perspective: 1px;
+	-o-transform-style: preserve-3d;
+}
+
+.cssparallax {
+	position: relative !important;
+	z-index: 0 !important;
+	transform: translate3d(0,0,-2px) scale(3);
+	-webkit-transform: translate3d(0,0,-2px) scale(3);
+	-moz-transform: translate3d(0,0,-2px) scale(3);
+	-ie-transform: translate3d(0,0,-2px) scale(3);
+	-o-transform: translate3d(0,0,-2px) scale(3);
+}
+
+section:after {
+    content: "\e89d";
+    top:0;
+}
+
+section:before {
+    content: "\e89e";
+    bottom:15px;
+}
+
+section:first-child:after{
+    content: "";
+}
+
+section:last-child:before{
+    content: "";
+}
+
+section:before{
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+section:after{
+  -moz-animation: bounce1 2s infinite;
+  -webkit-animation: bounce1 2s infinite;
+  animation: bounce1 2s infinite;
+}
+
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+
+@-moz-keyframes bounce1 {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+  60% {
+    -moz-transform: translateY(15px);
+    transform: translateY(15px);
+  }
+}
+@-webkit-keyframes bounce1 {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+  60% {
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
+  }
+}
+@keyframes bounce1 {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+  60% {
+    -moz-transform: translateY(15px);
+    -ms-transform: translateY(15px);
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
+  }
+}

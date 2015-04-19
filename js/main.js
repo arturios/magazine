@@ -38,26 +38,6 @@ $(document).ready(function() {
 			e.preventDefault();
 			goto(1);
 		})
-		/* * /
-			$('#content').scrollStopped(function() {
-				if (mobile()){return}
-					goto(0);
-			}); 
-		/* */
-	$('#content').mousewheel(function(event, delta) {
-		if (mobile()) {
-			return
-		}
-		this.scrollLeft -= (delta * 30);
-		event.preventDefault();
-	});
-	$('.overflow-y').mousewheel(function(event, delta) {
-		if (mobile()) {
-			return
-		}
-		this.scrollTop -= (delta * 30);
-		event.preventDefault();
-	});
 });
 $(window).load(function() {
 	Resize_Page();
@@ -129,8 +109,7 @@ function Resize_Page() {
 		$('article a').addClass('light-blue waves-effect waves-light btn col s12');
 	}
 	else {
-		$('article a').removeClass('light-blue waves-effect waves-light btn col s12');
-		$('.full,.vertical,.horizontal').ConvertToBackground();
+		$('article a').removeClass('light-blue waves-light btn col s12');
 		$('.square,.cuadrado').square();
 
         /* scroll horizontal */
@@ -146,17 +125,11 @@ function Resize_Page() {
 		/* resize fonts */
 		fsize = $('#fontsize').html();
 		if (fsize == undefined) {
-			fsize = 9;
+			fsize = 11;
 		}
-		var ajuste = .85;
-		initial_value = 554.2562584220408; //Math.sqrt((640 * 480));
-		end_value = Math.sqrt(($('section').width() * $('section').height()));
-		ratio = $('section').width() / $('section').height();
-		if (ratio < 1) {
-			ajuste = .85;
-		}
-		font_size = ajuste * (fsize / initial_value) * end_value * (1 + (1 - ratio) / 16);
-		$('body').css({
+		var ajuste = fsize/11;
+		font_size = ajuste * ($('section').width() + 2/3*$('section').height())/100;
+		$('#content').css({
 			fontSize: font_size + 'px'
 		});
 		goto(0);
@@ -183,9 +156,9 @@ function portrait() {
 
 function materializate() {
 	// añade efecto a los enlaces
-	$('aside a, .page-numbers').addClass('waves-effect waves-light');
+//	$('aside a, .page-numbers').addClass('waves-effect waves-light');
 	// prepara los enlaces de los laterales
-	$('aside ul li a').addClass('light-blue waves-light btn col s12');
+//	$('aside ul li a').addClass('light-blue waves-light btn col s12');
 	// menu móvil
 	$('.button-collapse').sideNav();
 	//prepara los submenús
@@ -196,3 +169,11 @@ function materializate() {
 		$('.dropdown-button').dropdown();
 	});
 }
+
+/*
+ * Plugin Name: square
+ *
+ * Author: Arturo Rios
+ */
+
+jQuery.fn.square=function(t){var e="",t=jQuery.extend(e,t);return this.each(function(){var t=jQuery(this);obj_width=t.width,t.height(obj_width)})};
