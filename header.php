@@ -45,21 +45,10 @@ if ($posttags) {
 	<!-- /wp_head -->
 	<noscript>
 		<style type="text/css">
-			/* crea el estilo de los enlaces en las barras laterales sin js */
-			/* forms */
-			
-			.input-field label {
-				font-size: 0.8rem;
-				-webkit-transform: translateY(-130%);
-				-moz-transform: translateY(-130%);
-				-ms-transform: translateY(-130%);
-				-o-transform: translateY(-130%);
-				transform: translateY(-130%);
-			}
-			
 			body,
 			#content,
-			article {
+			article,
+            section {
 				overflow: auto;
 			}
 		</style>
@@ -70,18 +59,14 @@ if ($posttags) {
 	<?php include (TEMPLATEPATH . '/inc/menu.php' ); ?>
 	<?php include (TEMPLATEPATH . '/inc/navigation.php' ); ?>
 
-	<!-- no sólo avisa de las cookies, sino que sirve para que el #¢∞"·% safari de iOS pinte su barra en pantalla completa pero no fastidie el menú -->
-	<div class="cookies blue-grey darken-4 grey-text text-lighten-3" role="alert">Si continua navegando es que acepta el uso en esta página de cookies propias y de terceros, más información <a href="http://ene-naturismo.org/revista/politica-de-cookies/" class="orange-text">aquí</a>.</div>
-
-
 	<!-- desplegadores de las barras laterales -->
 	<?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>
-	<a href="#" id="m-left" class="menuopenclose waves-effect" title="Enlaces" role="menuitem">
+	<a href="#" id="m-left" class="menuopenclose" title="Enlaces" role="menuitem">
 		<span class="mdi-navigation-arrow-forward"></span>
 	</a>
 	<?php endif; ?>
 	<?php if ( is_active_sidebar( 'right-sidebar' ) ) : ?>
-	<a href="#" id="m-right" class="menuopenclose waves-effect" title="Enlaces" role="menuitem">
+	<a href="#" id="m-right" class="menuopenclose" title="Enlaces" role="menuitem">
 		<span class="mdi-navigation-arrow-back"></span>
 	</a>
 	<?php endif; ?>

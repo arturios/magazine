@@ -22,8 +22,8 @@ wp_enqueue_script('jquerymin');
 wp_register_script('main', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0',true); 
 wp_enqueue_script('main');
 
-wp_register_script('materialize', get_template_directory_uri() . '/js/materialize.min.js', array('jquery'), '1.0.0',true); 
-wp_enqueue_script('materialize');
+// wp_register_script('materialize', get_template_directory_uri() . '/js/materialize.min.js', array('jquery'), '1.0.0',true); 
+// wp_enqueue_script('materialize');
 
 }
 

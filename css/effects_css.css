@@ -1,3 +1,89 @@
+.capital:first-letter {
+	position: relative;
+	display: block;
+	float: left;
+	font-size: 2.2em;
+	width: 1.5em;
+	height: 1.5em;
+	padding: 0 .5em;
+	text-align: center;
+	line-height: 150%;
+	border-radius: .125em;
+	background-image: url(../images/grid.png);
+	background-repeat: repeat;
+	text-align: center;
+	border: 2px solid #fff;
+	margin: .125em .25em .25em 0;
+}
+
+h1.box,
+h2.box,
+h3.box,
+h4.box,
+h5.box,
+h6.box {
+	line-height: 125% !important;
+	margin: 0;
+	padding: 0;
+}
+
+article p {
+	line-height: 150%;
+}
+
+.text-strong {
+	font-weight: blod;
+}
+
+.small-caps {
+	font-variant: small-caps;
+}
+
+.upper {
+	text-transform: uppercase;
+}
+
+.text-spacing {
+	letter-spacing: .1em;
+}
+
+.z-index--100 {
+	z-index: -100 !important;
+}
+
+.z-index--10 {
+	z-index: -10 !important;
+}
+
+.z-index-0 {
+	z-index: 0 !important;
+}
+
+.z-index-10 {
+	z-index: 10 !important;
+}
+
+.z-index-100 {
+	z-index: 100 !important;
+}
+
+.br,
+.clear {
+	display: block;
+	clear: both;
+}
+
+.no-padding {
+	margin: 0;
+	padding: 0;
+}
+
+iframe {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
 .font-size-1200 {
     font-size: 12em;
     line-height: 100%;
@@ -141,11 +227,11 @@
     border-style: solid;
 }
 
-.border-05 {
+.border-05, .border-05em {
     border-width: .5rem;
 }
 
-.border-1 {
+.border-1, .border-1em {
     border-width: 1rem;
 }
 
@@ -330,58 +416,6 @@ ol.padding li {
     height: 0;
 }
 
-.text-strong {
-    font-weight: blod;
-}
-
-.small-caps {
-    font-variant: small-caps;
-}
-
-.upper {
-    text-transform: uppercase;
-}
-
-.text-spacing {
-    letter-spacing: .1em;
-}
-
-.z-index--100 {
-    z-index: -100 !important;
-}
-
-.z-index--10 {
-    z-index: -10 !important;
-}
-
-.z-index-0 {
-    z-index: 0 !important;
-}
-
-.z-index-10 {
-    z-index: 10 !important;
-}
-
-.z-index-100 {
-    z-index: 100 !important;
-}
-
-.br,
-.clear {
-    display: block;
-}
-
-.hr-white,
-.hr-black {
-    background: 0;
-}
-/*simula un hr bonito, tanto en blanco como en negro */
-
-.hr-white,
-.hr-black {
-    border: 0;
-    height: 2px;
-}
 /* efectos especificos de css3 */
 /*columnas */
 
@@ -414,6 +448,13 @@ ol.padding li {
     -moz-column-count: 4;
     -webkit-column-count: 4;
     column-count: 4;
+}
+
+.hr-white,
+.hr-black {
+    background: 0;
+    border: 0;
+    height: 2px;
 }
 
 .hr-white {
@@ -919,58 +960,80 @@ figure:after {
     /* W3C */
 }
 
-.wave {
-    position: relative;
-    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    -webkit-transition: .2s ease-out;
-    -moz-transition: .2s ease-out;
-    -o-transition: .2s ease-out;
-    -ms-transition: .2s ease-out;
-    transition: .2s ease-out;
-    cursor: pointer;
-    color: lightgray;
-    text-align: center;
-    padding: .5em 1em;
+
+/* links */
+
+.btn,
+aside a {
+	position: relative;
+	float: none;
+	clear: both;
+	display: block;
+	width: 100%;
+	text-align: center;
+	background-color: #03a9f4;
+	display: inline-block;
+	margin-bottom: 1rem;
+	padding: 0 2rem;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	background-clip: padding-box;
+	line-height: 2.5rem;
+	text-transform: uppercase;
+	border: none;
+	outline: 0;
+	-webkit-tap-highlight-color: transparent;
+    box-shadow: 0 .75rem .5rem -.5rem rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.3) inset;
+    -moz-box-shadow: 0 .75rem .5rem -.5rem rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.3) inset;
+    -webkit-box-shadow: 0 .75rem .5rem -.5rem rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.3) inset;
+	-webkit-transition: .2s ease-out;
+	-moz-transition: .2s ease-out;
+	-o-transition: .2s ease-out;
+	-ms-transition: .2s ease-out;
+	transition: .2s ease-out;
+	cursor: pointer;
+	color: #d3d3d3;
+	text-align: center;
+	padding: 0 1rem
 }
 
-.wave::before {
-    content: " ";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("data:image/svg+xml,<svg viewBox='0 0 120 120' version='1.1' xmlns='http://www.w3.org/2000/svg'><circle cx='60' cy='60' r='60' fill='#000000' fill-opacity='0.25'/></svg>");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 0 0;
-    filter: alpha(opacity=0);
-    -moz-opacity: 0;
-    opacity: 0;
-    z-index: -1;
+.waves-effect::before, aside a::before {
+	content: " ";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("data:image/svg+xml,<svg viewBox='0 0 120 120' version='1.1' xmlns='http://www.w3.org/2000/svg'><circle cx='60' cy='60' r='60' fill='#ffffff' fill-opacity='0.25'/></svg>");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 0 0;
+	filter: alpha(opacity=0);
+	-moz-opacity: 0;
+	opacity: 0;
+	z-index: 1
 }
 
-.wave:hover {
-    color: white;
-    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+.waves-effect:hover, aside a:hover {
+	color: #fff;
+    box-shadow: 0 .75rem .5rem -.5rem rgba(0, 0, 0, 0.75), 0 1px 4px rgba(0, 0, 0, 0.5), 0 0 4px rgba(0, 0, 0, 0.5) inset;
+    -moz-box-shadow: 0 .75rem .5rem -.5rem rgba(0, 0, 0, 0.75), 0 1px 4px rgba(0, 0, 0, 0.5), 0 0 4px rgba(0, 0, 0, 0.5) inset;
+    -webkit-box-shadow: 0 .75rem .5rem -.5rem rgba(0, 0, 0, 0.75), 0 1px 4px rgba(0, 0, 0, 0.5), 0 0 4px rgba(0, 0, 0, 0.5) inset;
 }
 
-.wave:active {
-    color: white;
+ .waves-effect:active,aside a:active {
+	color: #fff
 }
 
-.wave:active::before {
-    background-size: 700% 700%;
-    filter: alpha(opacity=1);
-    -moz-opacity: 1;
-    opacity: 1;
-    -webkit-transition: all 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
-    -moz-transition: all 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
-    -o-transition: all 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
-    -ms-transition: all 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
-    transition: all 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+aside a:active::before, .waves-effect:active::before {
+	background-size: 40vw 40vw;
+	filter: alpha(opacity=1);
+	-moz-opacity: 1;
+	opacity: 1;
+	-webkit-transition: all 1s cubic-bezier(.25, .46, .45, .94);
+	-moz-transition: all 1s cubic-bezier(.25, .46, .45, .94);
+	-o-transition: all 1s cubic-bezier(.25, .46, .45, .94);
+	-ms-transition: all 1s cubic-bezier(.25, .46, .45, .94);
+	transition: all 1s cubic-bezier(.25, .46, .45, .94)
 }

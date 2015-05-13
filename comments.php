@@ -1,5 +1,5 @@
-<section tabindex="0" class="dark-blue">
- <div id="coments" class="box top-0 left-6 width-12 height-24 overflow-y">
+<section tabindex="0" class="dark-blue overflow-y">
+ <div id="coments" class="relative top-1 left-6 width-12">
  <div class="box top-1 left-2 width-20">
  <h2 class="condensed"><?php the_title(); ?></h2>
  <div class="relative width-24">
@@ -80,19 +80,19 @@ return;
 
 <div class="input-field">
 <i class="mdi-action-account-circle prefix"></i>
-<input type="text" class="validate" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="44"  tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
+<input type="text" required name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="44"  tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
 <label for="author" class="">Nombre <?php if ($req) echo "(obligatorio)"; ?>:</label>
 </div>
 
 <div class="input-field">
 <i class="mdi-communication-email prefix"></i>
-<input type="text" class="validate" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
+<input type="text" required name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
 <label for="email">Correo (no se publicará <?php if ($req) echo "y es obligatorio"; ?> ):</label>
 </div>
 
 <div class="input-field">
 <i class="mdi-av-web prefix"></i>
-<input type="text" class="validate" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" tabindex="3" />
+<input type="text" required name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" tabindex="3" />
 <label for="url">Página:</label>
 </div>
 

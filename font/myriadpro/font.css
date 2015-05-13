@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'myriadpro';
+	src: url('./myriadpro.eot');
+	src: local('myriadpro'), url('./myriadpro.woff') format('woff'), url('./myriadpro.ttf') format('truetype');
+}
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_7550">Text with this font applied</p> */
+.fontsforweb_fontid_7550 {
+	font-family: 'myriadpro' !important;
+}
+
+/* Font downloaded from FontsForWeb.com */
