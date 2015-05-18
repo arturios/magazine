@@ -8,10 +8,6 @@
 	-webkit-box-sizing: border-box;
 }
 
-html>body {
-	font-size: calc(.88vw + .8vh);
-}
-
 a:active,
 a:hover {
 	outline: 0;
@@ -181,7 +177,7 @@ embed {
 
 ul {
 	list-style-type: circle;
-	padding: 0 0 0 1em;
+	padding: 0 0 0 2em;
 }
 
 .ul-none {
@@ -202,7 +198,7 @@ ul {
 
 ol {
 	list-style-type: decimal;
-	padding: 0 0 0 1em;
+	padding: 0 0 0 2em;
 }
 
 .ol-roman {

@@ -9,4 +9,3 @@
         <?php dynamic_sidebar('right-sidebar'); ?>
     </aside>
 <?php endif; ?>
-    <div id="overlayer" class="frame blue-grey darken-4"></div>

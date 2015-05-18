@@ -72,23 +72,24 @@ nav {
 	border: none;
 	background: none;
 	background-color: transparent !important;
-	color: #ccc;
-	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 #navigation a.prev span,
 #navigation a.next span {
 	font-size: 8rem;
 	line-height: 8rem;
+    z-index: 10000;
+	color: #ccc;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 #navigation a.prev {
-	left: -2rem;
+	left: -3rem;
 }
 
 #navigation a.next {
 	float: right;
-	right: -2rem;
+	right: 0rem;
 }
 
 #navigation a.prev:hover,
@@ -99,31 +100,13 @@ nav {
 }
 
 #navigation a.prev:hover {
-	left: -1.1em;
+	left: -1.5em;
 }
 
 #navigation a.next:hover {
-	right: -1.1em;
-}
-/* menus * /
-
-.nav-wrapper {
-	position: fixed;
-	top: 0;
-	height: 2.2rem;
-	line-height: 2.2rem !important;
-	margin: 0;
-	padding: 0;
-	text-transform: uppercase;
-	letter-spacing: .1rem;
-	background-color: #263238;
-	z-index: 1000;
+	right: -1.5rem;
 }
 
-.button-collapse {
-	display: none;
-	visibility: hidden;
-}
 /* aside */
 
 .menuopenclose {
@@ -207,6 +190,12 @@ aside span {
 }
 
 #overlayer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.8);
 	z-index: -1;
 	opacity: 0;
 	-webkit-opacity: 0;
@@ -230,7 +219,7 @@ aside span {
 #m-right:hover ~ #overlayer,
 #m-right:focus ~ #overlayer,
 #a-right:hover ~ #overlayer {
-	opacity: .75;
+	opacity: 1;
 	z-index: 100;
 }
 
@@ -384,6 +373,8 @@ menu li ul {
 menu li ul li {
 	display: block;
 	float: none;
+	padding: 0;
+	margin: 0:
 }
 /*Prevent text wrapping*/
 
@@ -397,12 +388,13 @@ menu ul li a +ul:hover {
 	position: absolute;
 	top:2.5rem;
 	display: block;
+	margin: 0;
+	padding: 0;
 }
 /*Style 'show menu' label button and hide it by default*/
 
 .button-collapse {
 	display: none;
-	z-index: 1000000;
 }
 
 #navigation a,

@@ -1026,7 +1026,7 @@ aside a {
 	color: #fff
 }
 
-aside a:active::before, .waves-effect:active::before {
+aside a:active::before, .waves-effect:active::before,aside a:focus::before, .waves-effect:focus::before {
 	background-size: 40vw 40vw;
 	filter: alpha(opacity=1);
 	-moz-opacity: 1;

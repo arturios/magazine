@@ -16,14 +16,15 @@ wp_enqueue_style('mobile'); // Enqueue it!
 wp_register_style('print', get_template_directory_uri() . '/print.css', array(), '1.0', 'print');
 wp_enqueue_style('print'); // Enqueue it!
 
-wp_register_script('jquerymin', get_template_directory_uri() . '/js/jquery.min.js', array(jquery), '1.9.1',true);
-wp_enqueue_script('jquerymin');
+function my_scripts_method() {
+	wp_enqueue_script(
+		'main',
+		get_stylesheet_directory_uri() . '/js/main.js',
+		array( 'jquery' )
+	);
+}
 
-wp_register_script('main', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0',true); 
-wp_enqueue_script('main');
-
-// wp_register_script('materialize', get_template_directory_uri() . '/js/materialize.min.js', array('jquery'), '1.0.0',true); 
-// wp_enqueue_script('materialize');
+add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
 
 }
 
@@ -37,8 +38,8 @@ echo paginate_links(array(
 'format'       => '?paged=%#%',
 'show_all'     => false,
 'prev_next'    => true,
-'prev_text'    => __('<span class="mdi-navigation-chevron-left"></span>'),
-'next_text'    => __('<span class="mdi-navigation-chevron-right"></span>'),
+'prev_text'    => __('<span class="icon-angle-left"></span>'),
+'next_text'    => __('<span class="icon-angle-right"></span>'),
 'current'      => max(1, get_query_var('paged')),
 'total'        => $wp_query->max_num_pages,
 ));
@@ -119,5 +120,6 @@ if ( ! empty( $header_image ) ) : ?>
 add_theme_support( 'custom-background' );
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'automatic-feed-links' );
+add_theme_support( 'html5', array( 'comment-form', 'search-form', 'gallery', 'caption' ) );
 remove_filter ('the_content',  'wpautop');
 ?>

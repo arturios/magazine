@@ -1,3 +1,7 @@
+html>body {
+	font-size: calc(.88vw + .8vh);
+}
+
 html,
 body,
 #content,
@@ -20,13 +24,15 @@ section,
 #content {
     position: absolute;
     z-index: 100;
-    overflow: auto;
-    /*    padding-top: 3rem;*/
 }
 
 .box {
     position: absolute !important;
     z-index: 4;
+}
+
+section {
+    overflow: hidden;
 }
 
 h1.box,
@@ -1314,11 +1320,10 @@ h6.box {
     section,
     #comentarios {
         width: 200%;
-    }
-    #content {
         font-size: 140%;
         line-height: 150%;
     }
+	/* */
     body,
     #content,
     article {
@@ -1326,5 +1331,8 @@ h6.box {
     }
     article section:last-child {
         width: 50%;
+    }
+	article section:first-child {
+        width: 200%;
     }
 }

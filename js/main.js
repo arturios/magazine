@@ -1,4 +1,4 @@
-$('article').fadeOut(0);
+jQuery('article').fadeOut(0);
 var waitForFinalEvent = (function () {
 	var timers = {};
 	return function (callback, ms, uniqueId) {
@@ -11,26 +11,26 @@ var waitForFinalEvent = (function () {
 		timers[uniqueId] = setTimeout(callback, ms);
 	};
 })();
-$(document).ready(function () {
-	$('article').each(function () {
-		$('article').fadeIn(1000);
+jQuery(document).ready(function () {
+	jQuery('article').each(function () {
+		jQuery('article').fadeIn(1000);
 		Resize_Page();
 	});
 
-	$('a').not('.prev, .next').click(function (e) {
+	jQuery('a').not('.prev, .next').click(function (e) {
 		e.preventDefault();
-		pagina = $(this).attr('href');
+		pagina = jQuery(this).attr('href');
 		loadUrl(pagina);
 	})
 
-	$('.prev').click(function (e) {
+	jQuery('.prev').click(function (e) {
 		if (mobile()) {
 			return
 		}
 		e.preventDefault();
 		goto(-1);
 	})
-	$('.next').click(function (e) {
+	jQuery('.next').click(function (e) {
 		if (mobile()) {
 			return
 		}
@@ -38,19 +38,19 @@ $(document).ready(function () {
 		goto(1);
 	})
 });
-$(window).load(function () {
+jQuery(window).load(function () {
 	Resize_Page();
-	$('article').fadeIn(1000);
+	jQuery('article').fadeIn(1000);
 });
-$(window).resize(function () {
+jQuery(window).resize(function () {
 	waitForFinalEvent(function () {
 		Resize_Page();
 	}, 100, 'some unique string');
 });
-$(window).bind('orientationchange', function (event) {
+jQuery(window).bind('orientationchange', function (event) {
 	Resize_Page();
 });
-$(document).keydown(function (event) {
+jQuery(document).keydown(function (event) {
 	if (event.keyCode == 33 || event.keyCode == 37) {
 		event.preventDefault();
 		goto(-1);
@@ -65,12 +65,12 @@ $(document).keydown(function (event) {
 	};
 	if (event.keyCode == 40) {
 		event.preventDefault();
-		pagina = $('.next').attr('href');
+		pagina = jQuery('.next').attr('href');
 		loadUrl(pagina);
 	};
 	if (event.keyCode == 38) {
 		event.preventDefault();
-		pagina = $('.prev').attr('href');
+		pagina = jQuery('.prev').attr('href');
 		loadUrl(pagina);
 	};
 });
@@ -83,39 +83,40 @@ function goto(inc) {
 	if (portrait()) {
 		factor = .5;
 	}
-	sectionwidth = $('section').width() * factor;
-	pagenumber = (inc * sectionwidth) + parseInt($('#content').scrollLeft() / sectionwidth + .5) * sectionwidth;
-	$('#content:not(:animated)').animate({
+	sectionwidth = jQuery('section').width() * factor;
+	pagenumber = (inc * sectionwidth) + parseInt(jQuery('#content').scrollLeft() / sectionwidth + .5) * sectionwidth;
+	jQuery('#content:not(:animated)').animate({
 		scrollLeft: pagenumber
 	}, 500);
 
-	if (pagenumber > ($('article').width() - sectionwidth + 1)) {
-		pagina = $('.next').attr('href');
+	if (pagenumber > (jQuery('article').width() - sectionwidth + 1)) {
+		pagina = jQuery('.next').attr('href');
 		loadUrl(pagina);
 	};
 	if (pagenumber < 0) {
-		pagina = $('.prev').attr('href');
+		pagina = jQuery('.prev').attr('href');
 		loadUrl(pagina);
 	};
 }
 
 function Resize_Page() {
 	if (mobile()) {
-		$('body').css({
+		jQuery('body').css({
 			fontSize: '18px'
 		});
-		$('article, section').width('100%');
-		$('article a').addClass('light-blue waves-effect waves-light btn col s12');
+		jQuery('article, section').width('100%');
 	} else {
-		$('article a').removeClass('light-blue waves-light btn col s12');
-		$('.square,.cuadrado').square();
+		jQuery('.square,.cuadrado').square();
+		/* font-size para los navegadores que aun no soportan vw y vh */
+		jQuery('body').css('fontsize', .88 * jQuery('body').width() / 100 + .8 * jQuery('body').height() / 100);
 
 		/* scroll horizontal */
-		$('article').width(($('article section').length * 100) + '%');
-		$('section').width((100 / $('article section').length) + '%');
+		jQuery('article').width((jQuery('article section').length * 100) + '%');
+		jQuery('section').width((100 / jQuery('article section').length) + '%');
 		if (portrait()) {
-			$('article').width(($('article section').length * 200) + '%');
-			$('article section:last-child').width((50 / $('article section').length) + '%');
+			jQuery('article').width((jQuery('article section').length * 200) + '%');
+			jQuery('article section:last-child').width((50 / jQuery('article section').length) + '%');
+			jQuery('article section:first-child').width((100 / jQuery('article section').length) + '%');
 		}
 		goto(0);
 	}
@@ -126,19 +127,18 @@ function loadUrl(pagina) {
 	if (pagina == '#' || pagina === undefined) {
 		return;
 	}
-	$('article').fadeOut(1000, function () {
+	jQuery('article').fadeOut(500, function () {
 		document.location.href = pagina;
 	});
 }
 
 function mobile() {
-	return ($(window).width() < 741);
+	return (jQuery(window).width() < 741);
 }
 
 function portrait() {
-	return ($(window).width() < $(window).height());
+	return (jQuery(window).width() < jQuery(window).height());
 }
-
 
 /*
  * Plugin Name: square

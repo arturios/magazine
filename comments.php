@@ -3,11 +3,6 @@
  <div class="box top-1 left-2 width-20">
  <h2 class="condensed"><?php the_title(); ?></h2>
  <div class="relative width-24">
-<?php if ( has_post_thumbnail() ) : ?>
- <figure class="float-left width-4 square circle border-05 border-white raised">
-     <?php the_post_thumbnail('large', array( 'class' => 'full')); ?>
- </figure>
-<?php endif; ?>
 
   <?php the_excerpt(); ?>
  <div class="hr-white">&nbsp;</div>
@@ -79,34 +74,32 @@ return;
 <?php else : ?>
 
 <div class="input-field">
-<i class="mdi-action-account-circle prefix"></i>
-<input type="text" required name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="44"  tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
+<i class="icon-user prefix"></i>
+<input type="text" required="required" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="44"  tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
 <label for="author" class="">Nombre <?php if ($req) echo "(obligatorio)"; ?>:</label>
 </div>
 
 <div class="input-field">
-<i class="mdi-communication-email prefix"></i>
-<input type="text" required name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
+<i class="icon-mail prefix"></i>
+<input type="text" required="required" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
 <label for="email">Correo (no se publicará <?php if ($req) echo "y es obligatorio"; ?> ):</label>
 </div>
 
 <div class="input-field">
-<i class="mdi-av-web prefix"></i>
-<input type="text" required name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" tabindex="3" />
+<i class="icon-list-alt prefix"></i>
+<input type="text" required="required" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" tabindex="3" />
 <label for="url">Página:</label>
 </div>
 
 <?php endif; ?>
 
-<!--<p>You can use these tags: <code><?php echo allowed_tags(); ?></code></p>-->
-
 <div class="input-field">
-<i class="mdi-editor-mode-edit prefix"></i>
-<textarea name="comment" class="materialize-textarea" id="comment" tabindex="4"></textarea>
-<label for="comment">Comentario:</label>
+<i class="icon-pencil prefix"></i>
+<textarea id="comment" name="comment" cols="45" rows="8" aria-describedby="form-allowed-tags" aria-required="true" required="required"></textarea>
+    <label for="comment">Comentario:</label>
 </div>
 <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
-    <i class="mdi-content-send right"></i>
+    <i class="icon-paper-plane-empty right"></i>
 </button>
 <br />
 
