@@ -1,4 +1,4 @@
-<section tabindex="0" class="dark-blue overflow-y">
+<section id="comentarios" tabindex="0" class="dark-blue overflow-y">
  <div id="coments" class="relative top-1 left-6 width-12">
  <div class="box top-1 left-2 width-20">
  <h2 class="condensed"><?php the_title(); ?></h2>

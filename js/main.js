@@ -17,12 +17,17 @@ jQuery(document).ready(function () {
 		Resize_Page();
 	});
 
+	jQuery('figure').click(function () {
+        jQuery(this).focusout();
+		jQuery(this).parents('section').focus();
+		jQuery(this).toggleClass("fig");
+	})
+
 	jQuery('a').not('.prev, .next').click(function (e) {
 		e.preventDefault();
 		pagina = jQuery(this).attr('href');
 		loadUrl(pagina);
 	})
-
 	jQuery('.prev').click(function (e) {
 		if (mobile()) {
 			return
@@ -115,8 +120,10 @@ function Resize_Page() {
 		jQuery('section').width((100 / jQuery('article section').length) + '%');
 		if (portrait()) {
 			jQuery('article').width((jQuery('article section').length * 200) + '%');
-			jQuery('article section:last-child').width((50 / jQuery('article section').length) + '%');
-			jQuery('article section:first-child').width((100 / jQuery('article section').length) + '%');
+			jQuery('section').width(jQuery('article').width() / jQuery('article section').length);
+			jQuery('article section:last-child').width(jQuery('section').width() / 2);
+			jQuery('article section:first-child').width(jQuery('article').width() / jQuery('article section').length);
+			jQuery('article').width(jQuery('article').width() - jQuery('section').width() / 2);
 		}
 		goto(0);
 	}
@@ -139,12 +146,6 @@ function mobile() {
 function portrait() {
 	return (jQuery(window).width() < jQuery(window).height());
 }
-
-/*
- * Plugin Name: square
- *
- * Author: Arturo Rios
- */
 
 jQuery.fn.square = function (t) {
 	var e = "",

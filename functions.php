@@ -7,14 +7,9 @@ automatic_feed_links();
 
 if ( !is_admin() ) {
 
-wp_register_style('desktop', get_template_directory_uri() . '/style.css', array(), '1.0', 'screen and (min-width: 741px)');
-wp_enqueue_style('desktop');
+wp_register_style('style', get_template_directory_uri() . '/style.css', array(), '1.0', '');
+wp_enqueue_style('style');
 
-wp_register_style('mobile', get_template_directory_uri() . '/mobile.css', array(), '1.0', 'handheld, screen and (max-width: 740px)');
-wp_enqueue_style('mobile'); // Enqueue it!
-
-wp_register_style('print', get_template_directory_uri() . '/print.css', array(), '1.0', 'print');
-wp_enqueue_style('print'); // Enqueue it!
 
 function my_scripts_method() {
 	wp_enqueue_script(
