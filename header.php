@@ -62,12 +62,12 @@ if ($posttags) {
 	<!-- desplegadores de las barras laterales -->
 	<?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>
 	<a href="#" id="m-left" class="menuopenclose" title="Enlaces" role="menuitem">
-		<span class="icon-right"></span>
+		<span class="icon-right-big"></span>
 	</a>
 	<?php endif; ?>
 	<?php if ( is_active_sidebar( 'right-sidebar' ) ) : ?>
 	<a href="#" id="m-right" class="menuopenclose" title="Enlaces" role="menuitem">
-		<span class="icon-left"></span>
+		<span class="icon-left-big"></span>
 	</a>
 	<?php endif; ?>
 	<?php include (TEMPLATEPATH . '/inc/preloader.php' ); ?>
