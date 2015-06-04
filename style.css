@@ -345,7 +345,9 @@ h5,
 h6,
 .listad,
 .sans,
-.caption {
+.caption,
+#navigation a,
+#navigation span {
     font-family: "Roboto", Arial, sans-serif;
 }
 
@@ -355,7 +357,8 @@ h6,
     text-align: left;
 }
 
-.ultrafina {
+.ultrafina,
+.ultralight {
     font-family: roboto, sans-serif !important;
     font-weight: 100 !important;
     letter-spacing: .05em;
@@ -375,7 +378,7 @@ aside {
     font-variant: small-caps;
 }
 
-.sans {
+.serif {
     font-family: "Noto Serif", serif !important;
 }
 
@@ -1343,7 +1346,7 @@ textarea {
         content: " ";
         padding: .5em;
         z-index: 10;
-        color: white;
+        color: #e7e9e7;
     }
     figure:focus div,
     .fig div {
@@ -2810,6 +2813,7 @@ textarea {
         width: 100%;
         height: 100%;
         background-repeat: repeat;
+        z-index: 100;
     }
     .vignette:after {
         box-shadow: inset 0 0 30em rgba(0, 0, 0, 1), inset 0 0 6em rgba(0, 0, 0, 1);
@@ -2822,7 +2826,7 @@ textarea {
     .grid:after,
     figure:after,
     .capital:first-letter {
-        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 5 5' version='1.1' xmlns='http://www.w3.org/2000/svg'><line x1='0' y1='0' x2='5' y2='5' stroke='#ffffff' stroke-width='1' stroke-opacity='.75' /></svg>");
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 5 5'><line x1='0' y1='0' x2='5' y2='5' stroke='#ffffff' stroke-width='1' stroke-opacity='.25' /></svg>");
         background-size: 5px 5px;
     }
     .noise:after,
@@ -2844,8 +2848,7 @@ textarea {
     [class^=texture-]:after,
     [class*=" texture-"]:after,
     [class^=preset-]:after,
-    [class*=" preset-"]:after,
-    figure:after {
+    [class*=" preset-"]:after {
         content: " " !important;
         position: absolute !important;
         top: 0 !important;
@@ -2862,11 +2865,6 @@ textarea {
         filter: alpha(opacity=70);
         -moz-opacity: .7;
         opacity: .7;
-    }
-    figure:after {
-        filter: alpha(opacity=10);
-        -moz-opacity: .1;
-        opacity: .1;
     }
     .texture-leather:after {
         background-image: url(./images/leather.png) !important;
@@ -3438,7 +3436,6 @@ textarea {
         background-color: #e7e9e7;
     }
 }
-
 /* apaisado */
 
 @media screen and (orientation: portrait) and (min-width: 741px) {
@@ -3666,14 +3663,11 @@ textarea {
     .menuopenclose {
         position: fixed;
         top: 0;
-        font-size: 2rem;
-        line-height: 2rem;
+        font-size: 1.25rem;
+        line-height: 2.5rem;
         z-index: 1002;
         border: none;
         padding: 0;
-        background-color: transparent;
-        color: #444;
-        text-shadow: 1px 1px 2px #e7e9e7;
     }
     #m-left {
         left: 0;
@@ -3686,13 +3680,13 @@ textarea {
         top: 0;
         bottom: 0;
         width: 40%;
-        padding: 1rem;
+        padding: 3rem 1rem 1rem 1rem;
         overflow-y: auto;
         overflow-x: hidden;
         font-size: 1.1rem;
         line-height: 100%;
         z-index: 1000;
-        background-color: #fff;
+        background-color: #e7e9e7;
     }
     aside div {
         padding-bottom: 1.5em;
@@ -3831,13 +3825,14 @@ textarea {
     }
     /*Style for menu links*/
     
-    menu a {
+    menu a,
+    .menuopenclose {
         display: block;
         text-align: center;
         text-decoration: none;
-        color: #848283;
+        color: #e7e9e7;
         padding: 0 1rem;
-        text-shadow: 1px 1px 0 #e7e9e7, -1px 1px 0 #e7e9e7, 1px -1px 0 #e7e9e7, -1px -1px 0 #e7e9e7, 0 0 1px #e7e9e7;
+        text-shadow: 1px 1px 0 #3c3535, -1px 1px 0 #3c3535, 1px -1px 0 #3c3535, -1px -1px 0 #3c3535, 0 0 1px #3c3535, 2px 1px 0 #3c3535, -2px 1px 0 #3c3535, 2px -1px 0 #3c3535, -2px -1px 0 #3c3535, 0 0 4px #3c3535;
     }
     /*Hover state for top level links*/
     
@@ -3846,6 +3841,7 @@ textarea {
     }
     menu li:hover a {
         color: #3c3535;
+        text-shadow: none;
     }
     menu ul li a {
         position: relative;
@@ -3877,6 +3873,7 @@ textarea {
     menu li:hover ul a {
         background: #fff;
         color: #3c3535;
+        /*       text-shadow: none; */
     }
     menu ul li a:hover::before,
     .menuopenclose:hover::before {
@@ -3890,7 +3887,7 @@ textarea {
     menu li:hover ul a:hover {
         background: #76c2af;
         color: #e7e9e7;
-        text-shadow: none;
+        /*       text-shadow: none;*/
     }
     /*Hide dropdown links until they are needed*/
     
@@ -3978,8 +3975,6 @@ textarea {
         line-height: 200%;
     }
 }
-
-
 /* para imprimir */
 
 @media print {
@@ -3998,7 +3993,7 @@ textarea {
     }
     body {
         background-image: url();
-        background-color: white;
+        background-color: #e7e9e7;
     }
     body,
     article,

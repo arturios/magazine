@@ -4,7 +4,7 @@
 <h1 class="condensed font-size-900 text-shadow"><?php bloginfo('name'); ?></h1>
 <br />
 <h2 class="relative left-8 width-8 padding border border-white"><?php bloginfo('description'); ?><span class="frame nomobile gray opacity-50 z-index--10"></span></h2>
-	<p class="box right-0 top-1 padding text-stroke padding-left"><?php the_time("F"); ?> de <?php the_time("Y"); ?></p>
+	<p class="box right-1 top-1 padding text-stroke padding-left"><?php the_time("F"); ?> de <?php the_time("Y"); ?></p>
 	</div>
 </div>
 
