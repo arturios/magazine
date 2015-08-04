@@ -98,9 +98,11 @@ return;
 <textarea id="comment" name="comment" cols="45" rows="8" aria-describedby="form-allowed-tags" aria-required="true" required="required"></textarea>
     <label for="comment">Comentario:</label>
 </div>
-<button class="btn waves-effect waves-light" type="submit" name="action">Enviar
+<div class="relative left-6 width-12">
+<button class="btn waves-effect text-black condensed" type="submit" name="action">Enviar
     <i class="icon-paper-plane-empty right"></i>
 </button>
+</div>
 <br />
 
 <?php comment_id_fields(); ?>

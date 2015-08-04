@@ -11,8 +11,37 @@ var waitForFinalEvent = (function () {
         timers[uniqueId] = setTimeout(callback, ms);
     };
 })();
+
+var main = jQuery('article'),
+    pages = main.children('section'),
+    animcursor = 1,
+    pagesCount = pages.length,
+    current = 0,
+    isAnimating = false,
+    endCurrPage = false,
+    endgoto = false,
+    animEndEventNames = {
+        'WebkitAnimation': 'webkitAnimationEnd',
+        'OAnimation': 'oAnimationEnd',
+        'msAnimation': 'MSAnimationEnd',
+        'animation': 'animationend'
+    },
+    // animation end event name
+    animEndEventName = animEndEventNames[Modernizr.prefixed('animation')],
+    // support css animations
+    support = Modernizr.cssanimations;
+
 jQuery(document).ready(function () {
-	Resize_Page();
+	jQuery('html, body, #content, article, section').css('position','absolute');
+	jQuery('#content').addClass('pt-perspective');
+	
+    pages.each(function () {
+        var page = jQuery(this);
+        pages.addClass('pt-page');
+        page.data('originalClassList', page.attr('class'));
+    });
+
+    pages.eq(current).addClass('pt-page-current');
 
     jQuery('article').each(function () {
         jQuery('article').fadeIn(1000);
@@ -23,7 +52,10 @@ jQuery(document).ready(function () {
         jQuery(this).parents('section').focus();
         jQuery(this).toggleClass("fig");
     })
-
+    jQuery('figure').click(function () {
+        jQuery(this).parents('section').focus();
+        jQuery(this).toggleClass("fig");
+    })
     jQuery('a').not('.prev, .next').click(function (e) {
         e.preventDefault();
         pagina = jQuery(this).attr('href');
@@ -43,19 +75,23 @@ jQuery(document).ready(function () {
         e.preventDefault();
         goto(1);
     })
-});
+})
+
 jQuery(window).load(function () {
     Resize_Page();
     jQuery('article').fadeIn(1000);
 });
+
 jQuery(window).resize(function () {
     waitForFinalEvent(function () {
         Resize_Page();
     }, 100, 'some unique string');
 });
+
 jQuery(window).bind('orientationchange', function (event) {
     Resize_Page();
 });
+
 jQuery(document).keydown(function (event) {
     if (event.keyCode == 33 || event.keyCode == 37) {
         event.preventDefault();
@@ -81,30 +117,6 @@ jQuery(document).keydown(function (event) {
     };
 });
 
-function goto(inc) {
-    if (mobile()) {
-        return;
-    }
-    factor = 1;
-    if (portrait()) {
-        factor = .5;
-    }
-    sectionwidth = jQuery('section').width() * factor;
-    pagenumber = (inc * sectionwidth) + parseInt(jQuery('#content').scrollLeft() / sectionwidth + .5) * sectionwidth;
-    jQuery('#content:not(:animated)').animate({
-        scrollLeft: pagenumber
-    }, 500);
-
-    if (pagenumber > (jQuery('article').width() - sectionwidth + 1)) {
-        pagina = jQuery('.next').attr('href');
-        loadUrl(pagina);
-    };
-    if (pagenumber < 0) {
-        pagina = jQuery('.prev').attr('href');
-        loadUrl(pagina);
-    };
-}
-
 function Resize_Page() {
     if (mobile()) {
         jQuery('body').css({
@@ -114,27 +126,16 @@ function Resize_Page() {
     } else {
         jQuery('.square,.cuadrado').square();
         /* font-size para los navegadores que aun no soportan vw y vh */
-        jQuery('body').css('fontsize', .88 * jQuery(window).width() / 100 + .75 * jQuery(window).height() / 100);
-
-        /* scroll horizontal */
-        jQuery('article').width((jQuery('article section').length * 100) + '%');
-        jQuery('section').width((100 / jQuery('article section').length) + '%');
-        if (portrait()) {
-            jQuery('article').width((jQuery('article section').length * 200) + '%');
-            jQuery('section').width(jQuery('article').width() / jQuery('article section').length);
-            jQuery('article section:last-child').width(jQuery('section').width() / 2);
-            jQuery('article section:first-child').width(jQuery('article').width() / jQuery('article section').length);
-            jQuery('article').width(jQuery('article').width() - jQuery('section').width() / 2);
-        }
-        goto(0);
+        jQuery('body').css('fontsize', .88 * jQuery('body').width() / 100 + .8 * jQuery('body').height() / 100);
     }
 }
 
-
 function loadUrl(pagina) {
+
     if (pagina == '#' || pagina === undefined) {
-        return;
+        return false;
     }
+
     jQuery('article').fadeOut(500, function () {
         document.location.href = pagina;
     });
@@ -156,3 +157,75 @@ jQuery.fn.square = function (t) {
         obj_width = t.width, t.height(obj_width)
     })
 };
+
+function goto(options) {
+
+    if (isAnimating) {
+        return false;
+    }
+
+    isAnimating = true;
+
+    var currPage = pages.eq(current);
+
+    if (options == 1) {
+        ++current;
+        outClass = 'pt-page-rotateRoomLeftOut pt-page-ontop';
+        inClass = 'pt-page-rotateRoomLeftIn';
+    }
+    if (options == -1) {
+        --current;
+        outClass = 'pt-page-rotateRoomRightOut pt-page-ontop';
+        inClass = 'pt-page-rotateRoomRightIn';
+    }
+
+    if (current > pagesCount - 1) {
+        current = 0;
+        pagina = jQuery('.next').attr('href');
+        loadUrl(pagina);
+    }
+
+    if (current < 0) {
+        current = pagesCount - 1;
+        pagina = jQuery('.prev').attr('href');
+        loadUrl(pagina);
+    }
+
+    pages.eq(current).removeClass('pt-page-current')
+    var goto = pages.eq(current).addClass('pt-page-current');
+
+
+
+    currPage.addClass(outClass).on(animEndEventName, function () {
+        currPage.off(animEndEventName);
+        endCurrPage = true;
+        if (endgoto) {
+            onEndAnimation(currPage, goto);
+        }
+    });
+
+    goto.addClass(inClass).on(animEndEventName, function () {
+        goto.off(animEndEventName);
+        endgoto = true;
+        if (endCurrPage) {
+            onEndAnimation(currPage, goto);
+        }
+    });
+
+    if (!support) {
+        onEndAnimation(currPage, goto);
+    }
+}
+
+
+function onEndAnimation(outpage, inpage) {
+    endCurrPage = false;
+    endgoto = false;
+    resetPage(outpage, inpage);
+    isAnimating = false;
+}
+
+function resetPage(outpage, inpage) {
+    outpage.attr('class', outpage.data('originalClassList'));
+    inpage.attr('class', inpage.data('originalClassList') + ' pt-page-current');
+}

@@ -4,12 +4,13 @@
         <div class="relative width-4 left">
 			<div class="width-24 padding">
             <?php if(!empty($post->post_excerpt)): ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="condensed text-spacing line-height-100 width-24">
-						<?php the_title(); ?>
-				</a>
-                <div class="small">
+				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><span class="condensed text-spacing line-height-100 width-24">
+						<?php the_title(); ?></span>
+				
+                <span class="small sans">
                 	<?php the_excerpt(); ?>
-                </div>
+                </span>
+					</a>
 			<?php else: ?>
         		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="condensed text-white font-size-150 line-height-100 width-24">
 					<?php the_title(); ?>
