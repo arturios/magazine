@@ -1,5 +1,5 @@
 <?php include (TEMPLATEPATH . '/inc/header2.php' ); ?>
-<div class="box top-0 left-0 width-24 height-16 table">
+<div id="portada" class="box top-0 left-0 width-24 height-16 table">
 	<div class="v-center text-center">
 <?php /* If this is a category archive */ if (is_category()) { ?>
 <h1 class="condensed font-size-600 text-shadow">Artículos de… &nbsp;</h1>
@@ -35,7 +35,7 @@
 
 	</div>
 </div>
-
+</figure>
 
 <?php get_template_part('loop'); ?>
 </section>

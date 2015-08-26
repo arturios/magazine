@@ -12,16 +12,20 @@ var waitForFinalEvent = (function () {
     };
 })();
 jQuery(document).ready(function () {
-	Resize_Page();
+    Resize_Page();
 
     jQuery('article').each(function () {
         jQuery('article').fadeIn(1000);
+        jQuery('#images').css('zIndex', '1000').css('opacity', 1).fadeOut();
+
         Resize_Page();
     });
-
     jQuery('figure').click(function () {
-        jQuery(this).parents('section').focus();
-        jQuery(this).toggleClass("fig");
+        jQuery('#zoom').attr('src', jQuery(this).find('img').attr('src'));
+        jQuery('#images').fadeIn(600);
+    })
+    jQuery('#images').click(function () {
+        jQuery('#images').fadeOut(600);
     })
 
     jQuery('a').not('.prev, .next').click(function (e) {
@@ -135,7 +139,7 @@ function loadUrl(pagina) {
     if (pagina == '#' || pagina === undefined) {
         return;
     }
-    jQuery('article').fadeOut(500, function () {
+    jQuery('article').fadeOut(700, function () {
         document.location.href = pagina;
     });
 }

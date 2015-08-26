@@ -1,11 +1,19 @@
 <?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>
-    <aside id="a-left" class="dark-blue" role="complementary">
+	<a href="#" id="m-left" class="menuopenclose" title="Enlaces" role="menuitem">
+		<i class="material-icons">menu</i>
+	</a>
+
+    <aside id="a-left" class="darkgray" role="complementary">
         <?php dynamic_sidebar('left-sidebar'); ?>
     </aside>
 <?php endif; ?>
 
 <?php if ( is_active_sidebar( 'right-sidebar' ) ) : ?>
-    <aside id="a-right" class="dark-blue" role="complementary">
+	<a href="#" id="m-right" class="menuopenclose" title="Enlaces" role="menuitem">
+		<i class="material-icons">menu</i>
+	</a>
+
+    <aside id="a-right" class="darkgray" role="complementary">
         <?php dynamic_sidebar('right-sidebar'); ?>
     </aside>
 <?php endif; ?>

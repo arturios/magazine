@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
-
+	<meta property="fb:admins" content="100001208172466"/>
 	<?php if (is_search()) { ?>
 	<meta name="robots" content="noindex, nofollow" />
 	<?php } ?>
@@ -35,40 +35,21 @@ if ($posttags) {
     echo $tag->name . ', '; 
   }
 }
-?>magazine,revista,nudista,nudismo,naturista,naturismo">
+?>">
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 	<!-- wp_head -->
 	<?php wp_head(); ?>
 	<!-- /wp_head -->
-	<noscript>
-		<style type="text/css">
-			body,
-			#content,
-			article,
-            section {
-				overflow: auto;
-			}
-		</style>
-	</noscript>
+	<?php include (TEMPLATEPATH . '/inc/no-js.css.php' ); ?>
 </head>
 
 <body role="document">
 	<?php include (TEMPLATEPATH . '/inc/menu.php' ); ?>
 	<?php include (TEMPLATEPATH . '/inc/navigation.php' ); ?>
-
-	<!-- desplegadores de las barras laterales -->
-	<?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>
-	<a href="#" id="m-left" class="menuopenclose" title="Enlaces" role="menuitem">
-		<span class="icon-right-big"></span>
-	</a>
-	<?php endif; ?>
-	<?php if ( is_active_sidebar( 'right-sidebar' ) ) : ?>
-	<a href="#" id="m-right" class="menuopenclose" title="Enlaces" role="menuitem">
-		<span class="icon-left-big"></span>
-	</a>
-	<?php endif; ?>
 	<?php include (TEMPLATEPATH . '/inc/preloader.php' ); ?>
 	<div id="content" role="main">

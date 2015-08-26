@@ -9,15 +9,10 @@ if ( !is_admin() ) {
 
 wp_register_style('style', get_template_directory_uri() . '/style.css', array(), '1.0', '');
 wp_enqueue_style('style');
-
-//wp_register_style('animations', get_template_directory_uri() . '/animations.css', array(), '1.0', 'screen and (min-width: 741px)');
-//wp_enqueue_style('animations');
-
-wp_register_script('hyphe', get_template_directory_uri() . '/js/hyphe.js', array(), '',true); 
-wp_enqueue_script('hyphe');
-
+	
 wp_register_script('main', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0',true); 
 wp_enqueue_script('main');
+
 
 }
 
@@ -110,9 +105,15 @@ if ( ! empty( $header_image ) ) : ?>
 </div>
 <?php }
 
+
+function no_comment_reply_js(){
+	wp_deregister_script( 'comment-reply' );
+         }
+add_action('init','no_comment_reply_js');
+
 add_theme_support( 'custom-background' );
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'automatic-feed-links' );
-add_theme_support( 'html5', array( 'comment-form', 'search-form', 'gallery', 'caption' ) );
+add_theme_support( 'html5', array( 'search-form', 'gallery', 'caption' ) );
 remove_filter ('the_content',  'wpautop');
 ?>
