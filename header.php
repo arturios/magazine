@@ -35,7 +35,10 @@ if ($posttags) {
     echo $tag->name . ', '; 
   }
 }
-?>">
+?>
+								   
+magazine, revista, nudista, nudismo, naturista, naturismo, nude, bare, nudist, nudism, desnuda">
+	
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -48,8 +51,8 @@ if ($posttags) {
 	<?php include (TEMPLATEPATH . '/inc/no-js.css.php' ); ?>
 </head>
 
-<body role="document">
+<body>
 	<?php include (TEMPLATEPATH . '/inc/menu.php' ); ?>
 	<?php include (TEMPLATEPATH . '/inc/navigation.php' ); ?>
-	<?php include (TEMPLATEPATH . '/inc/preloader.php' ); ?>
-	<div id="content" role="main">
+	<?php include (TEMPLATEPATH . '/inc/images.php' ); ?>
+	<main role="main">

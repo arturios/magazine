@@ -1,12 +1,8 @@
 <noscript>
 	<style type="text/css">
-		body,
-		#content,
-		article,
-		section {
-			overflow: auto;
+		article {
+			opacity:1;
 		}
-		
 		@media screen and (min-width: 741px) {
 			figure:focus figcaption {
 				padding: .1rem .66666rem;

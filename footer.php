@@ -1,10 +1,7 @@
-</div>
+</main>
 <?php get_sidebar(); ?>
 <div id="overlayer" class="gray opacity-70"><a href="#" class="frame"></a></div>
-<div id="images" class="frame darkgray texture-leather">
-    <img src="transparente.png" id="zoom">
-    <a href="#" class="box top-0 right-0"><i class="material-icons font-size-200">close</i></a>
-</div>
+
 <?php wp_footer(); ?>
 
 <div id="fb-root"></div>
