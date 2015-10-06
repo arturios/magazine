@@ -3,6 +3,9 @@
 		article {
 			opacity:1;
 		}
+		section {
+			box-shadow: none !important
+		}
 		@media screen and (min-width: 741px) {
 			figure:focus figcaption {
 				padding: .1rem .66666rem;

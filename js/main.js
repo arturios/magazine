@@ -1,6 +1,12 @@
 var pagenumber = 0,
-    pagenumbers = jQuery('article section').length;
-jQuery('article').fadeOut(0);
+    pagenumbers = jQuery('article section').length,
+    fig = null;
+f_left = 0,
+    f_top = 0,
+    f_width = 0,
+    f_height = 0;
+
+// jQuery('article').css('overflow', 'hidden').fadeOut(0);
 jQuery('article section').css('position', 'absolute').fadeOut(0).eq(pagenumber).fadeIn(0);
 
 var waitForFinalEvent = (function () {
@@ -16,19 +22,54 @@ var waitForFinalEvent = (function () {
     };
 })();
 jQuery(document).ready(function () {
-    jQuery('article').animate({
-        opacity: 1
-    }, 600);
+    jQuery("article").delay(3000).fadeIn(1000);
     Resize_Page();
 
-    jQuery('figure').click(function () {
-        var transparente = jQuery('#zoom').attr('src');
-        jQuery('#zoom').attr('src', jQuery(this).find('img').attr('src'));
+    jQuery('figure').not("#zoom").click(function () {
+        fig = jQuery(this);
+        f_left = fig.offset().left;
+        f_top = fig.offset().top;
+        f_width = fig.width();
+        f_height = fig.height();
+        ratio = (fig.find('img').get(0).naturalWidth / fig.find('img').get(0).naturalHeight) / (jQuery(window).width() / jQuery(window).height());
+        margin = jQuery(window).width() / 30;
+        final_width = jQuery(window).width();
+        final_height = jQuery(window).height();
+        if ((ratio) < 1) {
+            final_width = final_width * ratio;
+        } else {
+            final_height = final_height / ratio;
+        }
+        final_width = final_width - (2 * margin);
+        final_height = final_height - (2 * margin);
+        margin_left = (jQuery(window).width() - final_width) / 2;
+        margin_top = (jQuery(window).height() - final_height) / 2;
+        jQuery("#zoom").css({
+            "left": f_left,
+            "top": f_top,
+            "width": f_width,
+            "height": f_height
+        }).find('img').attr('src', fig.find('img').attr('src'));
+        fig.fadeTo(300, .5);
         jQuery('#images').fadeIn(600);
+        jQuery("#zoom").animate({
+            "left": margin_left,
+            "top": margin_top,
+            "width": final_width,
+            "height": final_height
+        }, 600);
+        jQuery('article section').eq(pagenumber).addClass('animated_blur');
     })
     jQuery('#images').click(function () {
-        jQuery('#images').fadeOut(600).attr('src', transparente);
-
+        jQuery('#images').delay(300).fadeOut(600);
+        jQuery("#zoom").animate({
+            "left": f_left,
+            "top": f_top,
+            "width": f_width,
+            "height": f_height
+        }, 600);
+        fig.delay(300).fadeTo(300, 1);
+        jQuery('article section').eq(pagenumber).removeClass('animated_blur');
     })
 
     jQuery('a').not('.prev, .next').click(function (e) {
@@ -53,7 +94,7 @@ jQuery(document).ready(function () {
 });
 jQuery(window).load(function () {
     jQuery('article').fadeIn(1000);
-    jQuery('#images').css('zIndex', '10000').css('opacity', 1).fadeOut(1000);
+    jQuery('#images').css('zIndex', '10000').css('opacity', 1).fadeOut(0);
 });
 jQuery(window).resize(function () {
     waitForFinalEvent(function () {
@@ -108,8 +149,8 @@ function goto(inc) {
             scrollLeft: 0
         }, 600);
     }
-
     jQuery('article section').eq(pagenumber).fadeOut(600);
+
     pagenumber = pagenumber + inc;
     if (pagenumber > (pagenumbers - 1)) {
         pagina = jQuery('.next').attr('href');
@@ -126,11 +167,8 @@ function goto(inc) {
 
 function Resize_Page() {
     jQuery('article section').css('position', 'absolute').fadeOut(0).eq(pagenumber).fadeIn(0);
-    jQuery('.square,.cuadrado').square();
+    //	jQuery('.square,.cuadrado').square();
     jQuery('body').css('fontsize', .88 * jQuery(window).width() / 100 + .75 * jQuery(window).height() / 100);
-    if (!portrait()) {
-        jQuery('article').width('100%');
-    }
     if (mobile()) {
         jQuery('body').css({
             fontSize: '18px'
@@ -165,3 +203,9 @@ jQuery.fn.square = function (t) {
         obj_width = t.width, t.height(obj_width)
     })
 };
+
+function ratio(img) {
+    var image = jQuery(img);
+    var tmpImg = jQuery('<img/>').attr('src', image.attr('src'));
+    ratio = tmpImg[0].width / tmpImg[0].height;
+}

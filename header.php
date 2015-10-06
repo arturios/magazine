@@ -52,7 +52,9 @@ magazine, revista, nudista, nudismo, naturista, naturismo, nude, bare, nudist, n
 </head>
 
 <body>
+<header class="frame darkblue nomobile">
+	<?php include (TEMPLATEPATH . '/inc/portada.php' ); ?>
+</header>
 	<?php include (TEMPLATEPATH . '/inc/menu.php' ); ?>
 	<?php include (TEMPLATEPATH . '/inc/navigation.php' ); ?>
-	<?php include (TEMPLATEPATH . '/inc/images.php' ); ?>
 	<main role="main">

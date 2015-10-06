@@ -6,11 +6,11 @@
                 <?php the_excerpt(); ?>
                 <div class="hr-white">&nbsp;</div>
                 <div class="br">&nbsp;</div>
-                <div class="relative width-24 padding-bottom">
+                <div class="relative width-24 height-24 padding-bottom">
                     <div class="fb-send" data-href="<?php echo post_permalink( $ID ); ?>"></div>
                     <div class="fb-like" data-colorscheme="dark" data-href="<?php echo post_permalink( $ID ); ?>" data-mobile="true" data-share="true"></div>
                     <div id="comments" class="comments-area">
-                        <div class="fb-comments" data-href="<?php echo post_permalink( $ID ); ?>" data-numposts="10" data-colorscheme="dark" data-version="v2.3"></div>
+                        <div class="fb-comments width-24 height-24 z-index-10" data-href="<?php echo post_permalink( $ID ); ?>" data-numposts="10" data-colorscheme="dark" data-version="v2.3"></div>
                     </div>
                 </div>
             </div>

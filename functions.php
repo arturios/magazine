@@ -9,7 +9,7 @@ if ( !is_admin() ) {
 
 wp_register_style('style', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
 wp_enqueue_style('style');
-	
+
 wp_register_script('main', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0',true); 
 wp_enqueue_script('main');
 
