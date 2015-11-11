@@ -1,0 +1,45 @@
+.round {
+	border-radius: .5em;
+	-moz-border-radius: .5em;
+	-webkit-border-radius: .5em;
+}
+
+.round-top {
+	border-top-left-radius: .5em;
+	border-top-right-radius: .5em;
+	-moz-border-radius-topleft: .5em;
+	-moz-border-radius-topright: .5em;
+	-webkit-border-top-left-radius: .5em;
+	-webkit-border-top-right-radius: .5em;
+}
+
+.round-bottom {
+	border-bottom-left-radius: .5em;
+	border-bottom-right-radius: .5em;
+	-moz-border-radius-bottomleft: .5em;
+	-moz-border-radius-bottomright: .5em;
+	-webkit-border-bottom-left-radius: .5em;
+	-webkit-border-bottom-right-radius: .5em;
+}
+
+.round-left {
+	border-top-left-radius: .5em;
+	border-bottom-left-radius: .5em;
+	-moz-border-radius-bottomleft: .5em;
+	-moz-border-radius-topleft: .5em;
+	-webkit-border-bottom-left-radius: .5em;
+	-webkit-border-top-left-radius: .5em;
+}
+
+.round-right {
+	border-top-right-radius: .5em;
+	border-bottom-right-radius: .5em;
+	-moz-border-radius-bottomright: .5em;
+	-moz-border-radius-topright: .5em;
+	-webkit-border-bottom-right-radius: .5em;
+	-webkit-border-top-right-radius: .5em;
+}
+
+.circle {
+	border-radius: 100%;
+}

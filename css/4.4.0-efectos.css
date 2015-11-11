@@ -1,0 +1,39 @@
+/* overflow y text-indent */
+
+.no-overflow {
+	overflow: hidden;
+}
+
+.scroll,
+.overflow-y {
+	overflow-y: auto !important;
+}
+
+.noindent,
+.no-indent {
+	text-indent: 0;
+}
+
+.br,
+.clear {
+	display: block;
+	clear: both;
+}
+
+.block {
+	display: block;
+}
+
+.no-padding,
+.nopadding {
+	margin: 0;
+	padding: 0;
+}
+
+.nodesktop,
+.no-desktop {
+	display: none;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}

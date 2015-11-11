@@ -1,0 +1,21 @@
+/* Cuando un titular H2 le precede un H3 le vamos a dar un formato especial, para empezar h3 tendrá una tipografía con serifa, un ancho del 75% y una línea gris debajo
+*/
+
+
+h2+h3 {
+	font-family: "Noto Serif", times, 'times new roman', serif;
+	margin-top: -.75em;
+	font-style: italic;
+	margin-bottom: .5em;
+	padding-bottom: .33333333em;
+	max-width: 75%;
+}
+
+h2+h3:after {
+	content: "";
+	width: 25%;
+	height: 1em;
+	display: block;
+	clear: both;
+	border-bottom: .25em solid #848283;
+}

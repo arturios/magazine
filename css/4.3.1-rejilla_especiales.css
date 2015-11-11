@@ -1,0 +1,362 @@
+/* especiales */
+
+.top-1em {
+	top: 1rem
+}
+
+.bottom-1em {
+	bottom: 1rem
+}
+
+.left-1em {
+	left: 1rem
+}
+
+.right-1em {
+	right: 1rem
+}
+
+.top-2em {
+	top: 2rem
+}
+
+.bottom-2em {
+	bottom: 2rem
+}
+
+.top-4em {
+	top: 4rem
+}
+
+.bottom-4em {
+	bottom: 4rem
+}
+
+.height-2px {
+	height: 2px
+}
+
+.width-2px {
+	width: 2px
+}
+
+.height-4px {
+	height: 4px
+}
+
+.width-4px {
+	width: 4px
+}
+
+.height-05em {
+	height: .5em
+}
+
+.width-05em {
+	width: .5em
+}
+
+.height-1em {
+	height: 1em
+}
+
+.width-1em {
+	width: 1em
+}
+
+.height-2em {
+	height: 2em
+}
+
+.width-2em {
+	width: 2em
+}
+
+.height-4em {
+	height: 4em
+}
+
+.width-4em {
+	width: 4em
+}
+
+.height-8em {
+	height: 8em
+}
+
+.width-8em {
+	width: 8em
+}
+
+.height-16em {
+	height: 16em
+}
+
+.width-16em {
+	width: 16em
+}
+
+.left-2em {
+	left: 2rem
+}
+
+.left-4em {
+	left: 4rem
+}
+
+.right-2em {
+	right: 2rem
+}
+
+.right-4em {
+	right: 4rem
+}
+
+.top-phi1 {
+	top: 61.803398875%
+}
+
+.top-phi2 {
+	top: 38.19660112502%
+}
+
+.top-phi3 {
+	top: 85.410196625%
+}
+
+.top-phi4 {
+	top: 14.589803375%
+}
+
+.bottom-phi1 {
+	bottom: 61.803398875%
+}
+
+.bottom-phi2 {
+	bottom: 38.19660112502%
+}
+
+.bottom-phi3 {
+	bottom: 85.410196625%
+}
+
+.bottom-phi4 {
+	bottom: 14.589803375%
+}
+
+.left-phi1 {
+	left: 61.803398875%
+}
+
+.left-phi2 {
+	left: 38.19660112502%
+}
+
+.left-phi3 {
+	left: 85.410196625%
+}
+
+.left-phi4 {
+	left: 14.589803375%
+}
+
+.right-phi1 {
+	right: 61.803398875%
+}
+
+.right-phi2 {
+	right: 38.19660112502%
+}
+
+.right-phi3 {
+	right: 85.410196625%
+}
+
+.right-phi4 {
+	right: 14.589803375%
+}
+
+.width-phi1 {
+	width: 61.803398875%
+}
+
+.width-phi2 {
+	width: 38.19660112502%
+}
+
+.width-phi3 {
+	width: 85.410196625%
+}
+
+.width-phi4 {
+	width: 14.589803375%
+}
+
+.max-width-phi1 {
+	max-width: 61.803398875%
+}
+
+.max-width-phi2 {
+	max-width: 38.19660112502%
+}
+
+.max-width-phi3 {
+	max-width: 85.410196625%
+}
+
+.max-width-phi4 {
+	max-width: 14.589803375%
+}
+
+.height-phi1 {
+	height: 61.803398875%
+}
+
+.height-phi2 {
+	height: 38.19660112502%
+}
+
+.height-phi3 {
+	height: 85.410196625%
+}
+
+.height-phi4 {
+	height: 14.589803375%
+}
+
+.max-height-phi1 {
+	max-height: 61.803398875%
+}
+
+.max-height-phi2 {
+	max-height: 38.19660112502%
+}
+
+.max-height-phi3 {
+	max-height: 85.410196625%
+}
+
+.max-height-phi4 {
+	max-height: 14.589803375%
+}
+/* cuadrados */
+
+.square-1 {
+	width: 4.166666667vw;
+	height: 4.166666667vw
+}
+
+.square-2 {
+	width: 8.333333333vw;
+	height: 8.333333333vw
+}
+
+.square-3 {
+	width: 12.5vw;
+	height: 12.5vw
+}
+
+.square-4 {
+	width: 16.66666667vw;
+	height: 16.66666667vw
+}
+
+.square-5 {
+	width: 20.83333333vw;
+	height: 20.83333333vw
+}
+
+.square-6 {
+	width: 25vw;
+	height: 25vw
+}
+
+.square-7 {
+	width: 29.16666667vw;
+	height: 29.16666667vw
+}
+
+.square-8 {
+	width: 33.33333333vw;
+	height: 33.33333333vw
+}
+
+.square-9 {
+	width: 37.5vw;
+	height: 37.5vw
+}
+
+.square-10 {
+	width: 41.66666667vw;
+	height: 41.66666667vw
+}
+
+.square-11 {
+	width: 45.83333333vw;
+	height: 45.83333333vw
+}
+
+.square-12 {
+	width: 50vw;
+	height: 50vw
+}
+
+.square-13 {
+	width: 54.16666667vw;
+	height: 54.16666667vw
+}
+
+.square-14 {
+	width: 58.33333333vw;
+	height: 58.33333333vw
+}
+
+.square-15 {
+	width: 62.5vw;
+	height: 62.5vw
+}
+
+.square-16 {
+	width: 66.66666667vw;
+	height: 66.66666667vw
+}
+
+.square-17 {
+	width: 70.83333333vw;
+	height: 70.83333333vw
+}
+
+.square-18 {
+	width: 75vw;
+	height: 75vw
+}
+
+.square-19 {
+	width: 79.16666667vw;
+	height: 79.16666667vw
+}
+
+.square-20 {
+	width: 83.33333333vw;
+	height: 83.33333333vw
+}
+
+.square-21 {
+	width: 87.5vw;
+	height: 87.5vw
+}
+
+.square-22 {
+	width: 91.66666667vw;
+	height: 91.66666667vw
+}
+
+.square-23 {
+	width: 95.83333333vw;
+	height: 95.83333333vw
+}
+
+.square-24 {
+	width: 100vw;
+	height: 100vw
+}

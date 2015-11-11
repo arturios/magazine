@@ -46,7 +46,6 @@ magazine, revista, nudista, nudismo, naturista, naturismo, nude, bare, nudist, n
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 	<!-- wp_head -->
-	<?php wp_head(); ?>
 	<!-- /wp_head -->
 	<?php include (TEMPLATEPATH . '/inc/no-js.css.php' ); ?>
 </head>

@@ -1,0 +1,125 @@
+/* Configuración de la página */
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	line-height: 150%;
+	margin: 0;
+}
+
+a {
+	background: none;
+	text-decoration: none;
+}
+
+p {
+	z-index: 3;
+	word-wrap: break-word;
+	word-break: normal;
+	-webkit-hyphens: auto;
+	-webkit-hyphenate-character: \2010;
+	-webkit-hyphenate-limit-after: 1;
+	-webkit-hyphenate-limit-before: 3;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+	orphans: 2;
+	widows: 2;
+	text-align: inherit;
+}
+
+h1 {
+	font-size: 3em;
+	line-height: 1em !important;
+	margin-bottom: 0.5em;
+}
+
+h2 {
+	font-size: 2em;
+	line-height: 1.5em !important;
+	margin-bottom: .75em;
+}
+
+h3 {
+	font-size: 1.5em;
+	line-height: 1em !important;
+	margin-bottom: 1em;
+	font-weight: bold;
+}
+
+h4 {
+	font-size: 1.25em;
+	line-height: 1.2em;
+	padding: 0 .2em .2em .2em;
+	margin-bottom: 1em;
+	font-style: italic;
+}
+
+h5 {
+	font-size: 1em;
+	line-height: 1em;
+	margin: 1em 0;
+	font-variant: small-caps;
+	font-weight: bold;
+	letter-spacing: .025em;
+}
+
+h5:before {
+	content: "- ";
+}
+
+blockquote {
+	margin: 1.5em 0 3em 0;
+	padding: 0 1.5em;
+}
+
+small,
+cite {
+	font-size: .75em;
+	line-height: 1.5em;
+}
+
+object,
+embed {
+	clear: both;
+	height: auto;
+	left: 0;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style-type: circle;
+	padding-left: 2em;
+}
+
+ol {
+	list-style-type: decimal;
+	padding-left: 2em;
+}
+
+ul li,
+ol li {
+	padding-left: 1em;
+	padding-bottom: .5em;
+	margin: 0;
+}
+
+li p,
+li ul {
+	margin-bottom: 0;
+	margin-top: 0;
+}

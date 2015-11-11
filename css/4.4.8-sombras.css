@@ -1,0 +1,41 @@
+.shadow {
+	box-shadow: .5em .5em 2em rgba(0, 0, 0, 0.5));
+	-moz-box-shadow: .5em .5em 2em rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: .5em .5em 2em rgba(0, 0, 0, 0.5);
+}
+
+.shadow-right {
+	box-shadow: .5em 0 2em rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: .5em 0 2em rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: .5em 0 2em rgba(0, 0, 0, 0.5);
+}
+
+.shadow-left {
+	box-shadow: -.5em 0 2em rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: -.5em 0 2em rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: -.5em 0 2em rgba(0, 0, 0, 0.5);
+}
+
+.shadow-top {
+	box-shadow: 0 -.5em 2em rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 -.5em 2em rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 -.5em 2em rgba(0, 0, 0, 0.5);
+}
+
+.shadow-bottom {
+	box-shadow: 0 .5em 2em rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 .5em 2em rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 .5em 2em rgba(0, 0, 0, 0.5);
+}
+
+.inshadow {
+	box-shadow: inset .5em .5em 2em 0 #000;
+	-moz-box-shadow: inset .5em .5em 2em 0 #000;
+	-webkit-box-shadow: .5em .5em 2em 0 #000 inset;
+}
+
+.raised {
+	box-shadow: 0 1.5em 1em -1em rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.3) inset;
+	-moz-box-shadow: 0 1.5em 1em -1em rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.3) inset;
+	-webkit-box-shadow: 0 1.5em 1em -1em rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.3) inset;
+}

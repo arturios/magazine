@@ -1,0 +1,192 @@
+/* modificadores de texto */
+
+.capital:first-letter {
+	position: static;
+	display: block;
+	float: left;
+	font-size: 5em;
+	text-align: right;
+	margin: 1.5rem .75rem 2rem 1rem;
+	color: #3c3535;
+	font-weight: bold;
+	text-shadow: 2px 2px 0 #e7e9e7;
+	font-style: italic;
+}
+
+.small {
+	font-size: .75em;
+	line-height: 1.5em;
+}
+
+.text-strong {
+	font-weight: blod;
+}
+
+.small-caps {
+	font-variant: small-caps;
+}
+
+.upper {
+	text-transform: uppercase;
+}
+
+.text-spacing {
+	letter-spacing: .1em;
+}
+
+.text-center {
+	text-align: center !important;
+}
+
+.text-right {
+	text-align: right !important;
+}
+
+.text-left {
+	text-align: left !important;
+}
+
+.text-justify {
+	text-align: justify !important;
+}
+
+.text-relief {
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, .9);
+}
+
+.text-relief-b,
+.text-shadow {
+	text-shadow: 0px 0px 3px #3c3535, 1px 1px 0 #3c3535, 2px 2px 0 #3c3535;
+}
+
+.text-stroke {
+	text-shadow: 1px 1px 0 #3c3535, -1px 1px 0 #3c3535, 1px -1px 0 #3c3535, -1px -1px 0 #3c3535, 0 0 1px #3c3535, 2px 1px 0 #3c3535, -2px 1px 0 #3c3535, 2px -1px 0 #3c3535, -2px -1px 0 #3c3535, 0 0 4px #3c3535;
+}
+
+.text-3d {
+	text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+}
+/* tamaño fuentes */
+
+.font-size-1200 {
+	font-size: 12em;
+	line-height: 100%;
+}
+
+.font-size-900 {
+	font-size: 9em;
+	line-height: 100%;
+}
+
+.font-size-600 {
+	font-size: 6em;
+	line-height: 100%;
+}
+
+.font-size-400 {
+	font-size: 4em;
+	line-height: 112.5%;
+}
+
+.font-size-300 {
+	font-size: 3em;
+	line-height: 100%;
+}
+
+.font-size-250 {
+	font-size: 2.5em;
+	line-height: 120%;
+}
+
+.font-size-200 {
+	font-size: 2em;
+	line-height: 150%;
+}
+
+.font-size-150 {
+	font-size: 1.5em;
+	line-height: 100%;
+}
+
+.font-size-140 {
+	font-size: 1.4em;
+	line-height: 107.14%;
+}
+
+.font-size-130 {
+	font-size: 1.3em;
+	line-height: 1.1538em;
+}
+
+.font-size-120 {
+	font-size: 1.2em;
+	line-height: 125%;
+}
+
+.font-size-75 {
+	font-size: .75em;
+	line-height: 200%;
+}
+
+.font-size-50 {
+	font-size: .5em;
+	line-height: 300%;
+}
+
+.font-size-50,
+.font-size-75,
+.font-size-120,
+.font-size-130,
+.font-size-140,
+.font-size-150,
+.font-size-200,
+.font-size-250,
+.font-size-300,
+.font-size-400,
+.font-size-600,
+.font-size-900,
+.font-size-1200 {
+	margin: 0;
+	padding: 0;
+}
+/* alto de linea */
+
+.line-height-70 {
+	line-height: .7em !important;
+}
+
+.line-height-80 {
+	line-height: .8em !important;
+}
+
+.line-height-90 {
+	line-height: .9em !important;
+}
+
+.line-height-100 {
+	line-height: 1em !important;
+}
+
+.line-height-110 {
+	line-height: 1.1em !important;
+}
+
+.line-height-120 {
+	line-height: 1.2em !important;
+}
+
+.line-height-130 {
+	line-height: 1.3em !important;
+}
+
+.line-height-140 {
+	line-height: 1.4em !important;
+}
+
+.line-height-150 {
+	line-height: 1.5em !important;
+}
+
+.line-height-200 {
+	line-height: 2em !important;
+}

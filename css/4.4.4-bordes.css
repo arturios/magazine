@@ -1,0 +1,39 @@
+/* bordes */
+
+[class^=border],
+[class*=" border"] {
+	border-width: 2px;
+	border-style: none;
+	border-color: #888;
+}
+
+.border {
+	border-width: 2px;
+	border-style: solid;
+}
+
+.border-05,
+.border-05em {
+	border-width: .5rem;
+}
+
+.border-1,
+.border-1em {
+	border-width: 1rem;
+}
+
+.border-top {
+	border-top-style: solid;
+}
+
+.border-right {
+	border-right-style: solid;
+}
+
+.border-bottom {
+	border-bottom-style: solid;
+}
+
+.border-left {
+	border-left-style: solid;
+}

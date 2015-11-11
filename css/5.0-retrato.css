@@ -1,0 +1,31 @@
+/* si el dispositivo está en modo retrato en lugar de apaisado duplica el tamaño de cada página y de las tipografías de forma que se visualiza como si fueran las dos páginas de una revista */
+
+section {
+	width: 200%;
+	font-size: 140%;
+	line-height: 150%;
+}
+
+aside {
+	width: 66.666% !important;
+	font-size: 140%;
+	line-height: 150%;
+}
+
+body,
+main,
+article {
+	overflow-x: auto !important;
+}
+/* comentarios de wordpress */
+
+#comentarios {
+	width: 100vw;
+}
+
+#coments {
+	top: 4rem;
+	left: 0;
+	width: 100%;
+	padding: 0 2rem;
+}

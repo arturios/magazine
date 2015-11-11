@@ -1,0 +1,15 @@
+/* Siguiendo los manuales de composición de libros y revistas, los párrafos van seguidos, pero para distinguirlos tienen un indentado de 2em salvo el primero que no tiene indentado
+*/
+
+*+p {
+    text-indent: 0;
+}
+
+p+* {
+    margin-top: 1em;
+}
+
+p+p {
+    text-indent: 2em;
+    margin-top: 0;
+}

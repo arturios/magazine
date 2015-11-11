@@ -1,0 +1,32 @@
+/* especificos para wordpress */
+
+.attachment-thumbnail {
+	float: left;
+	width: 100%;
+	height: auto;
+	padding: 0 1em 1em 0;
+}
+.widget_tag_cloud a {
+	width: auto;
+	padding: 0 .5rem;
+	line-height: 125%;
+	display: inline-block;
+	float: none;
+	clear: none;
+	border: none;
+}
+#wp-calendar {
+	width: 100%;
+	line-height: 1.5em;
+	text-align: right;
+}
+#wp-calendar caption,
+#wp-calendar tfoot {
+	text-align: left;
+	font-size: 150%;
+	line-height: 200%;
+}
+#wp-calendar a {
+	margin: 0;
+	padding: 0;
+}

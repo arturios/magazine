@@ -1,0 +1,114 @@
+/* eliminamos en la versión para pantallas el outline  */
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+/* el tamaño de la tipografía se calcula teniendo en cuenta el alto y el ancho del dispositivo de esta forma se adapta a cualquier tamaño sin que cambie sustancialmente la distribución del texto */
+
+html>body {
+	font-size: calc(.84vw + .72vh) !important;
+}
+/* ajustamos los elementos al tamaño del dispositivo al 100% de alto y de ancho */
+
+html,
+body,
+main,
+article,
+section,
+.frame {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: auto;
+	zoom: 1;
+	-webkit-text-size-adjust: 100%;
+	background-color: transparent;
+	margin: auto;
+	float: left;
+}
+
+main {
+	position: absolute;
+	background-color: #e7e9e7;
+	z-index: 10;
+}
+/* ******************* */
+
+section,
+.box,
+.fixed,
+.static,
+.frame {
+	overflow: hidden;
+}
+/* elementos de la web:
+
+.box crea una caja en una posición absoluta
+.relative crea una caja en una posición relativa y flotante a la izquierda
+.fixed la crea fija a la caja predecesora
+.static estática a la precedesora y
+.frame es un atajo para crear una caja absoluta en posición X=0 e Y=0 con un tamaño del 100% tanto vertical como horizontal
+*/
+
+.box {
+	position: absolute !important;
+	z-index: 4;
+}
+.relative {
+	float: left;
+	position: relative !important;
+}
+
+.fixed {
+	position: fixed !important;
+}
+
+.static {
+	position: static;
+}
+
+.frame {
+	position: absolute;
+	z-index: 0;
+}
+/* .float-left y .float-right crea una caja relativa flotante */
+
+.float-left {
+	position: relative;
+	float: left !important;
+}
+
+.float-right {
+	position: relative;
+	float: right !important;
+}
+/* oculta las cajas con las siguientes clases, es útil para hacer que algo desaparezca en la versión escritorio y sin embargo aparezca en la versión móvil */
+
+.no-desktop,
+.nodesktop,
+.invisible {
+	width: 0;
+	height: 0;
+	display: none;
+	visibility: hidden;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+/* Aunque antigua y ahora las hay mejores, mantengo esta forma de alinear verticalmente */
+
+.table {
+	display: table;
+}
+
+.v-center {
+	display: table-cell;
+	vertical-align: middle;
+}

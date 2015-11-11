@@ -1,0 +1,140 @@
+img {
+	border: 0;
+	ms-interpolation-mode: bicubic;
+	max-width: none;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+.hrt,
+.vrt,
+.img-100,
+.cien {
+	position: absolute;
+}
+
+.hrt {
+	width: 100%;
+	height: auto;
+}
+
+.vrt {
+	height: 100%;
+	width: auto;
+}
+
+.cien,
+.img-100 {
+	width: 100%;
+	height: 100%;
+}
+
+figure {
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+figcaption {
+	z-index: 10;
+}
+
+.caption {
+	color: #000;
+	padding: .5rem;
+}
+
+.caption::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, .8);
+	z-index: -1;
+}
+
+img.center {
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.full,
+.cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.full,
+.cover {
+	object-fit: cover;
+	object-position: center center;
+}
+
+.full.left,
+.cover.left {
+	right: -25%;
+	width: 125%;
+	object-position: left;
+}
+
+.full.top,
+.cover.top {
+	bottom: -25%;
+	height: 125%;
+	object-position: top;
+}
+
+.full.right,
+.cover.right {
+	left: -25%;
+	width: 125%;
+	object-position: right;
+}
+
+.full.bottom,
+.cover.bottom {
+	top: -25%;
+	height: 125%;
+	object-position: bottom;
+}
+
+img.float-left,
+figure.float-left {
+	margin: 0 1em 1em 0;
+	float: left;
+}
+
+img.float-right,
+figure.float-right {
+	margin: 0 0 1em 1em;
+	float: right;
+}
+
+figure:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 5 5'><line x1='0' y1='0' x2='5' y2='5' stroke='#CCCCCC' stroke-width='1' stroke-opacity='.1' /></svg>");
+	background-size: 5px 5px;
+	background-repeat: repeat;
+	z-index: 100;
+}
+
+figure.nogrid:after,
+figure.no-grid:after {
+	background-image: none;
+}

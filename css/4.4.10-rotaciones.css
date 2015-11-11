@@ -1,0 +1,89 @@
+.rotate-180 {
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+}
+
+.rotate-90 {
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+}
+
+.rotate--90 {
+	-ms-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+}
+
+.rotate-45 {
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+
+.rotate--45 {
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+}
+
+.rotate-30 {
+	-ms-transform: rotate(30deg);
+	transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+}
+
+.rotate--30 {
+	-ms-transform: rotate(-30deg);
+	transform: rotate(-30deg);
+	-webkit-transform: rotate(-30deg);
+}
+
+.rotate-15 {
+	-ms-transform: rotate(15deg);
+	transform: rotate(15deg);
+	-webkit-transform: rotate(15deg);
+}
+
+.rotate--15 {
+	-ms-transform: rotate(-15deg);
+	transform: rotate(-15deg);
+	-webkit-transform: rotate(-15deg);
+}
+
+.rotate-7 {
+	-ms-transform: rotate(7.5deg);
+	transform: rotate(7.5deg);
+	-webkit-transform: rotate(7.5deg);
+}
+
+.rotate--7 {
+	-ms-transform: rotate(-7.5deg);
+	transform: rotate(-7.5deg);
+	-webkit-transform: rotate(-7.5deg);
+}
+
+.rotate-3 {
+	-ms-transform: rotate(3.75deg);
+	transform: rotate(3.75deg);
+	-webkit-transform: rotate(3.75deg);
+}
+
+.rotate--3 {
+	-ms-transform: rotate(-3.75deg);
+	transform: rotate(-3.75deg);
+	-webkit-transform: rotate(-3.75deg);
+}
+
+.rotate-1 {
+	-ms-transform: rotate(1.875deg);
+	transform: rotate(1.875deg);
+	-webkit-transform: rotate(1.875deg);
+}
+
+.rotate--1 {
+	-ms-transform: rotate(-1.875deg);
+	transform: rotate(-1.875deg);
+	-webkit-transform: rotate(-1.875deg);
+}
