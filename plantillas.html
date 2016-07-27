@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html id='pagina' lang='es-ES' class='no-js'>
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Plantillas prediseñadas</title>
+
+    <!-- Meta -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="user-scalable=yes,initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" id="style-css" href="./style.css" type="text/css" media="all">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="paginas.js"></script>
+
+</head>
+
+<body>
+
+    <a href="#" class="button-collapse"><i class="material-icons">menu</i></a>
+    <menu role="menu">
+        <ul id="header-menu" class="nav-menu">
+            <li id="save" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2404"><a href="#">Guardar página</a>
+                <li id="datos" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2404"><a href="#">Guardar datos</a>
+                </li>
+        </ul>
+    </menu>
+    <nav id="navigation" role="navigation">
+
+        <a title="Artículo anterior" href="#" class="prev page-numbers waves-effect" role="prev"><i class="material-icons">chevron_left</i></a>
+        <a title="Siguiente artículo" href="#" class="next page-numbers waves-effect" role="next"><i class="material-icons">chevron_right</i></a>
+    </nav>
+    <div id="images" class="frame table white">
+        <div class="frame texture-encalado"></div>
+        <img src="" id="zoom">
+        <div class="frame"></div>
+        <a href="#" class="box top-0 right-0"><i class="material-icons font-size-200">close</i></a>
+
+    </div>
+
+    <main>
+        <style type="text/css">
+            main {
+                font-size: 100%
+            }
+        </style>
+    </main>
+    <a href="#" id="m-left" class="menuopenclose" title="Enlaces" role="menuitem">
+        <i class="material-icons">menu</i>
+    </a>
+    <aside id="a-left" role="complementary">
+        <img src="paginas/pagina_00.jpg" width="100%">
+        <img src="paginas/pagina_01.jpg" width="100%">
+        <img src="paginas/pagina_02.jpg" width="100%">
+        <img src="paginas/pagina_03.jpg" width="100%">
+        <img src="paginas/pagina_04.jpg" width="100%">
+        <img src="paginas/pagina_05.jpg" width="100%">
+        <img src="paginas/pagina_06.jpg" width="100%">
+        <img src="paginas/pagina_07.jpg" width="100%">
+        <img src="paginas/pagina_08.jpg" width="100%">
+        <img src="paginas/pagina_09.jpg" width="100%">
+        <img src="paginas/pagina_10.jpg" width="100%">
+        <img src="paginas/pagina_11.jpg" width="100%">
+        <img src="paginas/pagina_12.jpg" width="100%">
+        <img src="paginas/pagina_13.jpg" width="100%">
+        <img src="paginas/pagina_14.jpg" width="100%">
+        <img src="paginas/pagina_15.jpg" width="100%">
+        <img src="paginas/pagina_16.jpg" width="100%">
+        <img src="paginas/pagina_17.jpg" width="100%">
+        <img src="paginas/pagina_18.jpg" width="100%">
+    </aside>
+    <a href="#" id="m-right" class="menuopenclose" title="Enlaces" role="menuitem">
+        <i class="material-icons">menu</i>
+    </a>
+    <aside id="a-right" role="complementary">
+        <img src="paginas/pagina_19.jpg" width="100%">
+        <img src="paginas/pagina_20.jpg" width="100%">
+        <img src="paginas/pagina_21.jpg" width="100%">
+        <img src="paginas/pagina_22.jpg" width="100%">
+        <img src="paginas/pagina_23.jpg" width="100%">
+        <img src="paginas/pagina_24.jpg" width="100%">
+        <img src="paginas/pagina_25.jpg" width="100%">
+        <img src="paginas/pagina_26.jpg" width="100%">
+        <img src="paginas/pagina_27.jpg" width="100%">
+        <img src="paginas/pagina_28.jpg" width="100%">
+        <img src="paginas/pagina_29.jpg" width="100%">
+        <img src="paginas/pagina_30.jpg" width="100%">
+        <img src="paginas/pagina_31.jpg" width="100%">
+        <img src="paginas/pagina_32.jpg" width="100%">
+        <img src="paginas/pagina_33.jpg" width="100%">
+        <img src="paginas/pagina_34.jpg" width="100%">
+        <img src="paginas/pagina_35.jpg" width="100%">
+        <img src="paginas/pagina_36.jpg" width="100%">
+        <img src="paginas/pagina_37.jpg" width="100%">
+        <img src="paginas/pagina_38.jpg" width="100%">
+        <img src="paginas/pagina_39.jpg" width="100%">
+        <img src="paginas/pagina_40.jpg" width="100%">
+        <img src="paginas/pagina_41.jpg" width="100%">
+        <div id="overlayer" class="gray opacity-70">
+            <a href="#" class="frame"></a>
+        </div>
+    </aside>
+
+    <script type="text/javascript">
+        jQuery('aside img').click(function() {
+            my_content = parseInt(jQuery(this).attr('src').substr(15, 2));
+            jQuery('section.current').removeClass('current');
+            my_section = "<section tabindex='0' class='sect current'></section>";
+            jQuery('main').append(my_section);
+            jQuery('section.current').html(page[my_content]);
+            jQuery("figure img")
+                .on("dragenter", onDragEnter)
+                .on("dragover", onDragOver)
+                .on("dragleave", onDragLeave)
+                .on("drop", onDrop);
+            pagenumbers = jQuery('main section').length;
+            pagenumber = pagenumbers;
+        })
+
+         jQuery('#save').click(function() {
+            var pom = document.createElement('a');
+            pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent("<!DOCTYPE html><html id='pagina' lang='es-ES' class='no-js'>" + jQuery('#pagina').html() + "</html>"));
+            pom.setAttribute('download', "temporal.html");
+
+            if (document.createEvent) {
+                var event = document.createEvent('MouseEvents');
+                event.initEvent('click', true, true);
+                pom.dispatchEvent(event);
+            } else {
+                pom.click();
+            }
+        })
+         jQuery('#datos').click(function() {
+            var pom = document.createElement('a');
+            pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(jQuery('main').html()));
+            pom.setAttribute('download', "datos.txt");
+
+            if (document.createEvent) {
+                var event = document.createEvent('MouseEvents');
+                event.initEvent('click', true, true);
+                pom.dispatchEvent(event);
+            } else {
+                pom.click();
+            }
+        })
+
+         var onDragEnter = function(event) {
+            event.preventDefault();
+        },
+
+            onDragOver = function(event) {
+                event.preventDefault();
+            },
+
+            onDragLeave = function(event) {
+                event.preventDefault();
+            },
+
+            onDrop = function(event) {
+                event.preventDefault();
+                var fichero = event.originalEvent.dataTransfer.files[0].name;
+                var camino = "fotos/";
+                jQuery(this).attr("src", camino + fichero);
+            };
+        jQuery("figure img")
+            .on("dragenter", onDragEnter)
+            .on("dragover", onDragOver)
+            .on("dragleave", onDragLeave)
+            .on("drop", onDrop);
+    </script>
+</body>
+
+</html>

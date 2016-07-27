@@ -107,7 +107,7 @@ return;
 <?php do_action('comment_form', $post->ID); ?>
 
 </form>
-
+<div class="br nomobile">&nbsp;</div>
 <?php endif; // If registration required and not logged in ?>
 
 </div>

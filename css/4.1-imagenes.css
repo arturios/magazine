@@ -31,7 +31,8 @@ svg:not(:root) {
 	height: 100%;
 }
 
-figure {
+figure,
+picture {
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
@@ -72,11 +73,6 @@ img.center {
 	right: 0;
 	width: 100%;
 	height: 100%;
-	object-fit: contain;
-}
-
-.full,
-.cover {
 	object-fit: cover;
 	object-position: center center;
 }
@@ -110,18 +106,21 @@ img.center {
 }
 
 img.float-left,
-figure.float-left {
+figure.float-left,
+picture.float-left {
 	margin: 0 1em 1em 0;
 	float: left;
 }
 
 img.float-right,
-figure.float-right {
+figure.float-right,
+picture.float-right {
 	margin: 0 0 1em 1em;
 	float: right;
 }
 
-figure:after {
+/*figure:after,
+picture:after {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -132,9 +131,17 @@ figure:after {
 	background-size: 5px 5px;
 	background-repeat: repeat;
 	z-index: 100;
-}
+}*/
 
 figure.nogrid:after,
-figure.no-grid:after {
+figure.no-grid:after,
+picture.nogrid:after,
+picture.no-grid:after {
+	width: 0;
+	height: 0;
 	background-image: none;
+	background-size: 0 0;
+	background-repeat: no-repeat;
 }
+
+figure.img {z-index: 199}

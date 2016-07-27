@@ -6,63 +6,58 @@ automatic_feed_links();
 
 
 if ( !is_admin() ) {
-
-wp_register_style('style', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
-wp_enqueue_style('style');
-
-wp_register_script('main', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0',true); 
-wp_enqueue_script('main');
-
-
+	wp_register_style('style', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
+	wp_enqueue_style('style');
+	wp_register_script('main', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0',true); 
+	wp_enqueue_script('main');
 }
 
 
-function Revista_pagination()
-{
-global $wp_query;
-$big = 999999999;
-echo paginate_links(array(
-'base'         => str_replace($big, '%#%', get_pagenum_link($big)),
-'format'       => '?paged=%#%',
-'show_all'     => false,
-'prev_next'    => true,
-'prev_text'    => __('<i class="material-icons">chevron_left</i>'),
-'next_text'    => __('<i class="material-icons">chevron_right</i>'),
-'current'      => max(1, get_query_var('paged')),
-'total'        => $wp_query->max_num_pages,
-));
+function Revista_pagination() {
+	global $wp_query;
+	$big = 999999999;
+	echo paginate_links(array(
+		'base'         => str_replace($big, '%#%', get_pagenum_link($big)),
+		'format'       => '?paged=%#%',
+		'show_all'     => false,
+		'prev_next'    => true,
+		'prev_text'    => __('<i class="material-icons">chevron_left</i>'),
+		'next_text'    => __('<i class="material-icons">chevron_right</i>'),
+		'current'      => max(1, get_query_var('paged')),
+		'total'        => $wp_query->max_num_pages,
+	));
 }
 
 
 // Clean up the <head>
-function removeHeadLinks() {
-remove_action('wp_head', 'rsd_link');
-remove_action('wp_head', 'wlwmanifest_link');
-}
-add_action('init', 'removeHeadLinks');
-remove_action('wp_head', 'wp_generator');
+// function removeHeadLinks() {
+// remove_action('wp_head', 'rsd_link');
+// remove_action('wp_head', 'wlwmanifest_link');
+// }
+// add_action('init', 'removeHeadLinks');
+// remove_action('wp_head', 'wp_generator');
 
 if (function_exists('register_sidebar')) {
 
 // Define Sidebar Widget Area 1
 register_sidebar(array(
-'name' => 'Left Sidebar',
-'id' => 'left-sidebar',
-'description' => 'Left Sidebar widgets',
-'before_widget' => '<div id="%1$s" class="widget %2$s">',
-'after_widget' => '</div>',
-'before_title' => '<h2>',
-'after_title' => '</h2>'
+	'name' => 'Left Sidebar',
+	'id' => 'left-sidebar',
+	'description' => 'Left Sidebar widgets',
+	'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	'after_widget' => '</div>',
+	'before_title' => '<h2>',
+	'after_title' => '</h2>'
 ));
 
 register_sidebar(array(
-'name' => 'Right Sidebar',
-'id' => 'right-sidebar',
-'description' => 'Right Sidebar widgets',
-'before_widget' => '<div id="%1$s" class="widget %2$s">',
-'after_widget' => '</div>',
-'before_title' => '<h2>',
-'after_title' => '</h2>'
+	'name' => 'Right Sidebar',
+	'id' => 'right-sidebar',
+	'description' => 'Right Sidebar widgets',
+	'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	'after_widget' => '</div>',
+	'before_title' => '<h2>',
+	'after_title' => '</h2>'
 ));
 
 

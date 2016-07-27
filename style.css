@@ -1,6 +1,6 @@
 /* comunes */
 
-@import url(http://fonts.googleapis.com/css?family=Roboto:100,400|Roboto+Condensed:700|Noto+Serif:400,700,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,400|Roboto+Condensed:700|Noto+Serif:400,700,400italic,700italic);
 @import url("./css/1-resetcss.css") all;
 @import url("./css/2-tipografias.css") all;
 @import url("./css/3.0-principal.css") all;
@@ -56,3 +56,7 @@
 /* zoom de las imágenes */
 
 @import url("./css/9-zoom.css") screen;
+
+body {
+	opacity: 1;
+}

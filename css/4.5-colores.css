@@ -279,7 +279,7 @@ a:hover {
 .lightgray a,
 .blue a,
 .yellow a {
-	color: #4f5d73;
+	color: #4f5d73 !important;
 }
 
 a,

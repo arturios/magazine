@@ -35,24 +35,25 @@ if ($posttags) {
     echo $tag->name . ', '; 
   }
 }
-?>
-								   
-magazine, revista, nudista, nudismo, naturista, naturismo, nude, bare, nudist, nudism, desnuda">
+?>magazine, revista, nudista, nudismo, naturista, naturismo, nude, bare, nudist, nudism, desnuda">
 	
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
-	<!-- wp_head -->
-	<!-- /wp_head -->
 	<?php include (TEMPLATEPATH . '/inc/no-js.css.php' ); ?>
+	<style type="text/css">
+		body {
+			opacity: 0;
+			transition: opacity 2s ease-out;
+		}
+	</style>
 </head>
 
 <body>
 <header class="frame darkblue nomobile">
-	<?php include (TEMPLATEPATH . '/inc/portada.php' ); ?>
+<?php include (TEMPLATEPATH . '/inc/portada.php' ); ?>
 </header>
 	<?php include (TEMPLATEPATH . '/inc/menu.php' ); ?>
 	<?php include (TEMPLATEPATH . '/inc/navigation.php' ); ?>

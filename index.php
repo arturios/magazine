@@ -5,5 +5,5 @@
 
 <?php get_template_part('loop'); ?>
 </section>
-</article>
+<!-- </article> -->
 <?php get_footer(); ?>

@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<article class="white" role="main">
+<!-- <article class="white" role="main"> -->
 	<section tabindex="0" class="dark-blue">
 		<figure class="frame" role="banner">
 			<img src="<?php echo get_header_image(); ?>" class="full" alt="portada" />

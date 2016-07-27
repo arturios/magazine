@@ -9,15 +9,20 @@
 }
 /* el tamaño de la tipografía se calcula teniendo en cuenta el alto y el ancho del dispositivo de esta forma se adapta a cualquier tamaño sin que cambie sustancialmente la distribución del texto */
 
+
+body {
+	line-height: 1.5em;
+}
+
 html>body {
-	font-size: calc(.84vw + .72vh) !important;
+	font-size: calc(.80vw + .70vh) !important;
 }
 /* ajustamos los elementos al tamaño del dispositivo al 100% de alto y de ancho */
+
 
 html,
 body,
 main,
-article,
 section,
 .frame {
 	position: relative;
@@ -35,10 +40,15 @@ section,
 	float: left;
 }
 
+body,
 main {
 	position: absolute;
-	background-color: #e7e9e7;
 	z-index: 10;
+}
+
+section {
+	background-color: #e7e9e7;
+	height: 100vh;
 }
 /* ******************* */
 
@@ -62,6 +72,7 @@ section,
 	position: absolute !important;
 	z-index: 4;
 }
+
 .relative {
 	float: left;
 	position: relative !important;
@@ -90,6 +101,14 @@ section,
 	position: relative;
 	float: right !important;
 }
+
+.flex {
+	display: flex;
+}
+
+.float-bottom {
+	align-self: flex-end;
+}
 /* oculta las cajas con las siguientes clases, es útil para hacer que algo desaparezca en la versión escritorio y sin embargo aparezca en la versión móvil */
 
 .no-desktop,
@@ -111,4 +130,37 @@ section,
 .v-center {
 	display: table-cell;
 	vertical-align: middle;
+}
+/* pasar de una sección a otra */
+
+.sect {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 1;
+}
+
+.sect.current {
+	z-index: 2;
+	-webkit-animation: animacion .6s ease-in-out both;
+	animation: animacion .6s ease-in-out both;
+}
+
+@keyframes animacion {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes animacion {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }

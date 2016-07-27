@@ -1,6 +1,4 @@
 body,
-main,
-article,
 section,
 aside {
 	position: relative;
@@ -14,15 +12,6 @@ aside {
 	padding: 0;
 	margin: 0;
 	color: #3c3535;
-}
-
-article {
-	padding: 3rem 0;
-}
-
-main {
-	padding: 2em 0;
-	text-align: left
 }
 
 h1,
@@ -85,7 +74,7 @@ aside li {
 }
 
 button,
-article a,
+section a,
 aside a {
 	position: relative;
 	float: none;
@@ -112,7 +101,7 @@ aside a {
 	border-radius: 4px;
 }
 
-article a {
+section a {
 	margin-left: -2.5rem;
 	margin-right: -2.5rem;
 	width: auto;
@@ -156,10 +145,10 @@ a,
 	transition: .6s ease-out;
 }
 
-article a:hover,
+section a:hover,
 aside a:hover,
 menu a:hover,
-article a:active,
+section a:active,
 aside a:active,
 menu a:active {
 	color: #fff;
@@ -183,8 +172,10 @@ iframe,
 object,
 header,
 figure,
+picture,
 img,
-figure img {
+figure img,
+picture img {
 	position: relative;
 	overflow: hidden;
 	width: 100%;
@@ -208,11 +199,13 @@ body {
 }
 
 figure,
+picture,
 div {
 	margin: 1.5rem 0;
 }
 
-figure:after {
+figure:after,
+picture:after {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -364,7 +357,7 @@ p[class*=" comment"] label {
 
 #wp-calendar {
 	width: 100%;
-	line-height: 1.5rem;
+	line-height: 150%;
 	text-align: right;
 }
 
@@ -383,6 +376,7 @@ p[class*=" comment"] label {
 #fontsize,
 #feedly-mini,
 figure>div,
+picture>div,
 .drag-target {
 	display: none;
 	visibility: hidden;
@@ -499,15 +493,6 @@ menu:hover {
 }
 
 #overlayer {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, .75);
-	z-index: -1;
-	opacity: 0;
-	filter: alpha(opacity=0);
 	-webkit-opacity: 0;
 	-webkit-transition: opacity .6s ease;
 	transition: opacity .6s ease;

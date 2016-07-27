@@ -102,6 +102,10 @@
 	background-image: url(../images/damask.png) !important;
 }
 
+.texture-cachemira:after {
+	background-image: url(../images/backg.png) !important;
+}
+
 .texture-encalado:after {
 	background-image: url(../images/encalado.png) !important;
 }
@@ -176,6 +180,7 @@
 	-webkit-animation: blur 1s forwards;
 	animation: blur 1s forwards;
 }
+
 @-webkit-keyframes blur {
 	0% {
 		-webkit-filter: blur(0px);
@@ -184,6 +189,7 @@
 		-webkit-filter: blur(2px);
 	}
 }
+
 keyframes blur {
 	0% {
 		filter: blur(0px);

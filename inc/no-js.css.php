@@ -1,11 +1,9 @@
 <noscript>
 	<style type="text/css">
-		article {
-			opacity:1;
-		}
 		section {
 			box-shadow: none !important
 		}
+		
 		@media screen and (min-width: 741px) {
 			figure:focus figcaption {
 				padding: .1rem .66666rem;
@@ -26,7 +24,8 @@
 				opacity: .8;
 				z-index: -1;
 			}
-			figure:focus {
+			figure:focus,
+			picture:focus {
 				position: fixed !important;
 				top: 0 !important;
 				left: 0 !important;
@@ -45,7 +44,8 @@
 				overflow-y: auto !important;
 				border: none !important;
 			}
-			figure:focus:before {
+			figure:focus:before,
+			picture:focus:before {
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -56,11 +56,13 @@
 				z-index: 10;
 				color: #e7e9e7;
 			}
-			figure:focus div {
+			figure:focus div,
+			picture:focus div {
 				display: none;
 				visibility: hidden
 			}
-			figure:focus img {
+			figure:focus img,
+			picture:focus img {
 				position: relative;
 				float: left;
 				text-align: center;
@@ -73,17 +75,18 @@
 				object-fit: contain !important;
 				object-position: center center !important;
 			}
-			figure:focus figcaption {
+			figure:focus figcaption,
+			picture:focus figcaption {
 				position: absolute;
 				bottom: 0;
 				left: 0;
 				width: 100%;
 			}
-			figure:focus:after {
+			figure:focus:after,
+			picture:focus:after {
 				width: 0;
 				height: 0;
 			}
-			/*movil*/
 		}
 	</style>
 </noscript>

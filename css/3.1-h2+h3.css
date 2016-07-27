@@ -13,7 +13,8 @@ h2+h3 {
 
 h2+h3:after {
 	content: "";
-	width: 25%;
+	width: 6em;
+	max-width: 50%;
 	height: 1em;
 	display: block;
 	clear: both;
