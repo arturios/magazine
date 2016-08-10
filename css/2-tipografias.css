@@ -2,13 +2,16 @@
 He elegido la combinación entre Roboto como tipografía sin serifa y Noto Serif para las serifas por que ambas se han diseñado para su correcta visualización en pantallas, lo que es más importante en una web que en una publicación de papel, además la combinación es elegante.
 */
 
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 html>body,
 h4,
 p,
 .serif {
-	font-family: "Noto Serif", times, 'times new roman', serif;
+    font-family: "Noto Serif", times, 'times new roman', serif;
 }
-
 h1,
 h2,
 h3,
@@ -17,52 +20,45 @@ h3,
 .caption,
 nav a,
 nav span {
-	font-family: "Roboto", Arial, sans-serif;
+    font-family: "Roboto", Arial, sans-serif;
 }
-
 .monospace {
-	font-family: "American Typewriter", 'Courier New', Courier, monospace !important;
-	text-align: left;
+    font-family: "American Typewriter", 'Courier New', Courier, monospace !important;
+    text-align: left;
 }
-
 .ultrafina,
 .ultralight .thin,
 .ultra.light,
 .light {
-	font-family: roboto, sans-serif !important;
-	font-weight: 100 !important;
-	letter-spacing: .05em;
+    font-family: roboto, sans-serif !important;
+    font-weight: 100 !important;
+    letter-spacing: .05em;
 }
-
 .blod,
 strong {
-	font-weight: 700 !important;
+    font-weight: 700 !important;
 }
-
 .condensed,
 aside,
 .nav-wrapper,
 h2,
 menu {
-	font-family: "Roboto Condensed", sans-serif !important;
+    font-family: "Roboto Condensed", sans-serif !important;
 }
-
 .condensed,
 h2 {
-	text-transform: uppercase;
+    text-transform: uppercase;
 }
-
 aside {
-	font-variant: small-caps;
+    font-variant: small-caps;
 }
-
 h1,
 h2,
 h3,
 h4,
 h5 {
-	text-rendering: optimizeLegibility;
-	margin: 0;
-	padding: 0;
-	font-weight: bold;
+    text-rendering: optimizeLegibility;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
 }

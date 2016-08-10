@@ -3,24 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <title>Plantillas prediseñadas</title>
-
+    <title></title>
     <!-- Meta -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="viewport" content="user-scalable=yes,initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <link rel="stylesheet" id="style-css" href="./style.css" type="text/css" media="all">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" id="style-css" href="style.css" type="text/css" media="all">
+    <script type="text/javascript" src="../../../wp-includes/js/jquery/jquery.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="paginas.js"></script>
+    <script type="text/javascript" src="./paginas.js"></script>
+    <style>
+        figure:after,
+        picture:after {
+            z-index: -100 !important
+        }
+    </style>
 
 </head>
 
 <body>
-
     <a href="#" class="button-collapse"><i class="material-icons">menu</i></a>
     <menu role="menu">
         <ul id="header-menu" class="nav-menu">
@@ -39,9 +42,7 @@
         <img src="" id="zoom">
         <div class="frame"></div>
         <a href="#" class="box top-0 right-0"><i class="material-icons font-size-200">close</i></a>
-
     </div>
-
     <main>
         <style type="text/css">
             main {
@@ -122,9 +123,12 @@
         })
 
          jQuery('#save').click(function() {
+            jQuery('section').removeClass('current');
             var pom = document.createElement('a');
             pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent("<!DOCTYPE html><html id='pagina' lang='es-ES' class='no-js'>" + jQuery('#pagina').html() + "</html>"));
-            pom.setAttribute('download', "temporal.html");
+            var path = window.location.pathname;
+            var page = path.split("/").pop();
+            pom.setAttribute('download', page);
 
             if (document.createEvent) {
                 var event = document.createEvent('MouseEvents');
@@ -135,6 +139,7 @@
             }
         })
          jQuery('#datos').click(function() {
+            jQuery('section').removeClass('current');
             var pom = document.createElement('a');
             pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(jQuery('main').html()));
             pom.setAttribute('download', "datos.txt");
@@ -162,9 +167,42 @@
 
             onDrop = function(event) {
                 event.preventDefault();
-                var fichero = event.originalEvent.dataTransfer.files[0].name;
-                var camino = "fotos/";
-                jQuery(this).attr("src", camino + fichero);
+                var retorno = "";
+                var fichero = event.originalEvent.dataTransfer.files[0];
+                var camino = "../../uploads/";
+                var imagen = jQuery(this);
+                var padre = imagen.parent();
+                imagen.attr("src", camino + fichero.name);
+
+                var reader = new FileReader();
+                reader.onload = (function(e) {
+                    var myCan = document.createElement('canvas');
+                    var img = new Image();
+                    img.src = e.target.result;
+                    img.onload = function() {
+                        myCan.id = 'myTempCanvas';
+                        var tsize = 48;
+                        myCan.width = tsize;
+                        myCan.height = tsize * img.naturalHeight / img.naturalWidth;
+                        if (myCan.getContext) {
+                            var cntxt = myCan.getContext('2d');
+                            cntxt.drawImage(img, 0, 0, myCan.width, myCan.height);
+                            var dataURL = myCan.toDataURL();
+                            if (dataURL != null && dataURL != undefined) {
+                                var nImg = document.createElement('img');
+                                nImg.src = dataURL;
+                                subimagen = "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20width%3D%22" + img.naturalWidth + "%22%20height%3D%22" + img.naturalHeight + "%22%20viewBox%3D%220%200%20" + img.naturalWidth + "%20" + img.naturalHeight + "%22%3E%0A%20%20%3Cfilter%20id%3D%22blur%22%20color-interpolation-filters%3D%22sRGB%22%3E%0A%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%2220%22%20edgeMode%3D%22duplicate%22%20/%3E%0A%20%20%20%20%3CfeComponentTransfer%3E%0A%20%20%20%20%20%20%3CfeFuncA%20type%3D%22discrete%22%20tableValues%3D%221%201%22%20/%3E%0A%20%20%20%20%3C/feComponentTransfer%3E%0A%20%20%3C/filter%3E%0A%20%20%3Cimage%20filter%3D%22url%28%23blur%29%22%20xlink%3Ahref%3D%22" + myCan.toDataURL('image/png') + "%22%20x%3D%220%22%20y%3D%220%22%20height%3D%22100%25%22%20width%3D%22100%25%22/%3E%0A%3C/svg%3E";
+                                padre.children('.subimagen').remove();
+                                padre.prepend("<img src='" + subimagen + "' class='subimagen " + imagen.attr("class") + "'>");
+                                imagen.addClass("wbg");
+                                padre.children('.subimagen').removeClass("wbg");
+
+
+                            } else alert('no parece una imagen');
+                        }
+                    }
+                });
+                reader.readAsDataURL(fichero);
             };
         jQuery("figure img")
             .on("dragenter", onDragEnter)
