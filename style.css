@@ -1,6 +1,6 @@
 /* comunes */
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:100,400|Roboto+Condensed:700|Noto+Serif:400,700,400italic,700italic);
+@import 'https://fonts.googleapis.com/css?family=Alegreya+Sans:100,400|Merriweather:400,400i,700,700i|Oswald&subset=latin-ext';
 @import url("./css/1-resetcss.css") all;
 @import url("./css/2-tipografias.css") all;
 @import url("./css/3.0-principal.css") all;
@@ -13,7 +13,7 @@
 @import url("./css/4.0-escritorio.css") all and (min-width: 741px);
 @import url("./css/4.1-imagenes.css") all and (min-width: 741px);
 @import url("./css/4.2-cuadrado.css") all and (min-width: 741px);
-@import url("./css/4.3.0-rejilla1.css") all and (min-width: 741px);
+@import url("./css/4.3.0-rejilla.css") all and (min-width: 741px);
 @import url("./css/4.3.1-rejilla_especiales.css") all and (min-width: 741px);
 /* ---------------------------------- */
 /* efectos css escritorio e impresión */
@@ -35,8 +35,12 @@
 /* solo escritorio */
 
 @import url("./css/4.6-navegacion.css") screen and (min-width: 741px);
+@import url("./css/animations.css") screen and (min-width: 741px);
 @import url("./css/4.7-wordpress.css") screen and (min-width: 741px);
-/* solo escritorio y orientación vertical */
+/* ------------------ */
+/* animaciones varias */
+
+@import url("./css/8-animaciones.css") screen and (min-width: 741px);/* solo escritorio y orientación vertical */
 
 @import url("./css/5.0-retrato.css") screen and (orientation: portrait) and (min-width: 741px);
 @import url("./css/5.1-cuadrados_retrato.css") screen and (orientation: portrait) and (min-width: 741px);
@@ -48,14 +52,11 @@
 /* versión móvil */
 
 @import url("./css/7-movil.css") screen and (max-width: 740px);
-/* ------------------ */
-/* animaciones varias */
 
-@import url("./css/8-animaciones.css") screen;
 /* -------------------- */
 /* zoom de las imágenes */
 
-@import url("./css/9-zoom.css") screen;
+@import url("./css/9-zoom.css") screen ;
 
 body {
 	opacity: 1;

@@ -10,6 +10,9 @@
 .border {
 	border-width: 2px;
 	border-style: solid;
+	box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+	-webkit-box-sizing: border-box !important;
 }
 
 .border-05,

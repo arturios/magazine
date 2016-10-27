@@ -3,7 +3,7 @@
 section {
 	width: 200%;
 	font-size: 140%;
-	line-height: 150%;
+	line-height: calc(1em  + 1vh) ;
 }
 
 aside {

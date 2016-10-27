@@ -147,7 +147,7 @@ del {
 
 abbr[title],
 dfn[title] {
-	border-bottom: 1px dotted #000;
+	border-bottom: 1px dotted var(--negro);
 	cursor: help;
 }
 /* tables still need cellspacing="0" in the markup */

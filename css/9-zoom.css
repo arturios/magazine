@@ -5,24 +5,19 @@
 	-webkit-box-sizing: border-box;
 	z-index: -100;
 	opacity: 0;
-	filter: alpha(opacity=0);
 }
 
-#overlayer,
-#zoom {
-	-webkit-transition: all 600ms cubic-bezier(1.000, 0.000, 0.500, 0.500);
-	-moz-transition: all 600ms cubic-bezier(1.000, 0.000, 0.500, 0.500);
-	-o-transition: all 600ms cubic-bezier(1.000, 0.000, 0.500, 0.500);
-	transition: all 600ms cubic-bezier(1.000, 0.000, 0.500, 0.500);
-}
-
-#overlayer.set,
-#overlayer.set #zoom {
-	opacity: 1;
+#overlayer.set {
+	opacity: .9;
 	z-index: 1000;
 }
 
-#zoom {
+#zoom, .zzz {
 	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0;
+	height: 0;
 	opacity: 0;
+	z-index: -100;
 }

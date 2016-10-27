@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html id='pagina' lang='es-ES' class='no-js'>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<!-- Meta -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="viewport" content="user-scalable=yes,initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<style type="text/css">
+		*,
+		*:before,
+		*:after {
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+		/* el tamaño de la tipografía se calcula teniendo en cuenta el alto y el ancho del dispositivo de esta forma se adapta a cualquier tamaño sin que cambie sustancialmente la distribución del texto */
+		
+		html>body {
+			font-size: calc(1vw + 1vh);
+		}
+		
+		body {
+			line-height: calc(0.75em + 1.5vh);
+		}
+		
+		*,
+		*:before,
+		*:after {
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+		}
+		
+		html {
+			-ms-text-size-adjust: 100%;
+			-webkit-text-size-adjust: 100%;
+		}
+		
+		body {
+			line-height: 150%;
+			margin: 0;
+		}
+		
+		a {
+			background: none;
+			text-decoration: none;
+		}
+		
+		p a {
+			text-decoration-style: dotted;
+			text-decoration-color: var(--rojo);
+			text-decoration-line: underline;
+		}
+		
+		p {
+			z-index: 3;
+			word-wrap: break-word;
+			word-break: normal;
+			-webkit-hyphens: auto;
+			-webkit-hyphenate-character: \2010;
+			-webkit-hyphenate-limit-after: 1;
+			-webkit-hyphenate-limit-before: 3;
+			-moz-hyphens: auto;
+			-ms-hyphens: auto;
+			-webkit-hyphens: auto;
+			hyphens: auto;
+			orphans: 2;
+			widows: 2;
+			text-align: inherit;
+		}
+		
+		h1 {
+			font-size: 3em;
+			line-height: 100%;
+			margin-bottom: 0.5em;
+		}
+		
+		h2 {
+			font-size: 2em;
+			line-height: 150%;
+			margin-bottom: .75em;
+		}
+		
+		h3 {
+			font-size: 1.5em;
+			line-height: 100%;
+			margin-bottom: 1em;
+			font-weight: bold;
+		}
+		
+		h4 {
+			font-size: 1.25em;
+			line-height: 120%;
+			padding: 0 .2em .2em .2em;
+			margin-bottom: 1em;
+			font-style: italic;
+		}
+		
+		h5 {
+			font-size: 1em;
+			line-height: 1em;
+			margin: 1em 0;
+			font-variant: small-caps;
+			font-weight: bold;
+			letter-spacing: .025em;
+		}
+		
+		h5:before {
+			content: "- ";
+		}
+		
+		blockquote {
+			margin: 1.5em 0 3em 0;
+			padding: 0 1.5em;
+		}
+		
+		small,
+		cite {
+			font-size: .75em;
+			line-height: 1.5em;
+		}
+		
+		object,
+		embed {
+			clear: both;
+			height: auto;
+			left: 0;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		
+		ul {
+			list-style-type: circle;
+			padding-left: 2em;
+		}
+		
+		ol {
+			list-style-type: decimal;
+			padding-left: 2em;
+		}
+		
+		ul li,
+		ol li {
+			padding-left: 1em;
+			padding-bottom: .5em;
+			margin: 0;
+		}
+		
+		li p,
+		li ul {
+			margin-bottom: 0;
+			margin-top: 0;
+		}
+		
+		html,
+		body,
+		main,
+		section {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			overflow: auto;
+			zoom: 1;
+			-webkit-text-size-adjust: 100%;
+			background-color: transparent;
+		}
+		
+		h2+h3 {
+			font-family: "Noto Serif", times, 'times new roman', serif;
+			margin-top: -.75em;
+			font-style: italic;
+			margin-bottom: .5em;
+			padding-bottom: .33333333em;
+			max-width: 75%;
+		}
+		
+		h2+h3:after {
+			content: "";
+			width: 6em;
+			max-width: 50%;
+			height: 1em;
+			display: block;
+			clear: both;
+			border-bottom: .25em solid #888;
+		}
+		
+		*+p {
+			text-indent: 0;
+		}
+		
+		p+* {
+			margin-top: 1em;
+		}
+		
+		p+p {
+			text-indent: 2em;
+			margin-top: 0;
+		}
+		/* */
+		
+		img {
+			object-fit: cover;
+			object-position: center center;
+		}
+	
+		section > * {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 50%;
+			overflow: hidden;
+			padding: 2em 1em 2em 2em;
+			height: 100%;
+		}
+		
+		section > *:nth-child(2) {
+			left: 50%;
+			padding: 2em 2em 2em 1em;
+		}
+		
+		section > div > img {
+			width: 100%;
+			height: 50%;
+		}
+
+	</style>
+</head>
+
+<body>
+	<main>
+		<section tabindex="0" class="">
+			<img src="https://c2.staticflickr.com/6/5825/30397564632_708449906a_b.jpg">
+			<div>
+				<img src="https://c1.staticflickr.com/9/8648/30218277310_817151e4b7_b.jpg">
+				<h2>Titular</h2>
+				<h3>Subtitular</h3>
+				<p>Admodum cillum sint hic quis ita culpa litteris iis firmissimum, iis aute aliqua se consequat an aliquip est duis. Irure o possumus sed quis. Te culpa iudicem eiusmod, se nisi nisi est fabulas. Qui nam culpa senserit, te fugiat magna aut consequat nam mandaremus noster varias ubi cillum et ne nisi comprehenderit. Nam sint legam ea senserit e illum vidisse e appellat. Ubi labore quamquam graviterque est occaecat fugiat quem ad ipsum, mentitum malis ullamco mentitum non iis enim cernantur consectetur a e summis eruditionem id et legam eram elit admodum, ita tempor despicationes et iudicem noster labore admodum elit.</p>
+				<p>Si iudicem non senserit, singulis e dolore. An illum officia ita lorem ex cernantur do nulla, amet laborum quo imitarentur, ipsum nescius an voluptatibus. Et vidisse non expetendis id varias aut o minim offendit. Noster singulis aut coniunctione eu si nisi possumus. Dolor ex iudicem et fore. Officia ubi offendit ne eu ingeniis o mentitum, labore ab est multos litteris, irure ne occaecat, fugiat ab mandaremus, fore a ullamco et tamen, ubi ingeniis imitarentur hic admodum cillum vidisse. Mandaremus quorum de litteris fidelissimae, amet officia do possumus, fore senserit exercitation est anim sed singulis e quid est ullamco est dolor, ullamco domesticarum in consequat ita o dolor multos quem voluptate a cupidatat eruditionem iis iudicem.</p>
+			</div>
+		</section>
+	</main>
+</body>
+
+</html>

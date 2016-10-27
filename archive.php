@@ -39,5 +39,4 @@
 
 <?php get_template_part('loop'); ?>
 </section>
-</article>
 <?php get_footer(); ?>

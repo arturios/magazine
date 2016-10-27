@@ -8,6 +8,4 @@
 </div>
 </figure>
 </section>
-<div id="fontsize">11</div>
-</article>
 <?php get_footer(); ?>

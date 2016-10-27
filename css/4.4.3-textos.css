@@ -7,9 +7,9 @@
 	font-size: 5em;
 	text-align: right;
 	margin: 1.5rem .75rem 2rem 1rem;
-	color: #3c3535;
+	color: var(--oscuro);
 	font-weight: bold;
-	text-shadow: 2px 2px 0 #e7e9e7;
+	text-shadow: 2px 2px 0 var(--claro);
 	font-style: italic;
 }
 
@@ -56,11 +56,11 @@
 
 .text-relief-b,
 .text-shadow {
-	text-shadow: 0px 0px 3px #3c3535, 1px 1px 0 #3c3535, 2px 2px 0 #3c3535;
+	text-shadow: 0px 0px 3px var(--oscuro), 1px 1px 0 var(--oscuro), 2px 2px 0 var(--oscuro);
 }
 
 .text-stroke {
-	text-shadow: 1px 1px 0 #3c3535, -1px 1px 0 #3c3535, 1px -1px 0 #3c3535, -1px -1px 0 #3c3535, 0 0 1px #3c3535, 2px 1px 0 #3c3535, -2px 1px 0 #3c3535, 2px -1px 0 #3c3535, -2px -1px 0 #3c3535, 0 0 4px #3c3535;
+	text-shadow: 1px 1px 0 var(--oscuro), -1px 1px 0 var(--oscuro), 1px -1px 0 var(--oscuro), -1px -1px 0 var(--oscuro), 0 0 1px var(--oscuro), 2px 1px 0 var(--oscuro), -2px 1px 0 var(--oscuro), 2px -1px 0 var(--oscuro), -2px -1px 0 var(--oscuro), 0 0 4px var(--oscuro);
 }
 
 .text-3d {
@@ -149,46 +149,51 @@
 	margin: 0;
 	padding: 0;
 }
+
+.font-size-aside {
+	font-size: 45%;
+	line-height: 1em;
+}
 /* alto de linea */
 
 .line-height-70 {
 	line-height: 70% !important;
-    padding-bottom: .8em;
+	padding-bottom: .8em;
 }
 
 .line-height-80 {
 	line-height: .8em !important;
-    padding-bottom: .7em;
+	padding-bottom: .7em;
 }
 
 .line-height-90 {
 	line-height: .9em !important;
-    padding-bottom: .6em;
+	padding-bottom: .6em;
 }
 
 .line-height-100 {
 	line-height: 1em !important;
-    padding-bottom: .5em;
+	padding-bottom: .5em;
 }
 
 .line-height-110 {
 	line-height: 110% !important;
-    padding-bottom: .4em;
+	padding-bottom: .4em;
 }
 
 .line-height-120 {
 	line-height: 120% !important;
-    padding-bottom: .3em;
+	padding-bottom: .3em;
 }
 
 .line-height-130 {
 	line-height: 130% !important;
-    padding-bottom: .2em;
+	padding-bottom: .2em;
 }
 
 .line-height-140 {
 	line-height: 140% !important;
-    padding-bottom: .1em;
+	padding-bottom: .1em;
 }
 
 .line-height-150 {

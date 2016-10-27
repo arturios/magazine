@@ -10,15 +10,14 @@
 /* el tamaño de la tipografía se calcula teniendo en cuenta el alto y el ancho del dispositivo de esta forma se adapta a cualquier tamaño sin que cambie sustancialmente la distribución del texto */
 
 
-body {
-	line-height: 1.5em;
-}
-
 html>body {
-	font-size: calc(.80vw + .70vh) !important;
+	font-size: calc(.75vw + .7vh);
 }
-/* ajustamos los elementos al tamaño del dispositivo al 100% de alto y de ancho */
+body {
+	line-height: calc(0.75em  + 1.5vh) ;
+}
 
+/* ajustamos los elementos al tamaño del dispositivo al 100% de alto y de ancho */
 
 html,
 body,
@@ -45,10 +44,13 @@ main {
 	position: absolute;
 	z-index: 10;
 }
-
+main {
+    margin-top: 4.166666667vh;
+    height: calc(100% - 4.166666667vh);
+}
 section {
-	background-color: #e7e9e7;
-	height: 100vh;
+	background-color: var(--claro);
+	height: 100%;
 }
 /* ******************* */
 
@@ -71,6 +73,9 @@ section,
 .box {
 	position: absolute !important;
 	z-index: 4;
+	-ms-wrap-flow: both;
+	-webkit-wrap-flow: both;
+	wrap-flow: both;
 }
 
 .relative {
@@ -130,37 +135,4 @@ section,
 .v-center {
 	display: table-cell;
 	vertical-align: middle;
-}
-/* pasar de una sección a otra */
-
-.sect {
-	position: absolute;
-	top: 0;
-	left: 0;
-	opacity: 0;
-	z-index: 1;
-}
-
-.sect.current {
-	z-index: 2;
-	-webkit-animation: animacion .6s ease-in-out both;
-	animation: animacion .6s ease-in-out both;
-}
-
-@keyframes animacion {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
-@-webkit-keyframes animacion {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
 }

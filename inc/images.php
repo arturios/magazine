@@ -1,6 +1,4 @@
-<div id="overlayer" class="frame table">
-	<div class="frame black opacity-90"></div>
-	<div id="zoom" class="raised border border-white border-05 round">
-		<img src="" class="full">
-	</div>
-</div>
+<div id="overlayer" class="frame black opacity-90"></div>
+<figure id="zoom" class="raised border border-white border-1px nogrid">
+	<img src="" class="full">
+</figure>

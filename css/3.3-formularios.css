@@ -136,7 +136,7 @@ input[type="search"]::-webkit-search-decoration {
  */
 
 fieldset {
-	border: 1px solid #c0c0c0;
+	border: 1px solid var(--grisclaro);
 	margin: 0 2px;
 	padding: 0.35em 0.625em 0.75em;
 }
@@ -172,23 +172,23 @@ optgroup {
 ****************************/
 
 ::-webkit-input-placeholder {
-	color: #d1d1d1;
+	color: var(--grisclaro);
 }
 
 :-moz-placeholder {
 	/* Firefox 18- */
 	
-	color: #d1d1d1;
+	color: var(--grisclaro);
 }
 
 ::-moz-placeholder {
 	/* Firefox 19+ */
 	
-	color: #d1d1d1;
+	color: var(--grisclaro);
 }
 
 :-ms-input-placeholder {
-	color: #d1d1d1;
+	color: var(--grisclaro);
 }
 
 input[type=text],
@@ -204,7 +204,7 @@ input[type=search],
 textarea {
 	background-color: transparent;
 	border: none;
-	border-bottom: 1px solid #9e9e9e;
+	border-bottom: 1px solid var(--gris);
 	border-radius: 0;
 	outline: none;
 	height: 5rem;
@@ -282,8 +282,8 @@ input[type=tel]:focus:not([readonly]),
 input[type=number]:focus:not([readonly]),
 input[type=search]:focus:not([readonly]),
 textarea:focus:not([readonly]) {
-	border-bottom: 1px solid #26a69a;
-	box-shadow: 0 1px 0 0 #26a69a;
+	border-bottom: 1px solid var(--verde);
+	box-shadow: 0 1px 0 0 var(--verde);
 }
 
 input[type=text]:focus:not([readonly]) + label,
@@ -297,7 +297,7 @@ input[type=tel]:focus:not([readonly]) + label,
 input[type=number]:focus:not([readonly]) + label,
 input[type=search]:focus:not([readonly]) + label,
 textarea:focus:not([readonly]) + label {
-	color: #26a69a;
+	color: var(--verde);
 }
 
 .input-field {
@@ -306,7 +306,7 @@ textarea:focus:not([readonly]) + label {
 }
 
 .input-field label {
-	color: #9e9e9e;
+	color: var(--gris);
 	position: absolute;
 	top: 1.5rem;
 	left: 0.75rem;
@@ -362,10 +362,10 @@ textarea:focus:not([readonly]) + label {
 }
 
 .input-field input[type=search]:focus {
-	background-color: #FFF;
+	background-color: var(--blanco);
 	border: 0;
 	box-shadow: none;
-	color: #444;
+	color: var(--grisoscuro);
 }
 
 .input-field input[type=search] + label {

@@ -116,6 +116,11 @@ return;
 
 </div>
 </div>
+	<div class="br text-center">
+		<a title="Artículo anterior" class="cprev" href="<?php echo get_permalink(get_adjacent_post(false,'',false)); ?>" role="prev"><i class="material-icons">chevron_left</i> Siguiente</a>&nbsp;
+		<a title="Siguiente artículo" class="cnext" href="<?php echo get_permalink(get_adjacent_post(false,'',true)); ?>" role="next">Anterior <i class="material-icons">chevron_right</i></a>
+		<div class="padding br"></div>
+	</div>
 </div>
 </div>
 </section>

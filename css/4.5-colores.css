@@ -1,245 +1,245 @@
 /* colores */
 
 .bblack {
-	background-color: #000 !important;
+	background-color: var(--negro) !important;
 }
 
 .beige {
-	background-color: #b39f8d !important;
+	background-color: var(--beige) !important;
 }
 
 .black {
-	background-color: #3c3535 !important;
+	background-color: var(--oscuro) !important;
 }
 
 .brown {
-	background-color: #633f33 !important;
+	background-color: var(--marron) !important;
 }
 
 .gray {
-	background-color: #848283 !important;
+	background-color: var(--gris) !important;
 }
 
 .lightgray {
-	background-color: #b5bab6 !important;
+	background-color: var(--grisclaro) !important;
 }
 
 .darkgray {
-	background-color: #35424B;
+	background-color: var(--grisoscuro);
 }
 
 .purple {
-	background-color: #4f3262 !important;
+	background-color: var(--purpura) !important;
 }
 
 .quiet {
-	background-color: #641254 !important;
+	background-color: var(--morado) !important;
 }
 
 .red {
-	background-color: #c71f2d !important;
+	background-color: var(--rojo) !important;
 }
 
 .orange {
-	background-color: #d39c43 !important;
+	background-color: var(--naranja) !important;
 }
 
 .yellow {
-	background-color: #f6e635 !important;
+	background-color: var(--amarillo) !important;
 }
 
 .white {
-	background-color: #e7e9e7 !important;
+	background-color: var(--claro) !important;
 }
 
 .blue {
-	background-color: #77b3d4 !important;
+	background-color: var(--azul) !important;
 }
 
 .dark-blue,
 .darkblue {
-	background-color: #4f5d73 !important;
+	background-color: var(--azuloscuro) !important;
 }
 
 .lightblue {
-	background-color: #d8eaf3 !important;
+	background-color: var(--azulclaro) !important;
 }
 
 .green {
-	background-color: #76c2af !important;
+	background-color: var(--verde) !important;
 }
 
 .darkgreen,
 .dark-green {
-	background-color: #5f6732 !important;
+	background-color: var(--verdeoscuro) !important;
 }
 
 .lightgreen {
-	background-color: #d2e4ad !important;
+	background-color: var(--verdeclaro) !important;
 }
 
 .wwhite {
-	background-color: #fff !important;
+	background-color: var(--blanco) !important;
 }
 
 .transparent {
-	background-color: rgba(0, 0, 0, 0) !important;
+	background-color: var(--transparente) !important;
 }
 
 .text-bblack {
-	color: #000 !important;
+	color: var(--negro) !important;
 }
 
 .text-beige {
-	color: #b39f8d !important;
+	color: var(--beige) !important;
 }
 
 .text-black {
-	color: #3c3535 !important;
+	color: var(--oscuro) !important;
 }
 
 .text-brown {
-	color: #633f33 !important;
+	color: var(--marron) !important;
 }
 
 .text-gray {
-	color: #848283 !important;
+	color: var(--gris) !important;
 }
 
 .text-lightgray {
-	color: #b5bab6 !important;
+	color: var(--grisclaro) !important;
 }
 
 .text-purple {
-	color: #4f3262 !important;
+	color: var(--purpura) !important;
 }
 
 .text-quiet {
-	color: #641254 !important;
+	color: var(--morado) !important;
 }
 
 .text-red {
-	color: #c71f2d !important;
+	color: var(--rojo) !important;
 }
 
 .text-orange {
-	color: #d39c43 !important;
+	color: var(--naranja) !important;
 }
 
 .text-yellow {
-	color: #f6e635 !important;
+	color: var(--amarillo) !important;
 }
 
 .text-white {
-	color: #e7e9e7 !important;
+	color: var(--claro) !important;
 }
 
 .text-blue {
-	color: #77b3d4 !important;
+	color: var(--azul) !important;
 }
 
 .text-dark-blue,
 .text-darkblue {
-	color: #4f5d73 !important;
+	color: var(--azuloscuro) !important;
 }
 
 .text-green {
-	color: #76c2af !important;
+	color: var(--verde) !important;
 }
 
 .text-darkgreen,
 .text-dark-green {
-	color: #5f6732 !important;
+	color: var(--verdeoscuro) !important;
 }
 
 .text-lightgreen {
-	color: #d2e4ad !important;
+	color: var(--verdeclaro) !important;
 }
 
 .text-wwhite {
-	color: #fff !important;
+	color: var(--blanco) !important;
 }
 
 .border-bblack {
-	border-color: #000 !important;
+	border-color: var(--negro) !important;
 }
 
 .border-beige {
-	border-color: #b39f8d !important;
+	border-color: var(--beige) !important;
 }
 
 .border-black {
-	border-color: #3c3535 !important;
+	border-color: var(--oscuro) !important;
 }
 
 .border-brown {
-	border-color: #633f33 !important;
+	border-color: var(--marron) !important;
 }
 
 .border-gray {
-	border-color: #848283 !important;
+	border-color: var(--gris) !important;
 }
 
 .border-lightgray {
-	border-color: #b5bab6 !important;
+	border-color: var(--grisclaro) !important;
 }
 
 .border-purple {
-	border-color: #4f3262 !important;
+	border-color: var(--purpura) !important;
 }
 
 .border-quiet {
-	border-color: #641254 !important;
+	border-color: var(--morado) !important;
 }
 
 .border-red {
-	border-color: #c71f2d !important;
+	border-color: var(--rojo) !important;
 }
 
 .border-orange {
-	border-color: #d39c43 !important;
+	border-color: var(--naranja) !important;
 }
 
 .border-yellow {
-	border-color: #f6e635 !important;
+	border-color: var(--amarillo) !important;
 }
 
 .border-white {
-	border-color: #e7e9e7 !important;
+	border-color: var(--claro) !important;
 }
 
 .border-blue {
-	border-color: #77b3d4 !important;
+	border-color: var(--azul) !important;
 }
 
 .border-dark-blue,
 .border-darkblue {
-	border-color: #4f5d73 !important;
+	border-color: var(--azuloscuro) !important;
 }
 
 .border-green {
-	border-color: #76c2af !important;
+	border-color: var(--verde) !important;
 }
 
 .border-darkgreen,
 .border-dark-green {
-	border-color: #5f6732 !important;
+	border-color: var(--verdeoscuro) !important;
 }
 
 .border-lightgreen {
-	border-color: #d2e4ad !important;
+	border-color: var(--verdeclaro) !important;
 }
 
 .border-wwhite {
-	border-color: #fff !important;
+	border-color: var(--blanco) !important;
 }
 
 a:hover {
-	color: #c71f2d;
+	color: var(--rojo);
 }
 
 .red a:hover {
-	color: #76c2af;
+	color: var(--verde);
 }
 
 .gray,
@@ -258,7 +258,7 @@ a:hover {
 .purple,
 .quiet,
 .beige {
-	color: #e7e9e7;
+	color: var(--claro);
 }
 
 .lightblue,
@@ -269,7 +269,7 @@ a:hover {
 .yellow,
 .white,
 .wwhite {
-	color: #3c3535;
+	color: var(--oscuro);
 }
 
 .white a,
@@ -279,12 +279,12 @@ a:hover {
 .lightgray a,
 .blue a,
 .yellow a {
-	color: #4f5d73 !important;
+	color: var(--azuloscuro) !important;
 }
 
 a,
 .text-bblack {
-	color: #000;
+	color: var(--negro);
 }
 
 .text-lightblue,
@@ -303,5 +303,5 @@ a,
 .purple a,
 .quiet a,
 .beige a {
-	color: #d8eaf3;
+	color: var(--azulclaro);
 }

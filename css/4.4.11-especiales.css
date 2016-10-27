@@ -6,8 +6,8 @@
 }
 
 .hr-white {
-	background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(255, 255, 255, .8), rgba(0, 0, 0, 0));
-	background: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(255, 255, 255, .8), rgba(0, 0, 0, 0));
+	background: -webkit-linear-gradient(left, var(--transparente), rgba(255, 255, 255, .8), var(--transparente));
+	background: -o-linear-gradient(left, var(--transparente), rgba(255, 255, 255, .8), var(--transparente));
 }
 
 .hr-black {
@@ -41,17 +41,15 @@
 }
 
 .grid:after {
-	background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 5 5'><line x1='0' y1='0' x2='5' y2='5' stroke='#ffffff' stroke-width='1' stroke-opacity='.25' /></svg>");
+	background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 5 5'><line x1='0' y1='0' x2='5' y2='5' stroke='var(--blanco)fff' stroke-width='1' stroke-opacity='.25' /></svg>");
 	background-size: 5px 5px;
 }
 
 .noise:after,
 .vignette-sepia:after,
 .vignette:after {
-	filter: alpha(opacity=70);
-	-moz-opacity: .7;
-	opacity: .7;
 	background-image: url(../images/ruido.png);
+	opacity: .5;
 }
 
 .nogrid:after {
@@ -126,7 +124,6 @@
 .grayscale {
 	-webkit-filter: grayscale(100%);
 	filter: grayscale(100%);
-	filter: none;
 }
 
 .contrast {
@@ -149,6 +146,18 @@
 	filter: blur(3px);
 	-webkit-filter: blur(3px);
 	filter: progid: DXImageTransform.Microsoft.blur(pixelradius=3);
+}
+
+.hide {
+	position: absolute;
+	height: 0;
+	width: 0;
+	overflow: 0;
+	left: -100%;
+}
+
+.svg-blur {
+	filter: url(#svg-blur);
 }
 
 .invert {
@@ -174,27 +183,4 @@
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.25)), color-stop(100%, rgba(255, 255, 255, 0.125)));
 	background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.125) 100%);
 	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.125) 100%);
-}
-
-.animated_blur {
-	-webkit-animation: blur 1s forwards;
-	animation: blur 1s forwards;
-}
-
-@-webkit-keyframes blur {
-	0% {
-		-webkit-filter: blur(0px);
-	}
-	100% {
-		-webkit-filter: blur(2px);
-	}
-}
-
-keyframes blur {
-	0% {
-		filter: blur(0px);
-	}
-	100% {
-		filter: blur(2px);
-	}
 }

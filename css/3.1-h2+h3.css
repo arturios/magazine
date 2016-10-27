@@ -18,5 +18,5 @@ h2+h3:after {
 	height: 1em;
 	display: block;
 	clear: both;
-	border-bottom: .25em solid #848283;
+	border-bottom: .25em solid var(--gris);
 }

@@ -29,9 +29,9 @@
 }
 
 .inshadow {
-	box-shadow: inset .5em .5em 2em 0 #000;
-	-moz-box-shadow: inset .5em .5em 2em 0 #000;
-	-webkit-box-shadow: .5em .5em 2em 0 #000 inset;
+	box-shadow: inset .5em .5em 2em 0 var(--negro);
+	-moz-box-shadow: inset .5em .5em 2em 0 var(--negro);
+	-webkit-box-shadow: .5em .5em 2em 0 var(--negro) inset;
 }
 
 .raised {

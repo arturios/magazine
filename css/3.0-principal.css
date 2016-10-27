@@ -1,11 +1,42 @@
+/* colores * /
+
+*/
+
+:root {
+	--negro: #000;
+	--beige: #b39f8d;
+	--oscuro: #3c3535;
+	--marron: #633f33;
+	--gris: #848283;
+	--grisclaro: #b5bab6;
+	--grisoscuro: #534949;
+	--purpura: #4f3262;
+	--morado: #641254;
+	--rojo: #c71f2d;
+	--rojooscuro: #7A0009;
+	--rojoclaro: #F9747E;
+	--naranja: #d39c43;
+	--naranjaclaro: #FFDA9D;
+	--amarillo: #f6e635;
+	--amarilloclaro: #FFF585;
+	--claro: #e7e9e7;
+	--blanco: #fff;
+	--azul: #77b3d4;
+	--azuloscuro: #4f5d73;
+	--azulclaro: #d8eaf3;
+	--verde: #76c2af;
+	--verdeoscuro: #5f6732;
+	--verdeclaro: #d2e4ad;
+	--transparente: rgba(0, 0, 0, 0);
+}
 /* Configuración de la página */
 
 *,
 *:before,
 *:after {
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
+	box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+	-webkit-box-sizing: border-box !important;
 }
 
 html {
@@ -14,13 +45,19 @@ html {
 }
 
 body {
-	line-height: 150%; 
+	line-height: 150%;
 	margin: 0;
 }
 
 a {
 	background: none;
 	text-decoration: none;
+}
+
+p a {
+	text-decoration-style: dotted;
+	text-decoration-color: var(--rojo);
+	text-decoration-line: underline;
 }
 
 p {

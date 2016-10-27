@@ -1,6 +1,7 @@
 @keyframes wave {
 	0% {
 		background-size: 0 0;
+		z-index: 10;
 	}
 	30% {
 		background-size: 20rem 20rem;
@@ -13,55 +14,13 @@
 	}
 	100% {
 		background-size: 100vw 100vw;
-		background: -webkit-radial-gradient(rgba(255, 255, 255, 0) 100%);
-		background: -o-radial-gradient(rgba(255, 255, 255, 0) 100%);
-		background: -moz-radial-gradient(rgba(255, 255, 255, 0) 100%);
-		background: radial-gradient(rgba(255, 255, 255, 0) 100%);
-	}
-}
-
-.moveToLeft {
-	-webkit-animation: moveToLeft .7s ease-in-out both;
-	animation: moveToLeft .7s ease-in-out both;
-}
-
-.moveToRight {
-	-webkit-animation: moveToRight .7s ease-in-out both;
-	animation: moveToRight .7s ease-in-out both;
-}
-
-@-webkit-keyframes moveToLeft {
-	from {}
-	to {
-		-webkit-transform: translateX(-100%);
-	}
-}
-
-@keyframes moveToLeft {
-	from {}
-	to {
-		-webkit-transform: translateX(-100%);
-		transform: translateX(-100%);
-	}
-}
-
-@-webkit-keyframes moveToRight {
-	from {}
-	to {
-		-webkit-transform: translateX(100%);
-	}
-}
-
-@keyframes moveToRight {
-	from {}
-	to {
-		-webkit-transform: translateX(100%);
-		transform: translateX(100%);
+		z-index: -1;
 	}
 }
 
 @keyframes wave {
 	0% {
+		z-index: 10;
 		background-size: 0 0;
 	}
 	30% {
@@ -75,13 +34,9 @@
 	}
 	100% {
 		background-size: 100vw 100vw;
-		background: -webkit-radial-gradient(rgba(255, 255, 255, 0) 100%);
-		background: -o-radial-gradient(rgba(255, 255, 255, 0) 100%);
-		background: -moz-radial-gradient(rgba(255, 255, 255, 0) 100%);
-		background: radial-gradient(rgba(255, 255, 255, 0) 100%);
+		z-index: 0;
 	}
 }
-
 
 @-webkit-keyframes blur {
 	0% {
@@ -91,6 +46,7 @@
 		-webkit-filter: blur(2px);
 	}
 }
+
 @keyframes blur {
 	0% {
 		filter: blur(0px);
