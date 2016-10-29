@@ -105,10 +105,10 @@ jQuery(document).ready(function () {
         sections.not('#comentarios').swipe({
             swipe: function (event, direction, distance, duration, fingerCount) {
                 if (direction == 'right') {
-                    gotoSection(1);
+                    gotoSection(-1);
                 }
                 if (direction == 'left') {
-                    gotoSection(-1);
+                    gotoSection(1);
                 }
             },
             //Default is 75px, set to 0 for demo so any distance triggers swipe
